@@ -13,5 +13,5 @@
             "email": "koubre@gmail.com"
         }
     ],
-    "require": {}
+    "require": {"monk24215/vendor-pages"}
 }
