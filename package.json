@@ -1,0 +1,26 @@
+{
+  "name": "vendor-pages",
+  "version": "1.0.0",
+  "description": "Text version of sales copy for AI reference",
+  "keywords": [
+    "clickbank",
+    "survival",
+    "sales",
+    "copy"
+  ],
+  "homepage": "https://github.com/monk24215/vendor-pages#readme",
+  "bugs": {
+    "url": "https://github.com/monk24215/vendor-pages/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monk24215/vendor-pages.git"
+  },
+  "license": "ISC",
+  "author": "monk24215",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
