@@ -1,0 +1,2082 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<script>
+window.bioEp = {
+    // Private variables
+    bgEl: {},
+    popupEl: {},
+    closeBtnEl: {},
+    shown: false,
+    overflowDefault: "visible",
+    transformDefault: "",
+
+    // Popup options
+    width: 400,
+    height: 220,
+    html: "",
+    css: "",
+    fonts: [],
+    delay: 600,
+    showOnDelay: false,
+    cookieExp: 0,
+    showOncePerSession: false,
+    onPopup: null,
+
+    // Object for handling cookies, taken from QuirksMode
+    // http://www.quirksmode.org/js/cookies.html
+    cookieManager: {
+        // Create a cookie
+        create: function(name, value, days, sessionOnly) {
+            var expires = "";
+
+            if (sessionOnly)
+                expires = "; expires=0"
+            else if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toGMTString();
+            }
+
+            document.cookie = name + "=" + value + expires + "; path=/";
+        },
+
+        // Get the value of a cookie
+        get: function(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(";");
+
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == " ") c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+
+            return null;
+        },
+
+        // Delete a cookie
+        erase: function(name) {
+            this.create(name, "", -1);
+        }
+    },
+
+    // Handle the bioep_shown cookie
+    // If present and true, return true
+    // If not present or false, create and return false
+    checkCookie: function() {
+        // Handle cookie reset
+        if (this.cookieExp <= 0) {
+            // Handle showing pop up once per browser session.
+            if (this.showOncePerSession && this.cookieManager.get("bioep_shown_session") == "true")
+                return true;
+
+            this.cookieManager.erase("bioep_shown");
+            return false;
+        }
+
+        // If cookie is set to true
+        if (this.cookieManager.get("bioep_shown") == "true")
+            return true;
+
+        return false;
+    },
+
+    // Add font stylesheets and CSS for the popup
+    addCSS: function() {
+        // Add font stylesheets
+        for (var i = 0; i < this.fonts.length; i++) {
+            var font = document.createElement("link");
+            font.href = this.fonts[i];
+            font.type = "text/css";
+            font.rel = "stylesheet";
+            document.head.appendChild(font);
+        }
+
+        // Base CSS styles for the popup
+        var css = document.createTextNode(
+            "#bio_ep_bg {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.3; z-index: 10001;}" +
+            "#bio_ep {display: none; position: fixed; width: " + this.width + "px; height: " + this.height +
+            "px; font-family: 'Titillium Web', sans-serif; font-size: 16px; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); background-color: #fff; box-shadow: 0px 1px 4px 0 rgba(0,0,0,0.5); z-index: 10002;}" +
+            "#bio_ep_close {position: absolute; left: 100%; margin: -8px 0 0 -12px; width: 20px; height: 20px; color: #fff; font-size: 12px; font-weight: bold; text-align: center; border-radius: 50%; background-color: #5c5c5c; cursor: pointer;}" +
+            this.css
+        );
+
+        // Create the style element
+        var style = document.createElement("style");
+        style.type = "text/css";
+        style.appendChild(css);
+
+        // Insert it before other existing style
+        // elements so user CSS isn't overwritten
+        document.head.insertBefore(style, document.getElementsByTagName("style")[0]);
+    },
+
+    // Add the popup to the page
+    addPopup: function() {
+        // Add the background div
+        this.bgEl = document.createElement("div");
+        this.bgEl.id = "bio_ep_bg";
+        document.body.appendChild(this.bgEl);
+
+        // Add the popup
+        if (document.getElementById("bio_ep"))
+            this.popupEl = document.getElementById("bio_ep");
+        else {
+            this.popupEl = document.createElement("div");
+            this.popupEl.id = "bio_ep";
+            this.popupEl.innerHTML = this.html;
+            document.body.appendChild(this.popupEl);
+        }
+
+        // Add the close button
+        if (document.getElementById("bio_ep_close"))
+            this.closeBtnEl = document.getElementById("bio_ep_close");
+        else {
+            this.closeBtnEl = document.createElement("div");
+            this.closeBtnEl.id = "bio_ep_close";
+            this.closeBtnEl.appendChild(document.createTextNode("X"));
+            this.popupEl.insertBefore(this.closeBtnEl, this.popupEl.firstChild);
+        }
+    },
+
+    // Show the popup
+    showPopup: function() {
+        if (this.shown) return;
+
+        this.bgEl.style.display = "block";
+        this.popupEl.style.display = "block";
+
+        // Handle scaling
+        this.scalePopup();
+
+        // Save body overflow value and hide scrollbars
+        //this.overflowDefault = document.body.style.overflow;
+        //document.body.style.overflow = "hidden";
+        this.overflowDefault = document.body.style.overflowX;
+        document.body.style.overflowX = "hidden";
+        this.shown = true;
+
+        this.cookieManager.create("bioep_shown", "true", this.cookieExp, false);
+        this.cookieManager.create("bioep_shown_session", "true", 0, true);
+
+        if (typeof this.onPopup === "function") {
+            this.onPopup();
+        }
+    },
+
+    // Hide the popup
+    hidePopup: function() {
+        this.bgEl.style.display = "none";
+        this.popupEl.style.display = "none";
+
+        // Set body overflow back to default to show scrollbars
+        // document.body.style.overflow = this.overflowDefault;
+        document.body.style.overflowX = this.overflowDefault;
+
+    },
+    // Hide the popup
+    hidePopupOnBgClick: function() {
+        this.bgEl.style.display = "none";
+        this.popupEl.style.display = "none";
+        this.cookieManager.erase('bioep_shown');
+        this.cookieManager.erase('bioep_shown_session');
+        this.shown = false;
+
+        // Set body overflow back to default to show scrollbars
+        //document.body.style.overflow = this.overflowDefault;
+        document.body.style.overflowX = this.overflowDefault;
+
+    },
+
+    // Handle scaling the popup
+    scalePopup: function() {
+        var margins = {
+            width: 40,
+            height: 40
+        };
+        var popupSize = {
+            width: bioEp.popupEl.offsetWidth,
+            height: bioEp.popupEl.offsetHeight
+        };
+        var windowSize = {
+            width: window.innerWidth,
+            height: window.innerHeight
+        };
+        var newSize = {
+            width: 0,
+            height: 0
+        };
+        var aspectRatio = popupSize.width / popupSize.height;
+
+        // First go by width, if the popup is larger than the window, scale it
+        if (popupSize.width > (windowSize.width - margins.width)) {
+            newSize.width = windowSize.width - margins.width;
+            newSize.height = newSize.width / aspectRatio;
+
+            // If the height is still too big, scale again
+            if (newSize.height > (windowSize.height - margins.height)) {
+                newSize.height = windowSize.height - margins.height;
+                newSize.width = newSize.height * aspectRatio;
+            }
+        }
+
+        // If width is fine, check for height
+        if (newSize.height === 0) {
+            if (popupSize.height > (windowSize.height - margins.height)) {
+                newSize.height = windowSize.height - margins.height;
+                newSize.width = newSize.height * aspectRatio;
+            }
+        }
+
+        // Set the scale amount
+        var scaleTo = newSize.width / popupSize.width;
+
+        // If the scale ratio is 0 or is going to enlarge (over 1) set it to 1
+        if (scaleTo <= 0 || scaleTo > 1) scaleTo = 1;
+
+        // Save current transform style
+        if (this.transformDefault === "")
+            this.transformDefault = window.getComputedStyle(this.popupEl, null).getPropertyValue("transform");
+
+        // Apply the scale transformation
+        this.popupEl.style.transform = this.transformDefault + " scale(" + scaleTo + ")";
+    },
+
+    // Event listener initialisation for all browsers
+    addEvent: function(obj, event, callback) {
+        if (obj.addEventListener)
+            obj.addEventListener(event, callback, false);
+        else if (obj.attachEvent)
+            obj.attachEvent("on" + event, callback);
+    },
+
+    // Load event listeners for the popup
+    loadEvents: function() {
+        // Track mouseout event on document
+        this.addEvent(document, "mouseout", function(e) {
+            e = e ? e : window.event;
+
+            // If this is an autocomplete element.
+            if (e.target.tagName.toLowerCase() == "input")
+                return;
+
+            // Get the current viewport width.
+            var vpWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+            // If the current mouse X position is within 50px of the right edge
+            // of the viewport, return.
+            if (e.clientX >= (vpWidth - 50))
+                return;
+
+            // If the current mouse Y position is not within 50px of the top
+            // edge of the viewport, return.
+            if (e.clientY >= 50)
+                return;
+
+            // Reliable, works on mouse exiting window and
+            // user switching active program
+            var from = e.relatedTarget || e.toElement;
+            if (!from)
+                bioEp.showPopup();
+        }.bind(this));
+
+        // Handle the popup close button
+        this.addEvent(this.closeBtnEl, "click", function() {
+            bioEp.hidePopup();
+        });
+        let myBg = document.getElementById('bio_ep_bg');
+        // Handle the popup close button when clicked on background
+        this.addEvent(myBg, "click", function() {
+            bioEp.hidePopupOnBgClick();
+        });
+
+
+        // Handle window resizing
+        this.addEvent(window, "resize", function() {
+            bioEp.scalePopup();
+        });
+    },
+
+    // Set user defined options for the popup
+    setOptions: function(opts) {
+        this.width = (typeof opts.width === 'undefined') ? this.width : opts.width;
+        this.height = (typeof opts.height === 'undefined') ? this.height : opts.height;
+        this.html = (typeof opts.html === 'undefined') ? this.html : opts.html;
+        this.css = (typeof opts.css === 'undefined') ? this.css : opts.css;
+        this.fonts = (typeof opts.fonts === 'undefined') ? this.fonts : opts.fonts;
+        this.delay = (typeof opts.delay === 'undefined') ? this.delay : opts.delay;
+        this.showOnDelay = (typeof opts.showOnDelay === 'undefined') ? this.showOnDelay : opts.showOnDelay;
+        this.cookieExp = (typeof opts.cookieExp === 'undefined') ? this.cookieExp : opts.cookieExp;
+        this.showOncePerSession = (typeof opts.showOncePerSession === 'undefined') ? this.showOncePerSession :
+            opts.showOncePerSession;
+        this.onPopup = (typeof opts.onPopup === 'undefined') ? this.onPopup : opts.onPopup;
+    },
+
+    // Ensure the DOM has loaded
+    domReady: function(callback) {
+        (document.readyState === "interactive" || document.readyState === "complete") ? callback(): this
+            .addEvent(document, "DOMContentLoaded", callback);
+    },
+
+    // Initialize
+    init: function(opts) {
+        // Handle options
+        if (typeof opts !== 'undefined')
+            this.setOptions(opts);
+
+        // Add CSS here to make sure user HTML is hidden regardless of cookie
+        this.addCSS();
+
+        // Once the DOM has fully loaded
+        this.domReady(function() {
+            // Handle the cookie
+            if (bioEp.checkCookie()) return;
+
+            // Add the popup
+            bioEp.addPopup();
+
+            // Load events
+            setTimeout(function() {
+                bioEp.loadEvents();
+
+                if (bioEp.showOnDelay)
+                    bioEp.showPopup();
+            }, bioEp.delay * 1000);
+        });
+    }
+}
+</script>
+<script>
+bioEp.init({
+    html: '<div class="popup-inner">' +
+        '<div class="popup-msg text-center">' +
+        '<img class="img-responsive-mob-desk" src="https://www.thestockpilesavior.com/vsl/img/stop1-1.png" alt="wait" width="667" height="201"/>' +
+        '</div>' +
+        '<p id="textp" style="">' + '<span>' +
+        '<a href="https://www.thestockpilesavior.com/disc1/">' +
+        '<u>Get 27% OFF NOW!</u>' +
+        ' </a>' +
+        '</span>' +
+        '</p>' + '<div style="text-align:center;" class="voucher">' +
+        '<a href="https://www.thestockpilesavior.com/disc1/">' +
+        '<span class="orange-button">Click Here</span>' + '</a>' +
+        '</div>' + '</div>',
+    css: '.popup-inner {padding-top:1em;padding-bottom:3em;position: relative;width:100%;max-width: 100%;min-width:2em;background: #fff;font-weight: 400;color: black; display: flex; flex-direction: column; align-items: center; justify-content: center;}' +
+        '.popup-msg {margin-top:20px;margin-bottom:20px;text-align:center;}' +
+        '.img-responsive-mob-desk {width:100%;display:inline;margin:0;padding:0;vertical-align:middle;border:0;}' +
+        '.popup-inner span {color: #0000ff;}' + '.voucher span {color: #fff;}' +
+        '.popup-inner a,.popup-inner a:hover {color:#0000ff;}' +
+        '.voucher a {color:#fff;text-decoration:none;}' + '.voucher a:hover{color:#fff;text-decoration:none;}' +
+        '#bio_ep_bg {background:rgba(0,0,0,.6);transition: all .2s ease;left:0;position:fixed;opacity:1;}' +
+        '#bio_ep {height:auto;padding-top:1em;padding-bottom:3em;top:5%;left: calc(50% - 370px); width: 740px;max-width: 96%;background: #fff;padding: 15px;margin-top: 3em;margin-bottom:3em;border-radius: 5px;box-shadow: rgb(0 0 0 / 25%) 0px 14px 28px -10px;opacity:1;transform:scale(1);}' +
+        '#bio_ep_close{margin: -25px 0 0 -15px;text-align: center;background-image: url("https://www.thestockpilesavior.com/vsl/img/download.svg");background-size: 30px 30px;color: transparent;background-color: #fff;width:30px;height:30px;-webkit-box-shadow: 0 0 10px rgb(0 0 0 / 50%);box-shadow: 0 0 10px rgb(0 0 0 / 50%);}' +
+        '.orange-button{padding: 10px 30px;border-color: #bd3f00;border-width: 1px;border-radius: 4px;background: #ff5500;  font-size: 24px;color: #ffffff;font-family: "Helvetica Neue", Helvetica, sans-serif;font-weight: bold;text-shadow: #000000 0px 1px 0px;}' +
+        '#textp{padding-top:20px;padding-bottom:15px;font-size:24px;font-family:Tahoma;font-weight:bold;color: #0000ff;text-align: center;}',
+
+    cookieExp: 0
+    //delay: 2,
+    //showOnDelay: true
+});
+</script>
+<head>
+    <!-- ~/statics/header_meta.php - keep on top -->
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Expires" content="0" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<title>The Stockpile Savior</title>
+
+<link rel="icon" href="https://www.thestockpilesavior.com/statics/images/favicon.ico" type="image/png" sizes="123x123">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://www.thestockpilesavior.com/statics/js/jquery.cookie.js"></script>
+
+<script>
+    var split = "";
+    var exit_config = [{"message":"***************************************\n\n WAIT! \n\nWould you rather read the special report, \n\ninstead of watching the video? \n\n \n\nClick the *Stay on page* or *Cancel* button.\n\n to get to the text version of the presentation\n\n***************************************","from":"0","to":"1500","link":"..\/tsl\/index.php","next":false},{"message":"***************************************\n\n WAIT! \n\n STOP...Get 40% OFF NOW! \n\nClick the *Stay on page* or *Cancel* button.\n\n to claim your voucher NOW! \n\n***************************************","from":"1500","to":"","link":"..\/tsl\/downsell.php","next":false}];
+    var exitMessage = "***************************************\n\n WAIT! \n\nWould you rather read the special report, \n\ninstead of watching the video? \n\n \n\nClick the *Stay on page* or *Cancel* button.\n\n ";
+    var timetobuy = "903";
+    var StopExit = true;
+    var partialcontrol = true;
+</script>
+
+
+<script>
+    let splitTestId = "notset";
+    let variationId = "notset";
+    let testStatus = "not_set";
+    let siteTitle = document.title;
+    let currentPath = window.location.pathname + window.location.search; // Include existing query parameters
+    // Determine the correct separator to use
+    let separator = currentPath.includes('?') ? '&' : '?';
+
+    // Construct additionalParams with the correct separator
+    let additionalParams = separator + 'splitid=' + encodeURIComponent(splitTestId) + '&varid=' + encodeURIComponent(variationId);
+    // Concatenate the current path and additional parameters
+    let customPagePath = currentPath + additionalParams;
+    console.log(customPagePath);
+    console.log("var" + variationId);
+    console.log("test" + splitTestId);
+    console.log(siteTitle);
+
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8MHETFJFRG"></script>
+<script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    if (customPagePath && testStatus == 'active' && siteTitle) {
+        gtag('config', 'G-8MHETFJFRG', {'page_title': siteTitle + " | Split" + splitTestId + "-" + variationId});
+    } else {
+        gtag('config', 'G-8MHETFJFRG');
+    }
+
+    // Send the virtual page view event with the custom page path
+    if (customPagePath && testStatus == 'active') {
+        gtag('event', 'page_view', {
+            'send_to': 'G-8MHETFJFRG',
+            'page_location': customPagePath
+        });
+    }
+    gtag('config', 'AW-11272587429');
+</script>
+<style>
+      .cookie-box {
+          position: fixed;
+          bottom: 0;
+          width: auto;
+          background-color: rgba(255, 255, 255, 0.8);
+          z-index: 99999999;
+          display: none;
+          border-radius: 20px;
+      }
+
+      .cookie-info {
+          color: #000000;
+          font-size: 12px;
+          padding: 5px 20px 5px 5px
+      }
+
+      .close-cookie-notification {
+          position: absolute;
+          top: -30px;
+          right: 0;
+      }
+
+      #close-cookie {
+          background-color: rgba(255, 255, 255, 0.8);
+          color: #000000;
+          border-radius: 10px;
+          padding: 3px 8px 3px 8px;
+      }
+
+      #close-cookie:hover {
+          background-color: #000000;
+          color: #ffffff;
+          border-radius: 10px;
+          padding: 3px 8px 3px 8px;
+      }
+  </style>
+  <div class="cookie-box">
+      <div class="col-md-12 col-xs-12 cookie-info">
+          <p class="cookie-info">By continuing to browse our site you agree to our use of cookies. More information about <a href="/statics/privacy.php" target="_blank">cookies</a>. <button type="button" class="btn btn-primary" id="cookie-agree">I Agree</button></p>
+      </div>
+      <div class="close-cookie-notification">
+          <p id="close-cookie">x</p>
+      </div>
+  </div>
+
+  <script>
+      $(document).ready(function() {
+          if ($.cookie("accepted_cookie_policy") == null && $.cookie("closed_cookie_policy") == null) {
+              function showcookiebox() {
+                  $('.cookie-box').show();
+              }
+              window.setTimeout(showcookiebox, 1000);
+          }
+
+          $("#cookie-agree").click(function() {
+              $.cookie('accepted_cookie_policy', 'true', {
+                  expires: 36500,
+                  path: '/'
+              });
+              $(".cookie-box").hide();
+          });
+      });
+
+
+      $("#close-cookie").click(function() {
+          $.cookie('closed_cookie_policy', 'true', {
+              expires: 1,
+              path: '/'
+          });
+          $(".cookie-box").hide();
+      });
+  </script>
+
+    <title>The Stockpile Savior</title>
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/nfp7qni.css">
+
+    <!-- CSS -->
+    <link href="https://www.thestockpilesavior.com/tsl/css/body-styles.css?v16" rel="stylesheet" type="text/css"/>
+    <link href="https://www.thestockpilesavior.com/tsl_presentation/css/updated_body.css?v5" rel="stylesheet" type="text/css"/>
+
+    <!-- BOOTSTRAP 5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+          <script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
+<script type="text/javascript">
+digistorePromocode( { "product_id": 502394, "adjust_all_urls": true, "adjust_domain": true } );
+</script>
+</head>
+
+<body>
+<style>
+        a {
+            text-decoration: none;
+        }
+
+        .purchase {
+            color: rgb(255, 255, 255);
+            background-color: rgb(239, 109, 0);
+            border: 1px solid rgba(0, 0, 0, 0.13);
+            border-bottom: 4px solid rgba(0, 0, 0, 0.13);
+            font-size: 30px;
+            margin: 0 auto;
+            display: block;
+            width: 490px;
+            max-width: 80%;
+            border-radius: 3px;
+        }
+
+        .purchase:hover {
+            box-shadow: inset 0 2px 2px 0 rgba(255, 255, 255, 0.22), 0 233px 233px 0 rgba(255, 255, 255, 0.12) inset;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        a:focus,
+        a:hover {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .purchase p {
+            padding: 5px 5px;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 21px;
+            font-weight: 700;
+        }
+        .click-here{       
+            display: inline-block;
+            font-weight: 700;
+            margin-bottom: 15px;
+            transition: all .2s ease-out;
+            color: black;
+            margin-top: 10px;
+            }
+        
+        #sectionRead { 
+            display:none;
+        }
+        #action_div {
+            display:none;
+        }
+    </style>
+    <div class="container-fluid">
+        <!-- NOTE: it's in white container - HEADLINE SECTION -->
+        <div class="row">
+            <div class="container">
+                <div class="headline-section mx-center text-center">
+                    <div>
+                    <img class="d-block mx-auto img-fluid"
+                         src="https://www.thestockpilesavior.com/tsl_presentation/img/secound_civil.png"
+                         alt="Digital formats of The Stockpile Savior">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BODY SECTION -->
+        <div class="row">
+            <div class="container mb-5">
+                <div class="tsl-section bgr-white mx-center">
+
+                    <div class="tsl-paragraphs text-align-left">
+                        <div class="row">
+                            <div class="container">
+                                <div class="warning-sign">WARNING! Controversial and Shocking Report Ahead</div>
+                                <div class="headline-section mx-center text-center">
+                                    <h3 class="headline-3 mt-2 mb-3  container-headline"><span class="span-block"> The
+                                            <span style="color: #BB2B24;">3 Sure-Fire Signs</span></span> That It’s
+                                        About
+                                        To Hit The Fan In 2026
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-align-left video-margin">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-xs-12">
+                                <style>
+.video_container {
+    max-width: 825px;
+    /* the uploaded video has 640x360 */
+    min-width: 240px;
+    /* mobile screen size must be at least 300px to "enjoy" a video */
+    margin: 20px auto;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.video_vimeo {
+    position: relative;
+    width: 100%;
+    height: 0;
+    margin: 0 auto;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.video_vimeo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<div class="video_container">
+    <div class="video_vimeo" id="video_vimeo"></div>
+</div>
+
+
+<script src='https://statics.thegoodprepper.org/statics/svb.main.js?v=2'></script>
+<script src='https://statics.thegoodprepper.org/statics/svb.player.js?v=2'></script>
+<script src='https://player.vimeo.com/api/player.js'></script>
+<script>
+svb.init({
+    site: 'https://www.thestockpilesavior.com/',
+    vsl: 'https://www.thestockpilesavior.com/vsl/index.php',
+    tsl: 'https://www.thestockpilesavior.com/tsl/index.php'
+});
+
+var vim = svb.player.create({
+    playerType: 'vimeo',
+    debug: 'no',
+    domElement: 'video_vimeo',
+    videoId: '1068134391',
+    buyBtnTime: '1120',
+    buyBtnLabel: 'button',
+    buyBtnCat: 'Buy Button',
+    returnVisitor: 'returnvisitor',
+    endVidLabel: 'stop',
+    videoLength: 2752,
+    loop: 'no',
+    gaEvents: '2min',
+    cuePoints: [{"label":"seebutton","time":621,"checkcookie":true,"category":"Buy Button"},{"label":"Video start - 00:01","time":1,"checkcookie":false,"category":"Video"},{"label":"01Minute","time":60,"checkcookie":false,"category":"Video"},{"label":"03Minute","time":180,"checkcookie":false,"category":"Video"},{"label":"05Minute","time":300,"checkcookie":false,"category":"Video"},{"label":"07Minute","time":420,"checkcookie":false,"category":"Video"},{"label":"09Minute","time":540,"checkcookie":false,"category":"Video"},{"label":"end vsl","time":3800,"checkcookie":false,"category":"Video"}]});
+if (vim) {
+    svb.player.doOnLoad(vim);
+    svb.player.doOnPlay(vim);
+    svb.player.doOnCuePoint(vim);
+    svb.player.doOnPause(vim);
+    svb.player.doOnFullScreen(vim);
+    svb.player.doOnEnd(vim);
+    svb.player.doOnError(vim);
+} else {
+    //log to console
+    svb.log(
+        'svb vimeo player #1068134391 @ #video_vimeo not loaded, check for errors');
+    //show big red message
+    document.getElementById('video_vimeo').style =
+        "display: block; font-size: 30px; line-height: 40px; color: #f00";
+    document.getElementById('video_vimeo').innerHTML = 'video not available';
+}
+</script>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="action_div">
+                        <div class="bttn-buy row align-items-center justify-content-center">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+                                <a href="https://www.digistore24.com/product/536616?custom=56d79030-7ee8-45a1-8a70-adee06b7293c&cid=notset&hide_plans&plan=1089502&ds24tr=purchase_vsl_desktop" data-info="eyJldmVudF90eXBlIjoiYWRkLXRvLWNhcnQiLCJldmVudF92YWx1ZSI6NDU0MjI3LCJSRUYiOiI1NmQ3OTAzMC03ZWU4LTQ1YTEtOGE3MC1hZGVlMDZiNzI5M2MiLCJzdmJfZXZlbnRfaWQiOiIwYWUxMjE3Ni0yYjg0LTRlNWItYjAxMS0xOTc3MjIyMmU0NDYiLCJnY2xpZCI6IiIsInRlc3RfaWQiOiIiLCJ0a24iOiJkSEpyYVdRdWZITndiR2wwTG54MGRpNThkQzU4WTNBdWZHTndkQzU4WTNBeExueGpjREl1ZkdOd015NThZM0EwTG54amNEVXVmSEJ5WXk1OFkzUXVmR04wTVM1OFkzUXlMbngwWnpFdWZIUm5NaTU4ZEdjekxueDBaelF1ZkhSbk5TNThiR2xrTG54dExueG9ZWE5vTGprMU9UTXpNREV5WmpjMk1URXhNbU15WW1KbVltUXpNVFpsTldWaVpqRSIsInRlc3RfdmFyaWF0aW9uIjoiIiwiX2ZiX3Nlc3Npb25fdGltZSI6MTc3Njc3MTc5MiwiX2ZiX3VhIjoiTW96aWxsYVwvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0XC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWVcLzE0Ny4wLjAuMCBTYWZhcmlcLzUzNy4zNiIsIl9mYl9zcmNfdXJsIjoid3d3LnRoZXN0b2NrcGlsZXNhdmlvci5jb21cL3ZzbFwvaW5kZXgucGhwIiwiX2ZiX3VybF9wYXJhbXMiOiIiLCJfZmJfdGlkIjoibm90Zm91bmQiLCJ2ZW5kb3IiOiJzYXZzdGFzaCIsImFmZmlsaWF0ZSI6InN2YmFmZjAxIiwiX2ZicCI6IiIsIl9mYmMiOiIiLCJfY2lkIjoibm90c2V0In0=" target='_blank' onclick="gtag('event', 'click', { 'event_category': 'Buy Button', 'event_label': 'tslbutton'});">
+                                    <div class="purchase">
+                                        <p>Purchase your book now </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="tsl-paragraphs">
+                        <p class="text-center click-here" id="toggleRead">Click Here If You Prefer To Read</p>
+                    </div>
+
+                    <div class="action_div_sibling" id="sectionRead">
+                        <div class="tsl-paragraphs text-align-left">
+                            
+
+<p>Fellow patriot,</p>
+<p>There is a hidden storm brewing. </p>
+<p>The <span class="filter-shadow">3 dark signs</span> that prove it are already here.</p>
+<p><u>And in 2026, it is about to destroy everything you hold dear.</u></p>
+<p>I’m talking about a devastating event that hit the US almost 200-years ago, and it’s about to hit
+    us again.</p>
+<p>Back then, it killed 3% of the population, erased approximately 60% of the nation’s wealth, and
+        left entire states devastated.</p>
+<p>Desperate families were left wandering the country fighting for bare survival. Communities turned
+    inside out. And the infrastructure that held our nation together crumbled.</p>
+<p>The scars it left cut deep and affect us even today, generations later.</p>
+<p>But come this November, what follows once again, will make that past tragedy seem like child's
+    play in comparison.</p>
+<p>This is something that will pit brother against brother, town folk against city folk, man against
+    woman… And there’s little we can do to stop it…</p>
+<p><b>Maybe you can feel it.</b></p>
+<p>There’s an almost <span class="italic-red">“electric”</span> charge in the atmosphere these days. Like a thunderstorm before the
+    big lighting strikes.</p>
+<p><u>Something is <span class="italic-red">terribly wrong </span>with our nation.</u> Like it’s reaching some boiling point, a point of no
+    return… and it seems like it’s about to give.</p>
+<p>There’s talk about World War 3 buzzing in the media… But at this point in time, a war against an
+    external threat would probably unite us. </p>
+<p>No.</br><b>The serious threat to the American way of life and your safety is <span class="italic-red">internal.</span></b></p>
+<p>And it can obliterate all the basic necessities of modern life.</p>
+<p>Unfortunately, this is not fear mongering. I wish it was…</p>
+<p>And I’ll prove it without a shadow of a doubt by sharing with you the 3 sure-fire signs that this
+    could happen as early as this year.</p>
+<p>Imagine…</p>
+<p>… a world where cities are having a meltdown, and millions of refugees are placed into the
+    countryside.</p>
+<p>The economy overwhelmed by the sudden internal conflicts shuts down, shifting into a kind of war
+    economy mode – prioritizing only a select few.</p>
+<p>Jobs vanish overnight. Millions of homeless people are hitting the streets. Some running from the
+    killings, others unknowingly heading for more danger.</p>
+<p>And no one prepared.</p>
+<p>People would be left at the mercy of whatever stockpiles they managed to build, if any. </p>
+<p>How much food and water you’ve got. What tools and equipment you need to survive and maintain
+    your home.</p>
+<p>Whatever arsenal you’ve got that allows you to protect your home from invaders. From rowing
+    gangs. And from the chaos that is heading our way…</p>
+</div>
+<div class="paralax">
+<h2 class="headline-4--banners text-center mobile">
+    The Clock Is Ticking, And Most <br>
+    Americans Are Not Ready <br>
+    <span style="color:#cd0000;">For The Coming “UN-<u>CIVIL WAR</u>”</span></h2>
+<h2 class="headline-4--banners text-center desktop">
+    The Clock Is Ticking, And Most
+    Americans Are Not Ready
+    <span style="color:#cd0000;display:block;">For The Coming <br>“UN-<u>CIVIL WAR</u>”</span></h2>
+</div>
+<div class="tsl-paragraphs text-align-left">
+<p>They either don’t have a stockpile, or worse, they have a completely inadequate one and think
+    they’re safe, when they’re not.</p>
+<p><i>(In a minute I’ll show you exactly <span class="italic-red">what needs to be in your stockpile</span>, to make sure you last
+        not just days and weeks, but months or even years, if you have to – with no government, with
+        no food in the grocery stores, and no one to count on but yourself</i>).</p>
+<div class="row">
+    <div class="col-sm-5 col-md-5 col-xs-12">
+        <div>
+            <img class="d-block mx-auto img-fluid img-dimension" style="height:350px; width:auto;"
+                src="https://www.thestockpilesavior.com/tsl_presentation/img_v2/mark_v1.png"
+                alt="Digital formats of The Stockpile Savior">
+        </div>
+    </div>
+    <div class="col-sm-7 col-md-7 col-xs-12 mt-3">
+        <p><b>Hi, my name is Mark Anderson, and I am known as the “Stockpile Scientist”.</b></p><br>
+        <p>And in the past few months, I’ve started seeing the writing on the wall.</p><br>
+        <p>I believe there are <span class="filter-shadow"><b>3 major signs</b></span> that it’s about to hit the fan… that we will have a <b>civil
+            war in the US.</b> And it could happen as early as this year.</p>
+    </div>  
+</div>
+<!-- <p><b>Hi, my name is Mark Anderson, and I am known as the “Stockpile Scientist”.</b></p> -->
+<!-- <p>And in the past few months, I’ve started seeing the writing on the wall.</p>
+<p>I believe there are <span class="filter-shadow"><b>3 major signs</b></span> that it’s about to hit the fan… that we will have a <b>civil
+        war in the US.</b> And it could happen as early as this year.</p> -->
+
+<p>All civil wars share <u>at least three signs in common</u>, and without disclosing the United States by
+    name, most experts on civil war would agree and say that the country in question is on the very
+    brink of civil war.</p>
+<div>
+    <img class="d-block mx-auto img-fluid img-dimension"
+         src="https://www.thestockpilesavior.com/tsl_presentation/img_v2/first_img.png"
+         alt="Digital formats of The Stockpile Savior">
+</div>
+<p>So how do you spot a civil war months before it explodes into chaos?</p>
+<div class="warning-sign">
+    <h2 class="text-center sign-style">Sign #1</h2>
+</div>
+<p><span class="filter-shadow">The first sign</span> is that most civil wars follow some prior conflict. Where one side feels
+    crushed, humiliated, taken for a fool, and angry, while the victors gloat and continue to put
+    the losing side down. </p>
+<p>This isn’t just about hurt feelings anymore – it’s about deep-seated resentment that can simmer
+    and eventually boil over, causing <b>violent conflicts that could tear our society apart.</b></p>
+<p>With the election battle this year so strong, there is bound to be a loser and a winner.</p>
+<p>But this time regardless of who wins, the other side is unlikely to take it anymore. And this
+    could be the spark that ignites the powder keg.</p>
+<div class="warning-sign">
+    <h2 class="text-center sign-style">Sign #2</h2>
+</div>
+<p><span class="filter-shadow">The second big warning sign</span> that trouble is brewing? </p>
+<p>Our country is <u>deeply divided</u>. Look around – everywhere you see lines in the sand are drawn like
+    never before.</p>
+<p>It’s rich against poor, working class vs the middle class, town folk vs city folk, blue states vs
+    red states… It goes even deeper, with gaps between religion, race, genders… and the list goes
+    on.</p>
+<p>It seems only 20 years ago we all still had things in common. But politics and social media have
+    created a rupture between groups, a gaping hole that many think is impossible to bridge.</p>
+<p>And when people start looking at others as <em>“less than human”</em> this is when atrocities start
+    happening.</p>
+<p>And this brings me to…</p>
+<div class="warning-sign">
+    <h2 class="text-center sign-style">Sign #3</h2>
+</div>
+
+<p><span class="filter-shadow">The third glaring sign.</span> Which is a rise of <span class="italic-red">sect-like behavior.</span></p>
+<p>Across the nation groups are forming into what essentially could be called <b>modern-day
+        cults.</b></p>
+<p>These groups <u>demand</u> that you join them or at the very least, become an ally. Anyone who does not
+    comply, or questions them is instantly branded as being wrong, evil, or even dangerous..</p>
+<p>Take, for instance, the rise of the “woke cult”, or as some call it “Church of the Woke”. This
+    group is infamous for its relentless push to cancel and silence anyone who dares to speak up
+    against what they believe.</p>
+<p>But it’s not just them. </p>
+<p>The fear of backlash is so intense that millions are choosing to keep their opinions to
+    themselves, because they are afraid of invoking the wrath of these powerful mobs, masked as
+    various civil rights activists.</p>
+<p>With cities like Baltimore being under siege, where tensions were boiling over. That was just a
+    terrifying preview of what’s to come.</p>
+<p>This isn’t just about differing opinions anymore, it’s about fearing for one’s safety over their
+    beliefs and first amendment rights.</p>
+<p><b>I believe that all of these 3 signs will come together by the end of this year</b>, with a desperate
+    half of the country losing the elections.</p>
+<p>With the division between us getting stronger than ever. And with various “cult leaders” asking
+    for retribution – not just on social media but in the real world too.</p>
+<p>When this happens, it will be <span class="filter-shadow"><em>game over for America.</em></span></p>
+<p>You see, if anything we are very prepared for an attack from the outside. All our defenses are
+    pointed outward. </p>
+<p>But what happens if a house is divided upon itself? When brother goes against brother? Countrymen
+    against countrymen?</p>
+<p>Regardless of how long it takes – there will still be a little time to prepare.</p>
+<p>But one thing is sure… time <i>is</i> running out.</p>
+<p>And food, water, supplies, generators, guns, ammo — you’ll need all this if you want to survive
+    and thrive when it hits.</p>
+</div>
+<div class="paralax">
+<h2 class="headline-4--banners text-center mobile">
+    But Having Food, Water And A <br> Generator Will Hardly Be Enough!
+</h2>
+<h2 class="headline-4--banners text-center desktop">
+    But Having Food, Water And A Generator Will Hardly Be Enough!
+</h2>
+</div>
+<div class="tsl-paragraphs text-align-left">
+<p>Because a civil war would be devastating.</p>
+<p>The first 100 days would be especially hard to understand while you’d adjust to the “new
+    normal”.</p>
+<p>Imagine the widespread collapse that would follow. </p>
+<p>Cities in lockdown, communities barricaded, and frequent blackouts as infrastructure fails.</p>
+<p>Power station being forced to shut down, or getting critically damaged beyond repair. </p>
+<p>Nuclear cores getting close to melt down, or worse. Millions of homes left without power and
+    heating in the dead or winter, or unable to live in the sweltering heat of summer.</p>
+<p>Where on top of having <strong><em>no fridge, no AC, no internet whatsoever...</em></strong> People have to learn to live
+    without water, because most municipal pumps aren't working.</p>
+<p>Where local and interstate transportation has ground to a halt - making it impossible for all
+    grocery stores - or pharmacies, or any store for that matter - to resupply.</p>
+</div>
+<div class="paralax">
+<h2 class="headline-4--banners text-center mobile">
+    … Leaving <span>Millions Of People</span> <br>
+    At The Mercy Of Their <br>
+   <span class='italic-red'>“Almost Useful”</span>  Stockpiles
+</h2>
+<h2 class="headline-4--banners text-center desktop">
+    … Leaving Millions Of People
+    At The Mercy Of Their
+    <span class='italic-red'>“Almost Useful”</span> Stockpiles
+</h2>
+</div>
+<div class="tsl-paragraphs text-align-left">
+<p>I'm talking about a <b>complete mayhem</b> on the streets where there is no clear distinction of
+    the enemy, leaving the unprepared as sitting ducks.</p>
+<p>Neighborhoods turn into fortresses, families hunkerdown unsure of when the chaos will end. </p>
+<p>Every day… a battle against uncertainty and the basic comforts of home become luxuries.</p>
+<p>As I said my name is Mark Anderson, and I am known as the "Stockpile Scientist". I’ll tell you
+    why people call me that in a minute because…</p>
+<p>I believe that most Americans, including preppers, are seriously underprepared for the
+    devastating consequences of a full fledged civil war. </p>
+<p>Regardless of whether they already have a stockpile, or they’re just starting to build one.
+</p>
+<p>Here’s why:</p>
+<p><b>1) A civil war in the US will be unexpected, because people are wilfully blind, claiming that:
+        “It can never happen here”.</b></p>
+<p>I believe the coming threat is so unlike everything we’ve been preparing for, that the
+    conventional stockpiling advice simply won’t cut it anymore.</p>
+<p>Preppers with serious stashes might have a chance… although most stockpiles are missing key items
+    that could make them useless (<i>I’ll show you what I mean in a second</i>).</p>
+<p>But there are millions of Americans with no stockpile whatsoever. And if you don’t have one, the
+    time to start it is now – because that might be your only way to survive for a long time.</p>
+<p>But not any stockpile will do. </p>
+<p>Preppers need to build <b>multifunctional stockpiles with a high “bang for buck” ratio.</b> And
+    most of all, they need “Stockpile saviors” - some of the most useful (and neglected) items a
+    prepper could hoard. I’ll show you 7 essential items like this, here on this page. (<i>Missing
+        item #1 almost cost me my daughter’s life</i>).</p>
+<p><b>2) There will be no way to resupply for months or more</b></p>
+<p>Unlike the other localized crises we had in the past years, this will likely be a continent-wide
+    catastrophe with no clear leadership. </p>
+<p>This means there will be no opportunities to restock for a long time. </p>
+<p>Most people, including preppers, will be shocked by how fast their stockpiles are draining. And
+    the truth is, most people are clueless about how to start a stockpile for 100 days or more –
+    without making really expensive (and life threatening) mistakes, and without even requiring a
+    lot of storage space.</p>
+<p>That’s why on this page I’ll explain how to build a 100-day stockpile in just 10 days – even when
+    you’re on a budget, or if you live in a small rented apartment with little space for a survival
+    stash.</p>
+<p>But even when people do manage to put together a long-term stockpile, most will fail. Because, in
+    my experience…</p>
+<p><b>3) Even those with big, expensive stockpiles are probably not going to make it.</b></p>
+<p>I should know. Because before being the “Stockpile Scientist”, I was one of those confident
+    preppers who thought he knew it all.</p>
+<p>And because of that, I put my family in serious danger – because of a $6 item I forgot to
+    pack.</p>
+<p>Look - I wasn’t born an expert in stockpiling. I became one by making more mistakes than anyone I
+    know. And since I believe smart people learn from other people’s mistakes, this is your chance
+    to learn from mine.</p>
+
+</div>
+<div class="paralax">
+<h2 class="headline-4--banners text-center mobile">
+    <span style="display:block;color:#bb2b24;">How Missing A $6 </span>
+    Item Nearly Got My Daughter Killed… <br>
+    And Made Me <span style="color:#bb2b24;">The “Stockpile Scientist”</span>
+
+</h2>
+<h2 class="headline-4--banners text-center desktop">
+    <span style="display:block;color:#bb2b24;">How Missing A $6
+        Item</span> Nearly Got My Daughter Killed…
+    And Made Me <span style="color:#bb2b24;">The “Stockpile Scientist”</span>
+</h2>
+</div>
+<div class="tsl-paragraphs text-align-left">
+<p>It was early 2010, and I was living in Haiti with my family as an expat.</p>
+<p>It was a poor country that was constantly battered by hurricanes and earthquakes. So prepping was
+    something you simply had to do.<br>
+    I wasn’t too worried. I had 5 figures worth of food, water, medicine, fuel – and all the tools I
+    thought I’d need to survive in case the big one hit. </p>
+<p>It didn’t take long for me to see my stockpile put to the test: on January 12, Haiti was hit by
+    one of the largest earthquakes in the history of the country. Millions of homes collapsed. The
+    country was left with no electricity and no water. There were no stores. People had to cram into
+    tent cities to survive. </p>
+<p>But in the middle of all that chaos, we were fine. My trusty generator was chugging along, we had
+    a fridge going, AC was working, food was plenty. And then it happened. </p>
+<p>I still remember it like it was yesterday. </p>
+<p>I was in our living room, listening to the radio about the widespread looting. My wife was pacing
+    the room worried. I wasn't. I was just telling her that we're safe, that we're nothing like
+    those poor souls outside who failed to prepare. </p>
+<p>That’s when the lights went out. But there was no reason to panic: the generator had run out of
+    gas. I had plenty of gasoline in my stockpile. I picked up a canister from the back of the shed
+    and filled up. I started the generator. </p>
+<p>Nothing. </p>
+<p>I thought maybe it was a blown fuse or something. I checked everything. There was nothing wrong
+    with the generator. But I could feel a sense of dread starting to grow in the pit of my
+    stomach. </p>
+<h2 class="text-center">There was nothing wrong with my generator… </h2>
+<p>It was the gasoline. </p>
+<p>I’d had it in storage for so long that it had degraded to the point of becoming useless.
+    And it was something that $6 worth of fuel stabilizer would have solved. Something a simple
+    checklist would have prevented. But now it was too late. </p>
+<p>I could feel my heart sinking, and my confidence was replaced with a deep sense of
+    desperation. </p>
+<p>And it turns out, I was right to feel that way. </p>
+<p>With no fuel, my generator became useless. We lost not just power: but the refrigerator and the
+    water pump. Soon, our hygiene took a dive. And that’s when Harper, my 6-year-old daughter, got
+    cholera. </p>
+<p>The previous week, we had felt calm and protected in the warmth of the living room, looking at
+    the turmoil and feeling confident. Now I was rushing to the nearest UN tent camp, desperate for
+    the electrolytes that would save my daughter. </p>
+<p>I was forced to leave my family at home, unprotected, vulnerable to looters and all sorts of scum
+    that typically surface after any disaster… to sit in a line of 1000 desperate people who all
+    needed the same doctor. </p>
+
+</div>
+<div class="paralax">
+<h2 class="headline-4--banners text-center mobile">
+    I Had To Beg For The Simple <br>
+    Medicine That My Daughter Needed.
+</h2>
+<h2 class="headline-4--banners text-center desktop">
+    I Had To Beg For The Simple Medicine That My Daughter Needed.
+</h2>
+</div>
+<div class="tsl-paragraphs text-align-left">
+<p>And right until the last moment, I didn’t know whether she was going to make it.
+    Knowing that my stupid mistake could have led to her death was my wake up call. </p>
+<p>Because after Harper got better, and we eventually escaped that hell, I didn’t let my mistake
+    slide. </p>
+<p>My stockpile had failed me. I thought I was prepared, and that false confidence was my undoing.
+    What else had I failed to prepare for? </p>
+<p>Once back to the US, I started having some deep conversations with people I respected. Not just
+    preppers. I spoke to veterans with real combat experience. I interviewed supply managers for
+    large cruise ships, who must spend months at sea and make sure nothing’s missing. And I picked
+    the brains of people with real survival stories in besieged cities. </p>
+<p>As it turns out, my experience was anything but singular. In fact… </p>
+
+</div>
+<div class="paralax">
+<h2 class="headline-4--banners text-center mobile">
+    Lots Of Preppers Were Making <br>
+    The Same Stupid Mistakes:
+
+</h2>
+<h2 class="headline-4--banners text-center desktop">
+    Lots Of Preppers Were Making
+    The Same Stupid Mistakes:
+</h2>
+</div>
+<div class="tsl-paragraphs text-align-left">
+<p><b>Mistake number 1 is overspending on non-essentials</b></p>
+<p>Imagine having a million dollar car that won’t start because you blew a 50 cent ignition fuse.
+    This is how most stockpiles look like. Preppers are spending thousands of dollars or more on
+    obvious things like freeze dried food, or water filters, or a generator. But very often they
+    ignore key items that are often cheap. And because of that, they can’t really make use of their
+    expensive stockpiles. </p>
+<p><b>Mistake number 2 is packing too much space with useless items </b></p>
+<p>Too many people think you need a huge stockpile that will take a lot of space. But in fact, there
+    are lots of ways to pack high impact items that don’t require a root cellar or even a
+    basement. </p>
+<p>One way to achieve that is to pick foods with high caloric density and long shelf life.
+    Another great way is to build a multifunctional stockpile – basically with items that serve
+    multiple purposes. I’ll show you 7 of my favorites below. </p>
+<p>In fact, I discovered that there are some items most preppers ignore, that can make or break your
+    stockpile. I call those items “stockpile saviors” because they literally save your stockpile.
+    Start incorporating stockpile saviors into your preparedness – and you’ll save thousands of
+    dollars on your preps, and will need a lot LESS space. </p>
+</div>
+<div class="paralax">
+<h2 class="headline-4--banners text-center mobile">
+    When Disaster Strikes,<br> It Will Be Too Late To Get These<br> 7 “Stockpile Saviors”:
+</h2>
+<h2 class="headline-4--banners text-center desktop">
+    When Disaster Strikes, It Will Be Too Late To Get These 7 “Stockpile Saviors”:
+</h2>
+</div>
+<div class="tsl-paragraphs text-align-left">
+<p>I mentioned the first one in my survival story: <b>Fuel stabilizer</b>. This might not sound
+    important if you’re planning to survive for a week or so. Or if you have access to fresh fuel.
+</p>
+<p>But for something catastrophic as a <b>civil war event</b>, having a fuel stabilizer will help
+    keep the power on when the entire country ground to a halt.</p>
+<p>You see, fuel isn't wine—it doesn't get better with age. </p>
+<p>Left alone, it'll break down over time because of oxygen and moisture. So at most, you can expect
+    5 months out of gasoline, and up to 12 from diesel and kerosene. Fuel stabilizer can double that
+    lifespan, which might be invaluable in a longer SHTF situation. </p>
+<p><b>Pro-tip:</b> a Tri Fuel adapter is a good investment – as it will allow your generator to run
+    on propane. And propane does NOT expire. </p>
+<div>
+    <img class="d-block mx-auto img-fluid img-dimension"
+         src="https://www.thestockpilesavior.com/7items/img/v2/pic1.png"
+         alt="Digital formats of The Stockpile Savior">
+</div>
+<p>On to the second item: </p>
+<div>
+    <img class="d-block mx-auto img-fluid img-dimension"
+         src="https://www.thestockpilesavior.com/7items/img/v2/pic2.png"
+         alt="Digital formats of The Stockpile Savior">
+</div>
+<p><b>Petroleum Jelly</b>. Petroleum Jelly is a must-have for any emergency kit, be it a bug-out-bag
+    or a bunker stash. It’s one of my favorite multifunctional prepping items.</p>
+<p>It's cheap, versatile, and easy to store, making it perfect for uncertain times. </p>
+<p>But it does more than you might think. </p>
+<p>Need to start a fire? Coat some cotton balls in Vaseline for an easy-to-light fire starter. </p>
+<p>Facing cold weather? It's a go-to for skin protection and even frostbite prevention. </p>
+<p>In first aid, it can help chapped skin and speed up wound healing—just steer clear of using it on
+    burns. </p>
+<p>It can also be a lifesaver for shaving without water, rejuvenating old leather, and making candle
+    wax removal a breeze. </p>
+<p>In short, Petroleum Jelly isn’t just goop in a jar; it’s your all-around utility player that
+    you'll be glad to have when you need it most. </p>
+<p>Our third item might sound boring but it can literally save your stockpile in an emergency: <b>Silica
+        gel</b></p>
+<div>
+    <img class="d-block mx-auto img-fluid img-dimension"
+         src="https://www.thestockpilesavior.com/7items/img/v2/pic3.png"
+         alt="Digital formats of The Stockpile Savior">
+</div>
+
+<p>You might remember those little packets you get in the box whenever you buy a new pair of
+    shoes. </p>
+<p>You see, moisture is one of the biggest enemies of a long term stockpile. </p>
+<p>Silica gel is a powerful desiccant that can absorb up to 37% of its own weight in moisture.</p>
+<p>Silica gel safeguards electronics from water damage and prevents condensation on camera equipment
+    and headphones. </p>
+<p>It effectively absorbs water, making it superior to rice for saving wet electronics.</p>
+<p>Moreover, silica gel prolongs the freshness of foods, protects metals from rusting, aids in
+    gardening, and even combats fog and condensation.</p>
+<p>In short, it’s a pivotal asset within your preparedness arsenal.</p>
+<p>The fourth item is <b>Bay Leaves…</b></p>
+<div>
+    <img class="d-block mx-auto img-fluid img-dimension"
+         src="https://www.thestockpilesavior.com/7items/img/v2/pic4.png"
+         alt="Digital formats of The Stockpile Savior">
+</div>
+
+<p>Now these leaves are more than just a crisis-time resource; they should be a regular part of your
+    daily life. </p>
+<p>In tough situations, they offer not only various health benefits but also effective pest
+    control. </p>
+<p>They help manage health issues such as arthritis, diabetes, cancer, digestive problems, and
+    infection… </p>
+<p>When dried, they hold flammable oils that transform them into exceptional emergency fire
+    starters.</p>
+<p>This unique attribute is invaluable during survival situations…</p>
+<p>Allowing you to quickly ignite a fire that’s crucial for you and your family’s warmth, cooking,
+    or signaling for help.</p>
+<p>So make bay leaves a staple of your stockpile, not just an emergency option. </p>
+<p>That brings me to our fifth Stockpile Savior… </p>
+<div>
+    <img class="d-block mx-auto img-fluid img-dimension"
+         src="https://www.thestockpilesavior.com/7items/img/v2/pic5.png"
+         alt="Digital formats of The Stockpile Savior">
+</div>
+
+<p><b>Baking soda </b></p>
+<p>Many preppers imagine that they need the newest and most expensive items. But to me, baking soda
+    is the definition of “good bang for your buck”. It’s cheap and has tons of uses in a crisis,
+    more than I can mention: </p>
+<p>Mouthwash and teeth whitener; deodorant; kitchen cleaner; weed killer. You can use it to clean a
+    scorched pot. It helps with heartburn and itchy skin.</p>
+<p>And it can help decontaminate radioactivity! </p>
+
+<p>The sixth item you should have in your stockpile is a good <b>tarp</b>. </p>
+<p>It’s funny how many preppers don’t have a good basic tarp. It’s one of the most versatile items
+    you could hope for in a crisis. No water? Unroll your tarp and collect rain or dew water. Broken
+    window? You can mend it with a tarp. Or you can build a simple shelter until you find something
+    more solid. </p>
+<p>It can act as wet weather clothing so you or your kids don’t get sick. And in an emergency, you
+    can use it as a stretcher.</p>
+<div>
+    <img class="d-block mx-auto img-fluid img-dimension"
+         src="https://www.thestockpilesavior.com/7items/img/v2/pic6.png"
+         alt="Digital formats of The Stockpile Savior">
+</div>
+
+<p>The last thing on my list is <b>Oxygen absorbers</b>. </p>
+<div>
+    <img class="d-block mx-auto img-fluid img-dimension"
+         src="https://www.thestockpilesavior.com/7items/img/v2/pic7.png"
+         alt="Digital formats of The Stockpile Savior">
+</div>
+
+<p>Oxygen shortens the shelf life of some foods. </p>
+<p>It makes food go bad faster by causing oxidation of fats…</p>
+<p>Letting germs grow, activating enzymes, and causing good food to spoil too fast. </p>
+<p>Yet in the absence of oxygen, food can last for more than a decade in storage! </p>
+<p>And guess what: it will allow you to prolong the expiration date of medication. This is
+    invaluable in a crisis, especially with hard to find medicine. </p>
+</div>
+<div class="paralax">
+<h2 class="headline-4--banners text-center mobile">I set out to build a step-by-step blueprint <br>
+    to build a 100+ days stockpile… in just 10 days… <br>
+    without requiring a big budget <br> and tons of space
+</h2>
+<h2 class="headline-4--banners text-center desktop">I set out to build a step-by-step blueprint
+    to build a 100+ days stockpile… in just 10 days…
+    without requiring a big budget and tons of space
+</h2>
+</div>
+<div class="tsl-paragraphs text-align-left">
+<p>After our narrow escape from Haiti, I conducted over 100 interviews with preppers of all sorts.
+    It made me realize that, while some people were better prepared than others… everyone was still
+    sort of “winging it”. </p>
+<p>No one had a roadmap for how to properly build a stockpile. And even those who had one were
+    making dangerous mistakes that could cost them the life of someone they loved. </p>
+<p>So I set out to create the ultimate resource for building a 100+ days stockpile from scratch, in
+    under 10 days. </p>
+<p>I called it “The Stockpile Savior”.</p>
+<div class="article-img col-lg-7">
+    <img class="d-block mx-auto img-fluid"
+         src="https://www.thestockpilesavior.com/tsl/img/lead/stash_mockup.png"
+         alt="Digital formats of The Stockpile Savior"/>
+
+</div>
+
+<p>This is the <b>ultimate guide to building a bulletproof stockpile…</b></p>
+<p>That takes you from being uncertain about your preps...</p>
+<p>To being <b>100% confident that your family will comfortably survive the first 100 days & beyond
+        of any disaster.</b></p>
+<p>And you won't have to waste hours researching what you need…</p>
+<p>Visiting stores to compare</p>
+<p>Or spending sleepless nights worrying about whether you’ve done your part to protect your
+    family.</p>
+<p>What really sets this apart from anything else in the market is that <b>I’ve done all the heavy
+        lifting FOR YOU</b>.</p>
+<p>See, this isn’t just a simple guide.</p>
+<p>It’s actually a <b>step by step blueprint that practically does all the work FOR you</b>.
+<p>
+<p>Think of it like <b>a 10 Day Roadmap to build a bulletproof stockpile</b>.</p>
+<p>Every morning, for 10 days, you’ll get a list of items you need to stockpile for that day.</p>
+
+<p>You’ll even get links for where to find the product so you can simply open your guide for each
+    day and follow the steps to build your stockpile.</p>
+
+<p>It really is as simple as <b>waking up, pressing a few buttons, and waiting for your stockpile to
+        practically build itself. </b></p>
+
+<p>Without doing any real work yourself.</p>
+
+<p>And remember: </p>
+
+<p>You’ll also get <b>options for each budget.</b></p>
+
+<p>Whether your budget is high enough to afford the high, end Dom Perignon Champagne version of this
+    stockpile…</p>
+
+<p>Or just enough to afford a bottle of Andre Champagne from a gas station…</p>
+
+<p>It won’t matter. </p>
+
+<p>Because whatever option you choose will build you <b>a bulletproof stockpile that protects you in
+        the face of any crisis.</b></p>
+
+<p>I even asked friends in the US to test it out and within days they sent me these pictures… Check
+    it out! </p>
+
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-xs-12 mt-2">
+        <img class="d-block mx-auto img-fluid img-dimension"
+             src="https://www.thestockpilesavior.com/tsl/img/lead/img11.png"
+             alt="Digital formats of The Stockpile Savior"/>
+    </div>
+    <div class="col-sm-6 col-md-6 col-xs-12 mt-2">
+        <img class="d-block mx-auto img-fluid img-dimension"
+             src="https://www.thestockpilesavior.com/tsl/img/lead/img12.jpg"
+             alt="Digital formats of The Stockpile Savior"/>
+    </div>
+</div>
+
+<p>Here’s exactly what you get inside <b>The Stockpile Savior…</b></p>
+
+<p><b>Part 1: How To Build The Ultimate Food Stockpile</b></p>
+
+<p>First, you’ll create a food stockpile that will make sure your family never goes hungry in a
+    disaster. You’ll discover…</p>
+
+<ul class="custom-list">
+
+    <li>The first food item that will fly off the shelf, <b>(it’s almost impossible to survive
+            without this item)</b> so I'll tell you exactly where to get it before anyone else even
+        realizes there’s a crisis coming…
+    </li>
+
+    <li>The <b>top 5 supply-trashing mistakes</b> almost every prepper makes! #3 alone causes
+        preppers to lose hundreds of dollars spent on food. What’s worse is, you won’t even realize
+        you made these mistakes until the time you’re hungry, try to dig into your supply, and find
+        out it’s no good!
+    </li>
+
+    <li>How to <b>store 100 days worth of food supplies safely</b> using the little secret behind
+        the success of the German U-Boat sailors in World War II. This is the secret that allowed
+        them to stay at sea for months on end without needing to restock even once.
+    </li>
+
+    <li>Why you're risking letting your family go hungry if you're counting on a garage-full of MREs
+        or other "survival food" for a crisis… and the <b>3 different types of food supplies you
+            must stockpile before you buy a single MRE!</b></li>
+
+</ul>
+
+<p>…and much more!</p>
+
+<p><b>Part 2: The Safe & Reliable Way To Ensure Your Family Has Access To Unlimited Water</p></b>
+
+<p>Next, we’ll ensure that your family has access to safe drinking water & hygiene conditions even
+    if your area is going through its worst drought. You’ll discover…</p>
+
+<ul class="custom-list">
+    <li><b>The $5 tool that literally turns on the faucet… anytime, anywhere!</b> To you, this means
+        having hundreds of gallons of water available on demand even when the rest of the city is
+        struggling to find any.
+    </li>
+
+    <li>When there’s no running water or garbage trucks, bacteria & viruses quickly make their way
+        to you. Here’s how to <b>AVOID watching your house turn into a waste management
+            nightmare.</b> Without this system in place, you risk letting your family catch
+        life-threatening diseases.
+    </li>
+
+    <li>Don’t believe ‘experts’ who tell you you need to rotate water! <b>Discover how to
+            economically store vast quantities of water that lasts for over 25 years</b>. This
+        secret was revealed by a <b>retired military commander.</b></li>
+</ul>
+
+<p>…and much more!</p>
+
+<p><b>Part 3: You’ll Never Experience Another Blackout If You Have These Items</p></b>
+
+<p>You already saw how having no power can render most of your preps useless. That’s why the next
+    thing we’ll do is create a stockpile that ensures you have running electricity even if the rest
+    of your city is living in rolling blackouts.</p>
+
+<p>You’ll discover… </p>
+
+
+<ul class="custom-list">
+
+    <li>The DIY home power system that doesn’t just protect you from blackouts… but also <b>slashes
+            the amount you pay for electricity practically overnight</b></li>
+
+    <li>If you’re relying on a generator, forgetting these <b>5 crucial items</b> could make your
+        setup useless… <b>forcing your family to live in the dark in a time of crisis</b>. For me,
+        that was fuel stabilizer. For you, it might be one of the 4 other crucial items.<b> You
+            don’t want to take this risk.</b></li>
+
+    <li>Finally, I’ll show you the only 4 items you need to <b>create your own ‘packable solar
+            system’ for a fraction of the price</b>. So you’re always powered up, even if you’re on
+        the go.
+    </li>
+
+</ul>
+
+<p><b>Part 4: Guns & Ammunition: When Your Family’s Safety Lies In Your Hands… You Can’t Afford To
+        Be Caught Without These Items</p></b>
+
+<p>Nothing is more important than your safety. That’s why you’ll discover exactly which security
+    items you need in your stockpile… and where to find them. Think about it: </p>
+
+<ul class="custom-list">
+
+    <li>How would you feel if someone takes away the stockpile you spent years building? That’s
+        exactly what happened during hurricane Katrina. <b>Discover the ONLY thing you can do right
+            now to ensure nobody put your stockpile in the back of a truck.</b></li>
+
+    <li><b>3 ways to stop an enemy in their tracks before they even reach your property...</b>
+        without using any weapons or even stepping out of your own home!
+    </li>
+
+    <li>Finally, I’ll show you a tiny, harmless item that saved dozens of lives in 9/11 <b>(and can
+            save yours too if you add it to your stockpile now)...</b></li>
+
+</ul>
+
+<p>…and much more!</p>
+
+<p><b>Part 5: How To Safeguard Your Health When Hospitals & Pharmacies Shut Down</p></b>
+
+<p>When the modern healthcare system collapses… Your family only has you to rely on to take care of
+    their health. That’s why you’ll need to know… </p>
+
+<ul class="custom-list">
+
+    <li>The sneaky way to <b>create a stockpile of prescription medication without your doctor ever
+            catching on!</b> You need to know this if you or your loved ones suffer from a chronic
+        illness. (And no, I’m not talking about animal antibiotics.)
+    </li>
+
+    <li>In fact, starting from June 11 2023… Even animal antibiotics are prescription only. That’s
+        why you need to know the <b>safe, 100% legal way to stockpile antibiotics</b> so you’re
+        protected from infections.
+    </li>
+
+    <li>You also need to know how to handle emergency situations without a trip to the ER. That’s
+        why I’ll show you how to <b>create an At-Home Emergency Room</b> using simple items anyone
+        can get at your nearby store…
+    </li>
+
+    <li>Finally, you’ll discover the <b>Comprehensive Medical Supplies Checklist</b> you must
+        prepare to safeguard your family’s health… (plus where to get them before the general public
+        panic-buys everything.)
+    </li>
+
+</ul>
+
+<p>…and much more!</p>
+
+<p>The best part is, this 10 Day Roadmap also comes with a <b>comprehensive guide</b> that takes you
+    in-depth and explains the purpose behind each of these items.</p>
+
+<p>So you aren’t just blindly collecting items…</p>
+
+<p>But <b>you’re also understanding the importance of each of them and how to put them to use</b>.
+</p>
+
+<p>It wasn't easy getting the information that's inside this program…</p>
+
+<p>It took months of blood, sweat and literal tears to figure out how to create a truly reliable
+    stockpile. </p>
+
+<p>One that leaves nothing to chance and gives you the confidence to protect your family no matter
+    what the future holds. </p>
+
+<p>But today…</p>
+
+<p>I’m confident enough to say that…</p>
+
+<p><b>This is the ONLY program on the market that can truly help you survive the first 100 days &
+        beyond of any SHTF situation…</b></p>
+
+<p><b>Without leaving you to do any of the research yourself or wasting thousands of dollars on
+        unnecessary products.</b></p>
+
+<p>But I wanted to go one step further to make sure you’re really covered.</p>
+
+<p>This is why, when you get The Stockpile Savior today…</p>
+
+</div>
+
+<div class="paralax">
+<h2 class="headline-3--banners text-center">I Want To Send You 3 Special Reports To Make Sure You’re
+    Truly Protected In Any Scenario
+
+</h2>
+</div>
+
+<div class="tsl-paragraphs text-align-left">
+
+<p>The first report you’ll get is…</p>
+
+<p><b>Special Report #1: The Invisible Stockpile</b></p>
+<div class="article-img col-lg-5">
+    <img class="d-block mx-auto img-fluid img-dimension"
+         src="https://www.thestockpilesavior.com/tsl/img/lead/special1.png"
+         alt="Digital formats of The Stockpile Savior"/>
+    <figcaption>Image is for visualization purpose only</figcaption>
+
+</div>
+<p><b>When the <i>Out of Stock</i> signs hit, the mob goes crazy.</b></p>
+
+<p>They’re willing to do anything it takes to get access to the essentials.</p>
+
+<p>Including <b>stealing from those like you who were smart enough to stockpile what they need.</b>
+</p>
+
+<p>That’s why, The Invisible Stockpile shows you <b>how to conceal your stockpile from the public
+        eye.</b></p>
+
+<p>So no one can find your items, <b>even if they manage to break into your home.</b></p>
+
+<p>You’ll discover… </p>
+<ul class="custom-list">
+    <li>The clever way to <b><i>‘camouflage’</i> your stockpile so no one realizes its value</b> -
+        even while looking directly at it…
+    </li>
+
+    <li><b>8 unexpected ways to conceal your stockpile</b> (like hiding items in false plumbing or
+        under the house between floor joists)...
+    </li>
+
+    <li>How to take advantage of outbuildings to <b>hide your supplies without anyone realizing
+            they’re there…</b></li>
+</ul>
+<p>…and much more.</p>
+
+<p>The second report you’ll get is…</p>
+
+<p><b>Special Report #2: How To Stay Safe When Your Rights Are Taken Away</b></p>
+<div class="article-img col-lg-5">
+    <img class="d-block mx-auto img-fluid img-dimension"
+         src="https://www.thestockpilesavior.com/tsl/img/lead/special2.png"
+         alt="Digital formats of The Stockpile Savior"/>
+    <figcaption>Image is for visualization purpose only</figcaption>
+
+</div>
+<p>When the very people hired to protect you turn into your enemies, you need a new plan of
+    action.</p>
+
+<p>That’s why, in this report you’ll discover how to protect your rights, including…</p>
+
+<ul class="custom-list">
+
+    <li>What you must do today to <b>avoid becoming a person of interest</b></li>
+
+    <li><b>5 unexpected items</b> you must stockpile today to prepare your family from the coming
+        anarchy and the increased crime rates from people who take advantage of the situation…
+    </li>
+</ul>
+<p>… and much more!</p>
+
+<p>And finally, the third report you’ll get is…</p>
+
+<p><b>Special Report #3: Riot Survival Tactics From A Hardened Policeman</b></p>
+<div class="article-img col-lg-5">
+    <img class="d-block mx-auto img-fluid img-dimension"
+         src="https://www.thestockpilesavior.com/tsl/img/lead/special3.png"
+         alt="Digital formats of The Stockpile Savior"/>
+    <figcaption>Image is for visualization purpose only</figcaption>
+
+</div>
+<p>The mobs don’t just resort to theft when stores go out of stock.</p>
+
+<p>Riots break out on the streets.</p>
+
+<p><b>Making it unsafe to even step out without risking your life.</b></p>
+
+<p>That’s why it’s essential to know these riot survival tactics - straight from a hardened
+    policeman.</p>
+
+<p>You’ll discover…</p>
+<ul class="custom-list">
+
+    <li>6 things you need to know BEFORE you’re caught in a riot <b>(Forgetting #3 could cost you
+            your life…)</b></li>
+
+    <li>The policeman’s guide to <b>instantly recognizing danger before a riot breaks out &
+            preparing for security…</b></li>
+
+    <li>The <b>most important thing</b> you need to survive a riot (It’s not guns, ammunition or
+        body armor)...
+    </li>
+
+</ul>
+
+<p>…and much more.</p>
+
+<p>As soon as you have these reports, <b>make sure you open them right away…</b></p>
+
+<p>…to be sure you don't miss out.</p>
+
+<p>With these 3 reports you could be <b>one of the few who live in total peace</b> even if there’s a
+    complete disaster outside your windows.</p>
+
+<p>You won’t have to worry about your family going hungry, thirsty or living for weeks in the
+    dark.</p>
+
+<p>Because when you’ve truly covered all your bases…</p>
+
+<p>You won’t get the dreadful feeling of waiting for the other shoe to drop like every other
+    prepper.</p>
+
+<p>That’s what these 3 special reports will do for you.</p>
+
+<p>By now you’re probably wondering…</p>
+
+</div>
+
+<div class="paralax">
+<h2 class="headline-4--banners text-center mobile">
+    "How Much Is This Incredible Package <br>Going To Cost?"
+</h2>
+<h2 class="headline-4--banners text-center desktop">
+    "How Much Is This Incredible Package Going To Cost?"
+</h2>
+</div>
+<div class="tsl-paragraphs text-align-left">
+
+<p>Look, with The Stockpile Savior on your side, you’ll <b>build a reliable stockpile that will help
+        you survive the first 100 Days of any disaster with absolute ease…</b></p>
+
+<p>In a matter of <b>just 10 days.</b></p>
+
+<p>That means you’ll be giving your family the <b>gift of total peace, comfort and safety</b> in a
+    situation where thousands of people are fighting just to get by.</p>
+
+<p>You’ll be <b>doing your duty to them</b> every time you <b>serve a fresh plate of food</b> cooked
+    with items from your stockpile…</p>
+
+<p>Every time you hand them <b>a clean glass of water…</b></p>
+
+<p>And every time you <b>protect them from danger</b> using items in your security stockpile.</p>
+
+<p>Plus, being the person with access to all these items when the rest of the city desperately needs
+    them puts you at a <b>HUGE strategic advantage. </b></p>
+
+<p>A $5 item could end up being worth a hundred dollars overnight at a time like this with people
+    happy to pay you anything just to get their hands on it.</p>
+
+<p>That’s not all. This stockpiling system also <b>SAVES you from wasting thousands of dollars on
+        unnecessary items - just like I did.</b></p>
+
+<p>On the other hand, <b>without The Stockpile Savior…</b></p>
+
+<p>You’ll always be the one desperately looking for what you need.</p>
+
+<p>In fact, <b>you’ll likely be one item away from endless chaos - like I was.</b></p>
+
+<p><u>It almost cost me my daughter’s life - and I wouldn’t want anyone else to face the fear that I
+        did.</u></p>
+
+<p>That’s why when you consider everything that The Stockpile Savior can really do for you…</p>
+
+<p>You can probably understand why my team was adamant that we set the price of this life-saving
+    program at $297…</p>
+
+<p>Which I think is extremely fair too…</p>
+
+<p>In fact, just by preventing you from buying some of the unnecessary items…</p>
+
+<p><b>This program would more than pay for itself.</b></p>
+
+<p>And yet, while I know that we could charge $297 for The Stockpile Savior and I'd still sleep
+    soundly at night…</p>
+
+</div>
+
+<div class="paralax">
+<h2 class="headline-3--banners text-center">I Didn’t Create This Product To Make A Profit
+</h2>
+</div>
+
+<div class="tsl-paragraphs text-align-left">
+
+<p>In fact…</p>
+
+<p><b>I had no plans to release anything to the public at all! </b></p>
+
+<p>This started off as a project to save myself and my family from any more pain.</p>
+
+<p>And my goal has not changed.</p>
+
+<p><b>My goal here is only to help other families live comfortably no matter what the world throws
+        their way.</b></p>
+
+<p>Even if that means <b>only covering the expenses of creating this book with its price tag. And
+        making no profits</b>.</p>
+
+<p>Which is why if you decide to take action right now…..</p>
+
+<p>And say "YES" to this life-saving program…</p>
+
+<p>You won't need to spend $297 …or Even $197…</p>
+
+<p>And why instead, <b>by taking action today…</b></p>
+
+<p>You can order The Stockpile Savior…</p>
+
+<p>And the 3 additional reports: </p>
+<ul class="custom-list">
+    <li>Special Report #1: The Invisible Stockpile</li>
+    <li>Special Report #2: How To Stay Safe When Your Rights Are Taken Away</li>
+    <li>Special Report #3: Riot Survival Tactics From A Hardened Policeman</li>
+</ul>
+<p><b>For just a one-time special offer of $39.</b></p>
+
+<p>The only way to get it is to <b>click the "Add To Cart" button now.</b></p>
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-100">
+        <a href="https://www.digistore24.com/product/536618?custom=56d79030-7ee8-45a1-8a70-adee06b7293c&cid=notset&hide_plans&plan=1089504&ds24tr=d_vsl_desktop" data-info="eyJldmVudF90eXBlIjoiYWRkLXRvLWNhcnQiLCJldmVudF92YWx1ZSI6NDU0MjI3LCJSRUYiOiI1NmQ3OTAzMC03ZWU4LTQ1YTEtOGE3MC1hZGVlMDZiNzI5M2MiLCJzdmJfZXZlbnRfaWQiOiIwYWUxMjE3Ni0yYjg0LTRlNWItYjAxMS0xOTc3MjIyMmU0NDYiLCJnY2xpZCI6IiIsInRlc3RfaWQiOiIiLCJ0a24iOiJkSEpyYVdRdWZITndiR2wwTG54MGRpNThkQzU4WTNBdWZHTndkQzU4WTNBeExueGpjREl1ZkdOd015NThZM0EwTG54amNEVXVmSEJ5WXk1OFkzUXVmR04wTVM1OFkzUXlMbngwWnpFdWZIUm5NaTU4ZEdjekxueDBaelF1ZkhSbk5TNThiR2xrTG54dExueG9ZWE5vTGprMU9UTXpNREV5WmpjMk1URXhNbU15WW1KbVltUXpNVFpsTldWaVpqRSIsInRlc3RfdmFyaWF0aW9uIjoiIiwiX2ZiX3Nlc3Npb25fdGltZSI6MTc3Njc3MTc5MiwiX2ZiX3VhIjoiTW96aWxsYVwvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0XC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWVcLzE0Ny4wLjAuMCBTYWZhcmlcLzUzNy4zNiIsIl9mYl9zcmNfdXJsIjoid3d3LnRoZXN0b2NrcGlsZXNhdmlvci5jb21cL3ZzbFwvaW5kZXgucGhwIiwiX2ZiX3VybF9wYXJhbXMiOiIiLCJfZmJfdGlkIjoibm90Zm91bmQiLCJ2ZW5kb3IiOiJzYXZzdGFzaCIsImFmZmlsaWF0ZSI6InN2YmFmZjAxIiwiX2ZicCI6IiIsIl9mYmMiOiIiLCJfY2lkIjoibm90c2V0In0="
+           target='_blank'
+           onclick="gtag('event', 'click', { 'event_category': 'Buy Button', 'event_label': 'tslbutton'});">
+            <img src="https://www.thestockpilesavior.com/disc1/img/lead/buy-btn-39d-ds2.png"
+                 class="mx-auto d-block img-fluid"/>
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-100">
+        <a href="https://www.digistore24.com/product/536616?custom=56d79030-7ee8-45a1-8a70-adee06b7293c&cid=notset&hide_plans&plan=1089502&ds24tr=p_vsl_desktop" data-info="eyJldmVudF90eXBlIjoiYWRkLXRvLWNhcnQiLCJldmVudF92YWx1ZSI6NDU0MjI3LCJSRUYiOiI1NmQ3OTAzMC03ZWU4LTQ1YTEtOGE3MC1hZGVlMDZiNzI5M2MiLCJzdmJfZXZlbnRfaWQiOiIwYWUxMjE3Ni0yYjg0LTRlNWItYjAxMS0xOTc3MjIyMmU0NDYiLCJnY2xpZCI6IiIsInRlc3RfaWQiOiIiLCJ0a24iOiJkSEpyYVdRdWZITndiR2wwTG54MGRpNThkQzU4WTNBdWZHTndkQzU4WTNBeExueGpjREl1ZkdOd015NThZM0EwTG54amNEVXVmSEJ5WXk1OFkzUXVmR04wTVM1OFkzUXlMbngwWnpFdWZIUm5NaTU4ZEdjekxueDBaelF1ZkhSbk5TNThiR2xrTG54dExueG9ZWE5vTGprMU9UTXpNREV5WmpjMk1URXhNbU15WW1KbVltUXpNVFpsTldWaVpqRSIsInRlc3RfdmFyaWF0aW9uIjoiIiwiX2ZiX3Nlc3Npb25fdGltZSI6MTc3Njc3MTc5MiwiX2ZiX3VhIjoiTW96aWxsYVwvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0XC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWVcLzE0Ny4wLjAuMCBTYWZhcmlcLzUzNy4zNiIsIl9mYl9zcmNfdXJsIjoid3d3LnRoZXN0b2NrcGlsZXNhdmlvci5jb21cL3ZzbFwvaW5kZXgucGhwIiwiX2ZiX3VybF9wYXJhbXMiOiIiLCJfZmJfdGlkIjoibm90Zm91bmQiLCJ2ZW5kb3IiOiJzYXZzdGFzaCIsImFmZmlsaWF0ZSI6InN2YmFmZjAxIiwiX2ZicCI6IiIsIl9mYmMiOiIiLCJfY2lkIjoibm90c2V0In0="
+           target='_blank'
+           onclick="gtag('event', 'click', { 'event_category': 'Buy Button', 'event_label': 'tslbutton'});">
+            <img src="https://www.thestockpilesavior.com/disc1/img/lead/buy-btn-39p-ds.png"
+                 class="mx-auto d-block img-fluid"/>
+        </a>
+    </div>
+</div>
+
+<p>For $39 you'll get immediate digital access to The Stockpile Savior.</p>
+
+<p>And you’ll have a proven roadmap to build your stockpile in just 10 days.</p>
+
+<p>So you can thrive not just survive in the face of ANY disaster.</p>
+
+<p>You can only <b>get The Stockpile Savior here if you click the "Add To Cart" button now.</b></p>
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-100">
+        <a href="https://www.digistore24.com/product/536618?custom=56d79030-7ee8-45a1-8a70-adee06b7293c&cid=notset&hide_plans&plan=1089504&ds24tr=d_vsl_desktop" data-info="eyJldmVudF90eXBlIjoiYWRkLXRvLWNhcnQiLCJldmVudF92YWx1ZSI6NDU0MjI3LCJSRUYiOiI1NmQ3OTAzMC03ZWU4LTQ1YTEtOGE3MC1hZGVlMDZiNzI5M2MiLCJzdmJfZXZlbnRfaWQiOiIwYWUxMjE3Ni0yYjg0LTRlNWItYjAxMS0xOTc3MjIyMmU0NDYiLCJnY2xpZCI6IiIsInRlc3RfaWQiOiIiLCJ0a24iOiJkSEpyYVdRdWZITndiR2wwTG54MGRpNThkQzU4WTNBdWZHTndkQzU4WTNBeExueGpjREl1ZkdOd015NThZM0EwTG54amNEVXVmSEJ5WXk1OFkzUXVmR04wTVM1OFkzUXlMbngwWnpFdWZIUm5NaTU4ZEdjekxueDBaelF1ZkhSbk5TNThiR2xrTG54dExueG9ZWE5vTGprMU9UTXpNREV5WmpjMk1URXhNbU15WW1KbVltUXpNVFpsTldWaVpqRSIsInRlc3RfdmFyaWF0aW9uIjoiIiwiX2ZiX3Nlc3Npb25fdGltZSI6MTc3Njc3MTc5MiwiX2ZiX3VhIjoiTW96aWxsYVwvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0XC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWVcLzE0Ny4wLjAuMCBTYWZhcmlcLzUzNy4zNiIsIl9mYl9zcmNfdXJsIjoid3d3LnRoZXN0b2NrcGlsZXNhdmlvci5jb21cL3ZzbFwvaW5kZXgucGhwIiwiX2ZiX3VybF9wYXJhbXMiOiIiLCJfZmJfdGlkIjoibm90Zm91bmQiLCJ2ZW5kb3IiOiJzYXZzdGFzaCIsImFmZmlsaWF0ZSI6InN2YmFmZjAxIiwiX2ZicCI6IiIsIl9mYmMiOiIiLCJfY2lkIjoibm90c2V0In0="
+           target='_blank'
+           onclick="gtag('event', 'click', { 'event_category': 'Buy Button', 'event_label': 'tslbutton'});">
+            <img src="https://www.thestockpilesavior.com/disc1/img/lead/buy-btn-39d-ds2.png"
+                 class="mx-auto d-block img-fluid"/>
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-100">
+        <a href="https://www.digistore24.com/product/536616?custom=56d79030-7ee8-45a1-8a70-adee06b7293c&cid=notset&hide_plans&plan=1089502&ds24tr=p_vsl_desktop" data-info="eyJldmVudF90eXBlIjoiYWRkLXRvLWNhcnQiLCJldmVudF92YWx1ZSI6NDU0MjI3LCJSRUYiOiI1NmQ3OTAzMC03ZWU4LTQ1YTEtOGE3MC1hZGVlMDZiNzI5M2MiLCJzdmJfZXZlbnRfaWQiOiIwYWUxMjE3Ni0yYjg0LTRlNWItYjAxMS0xOTc3MjIyMmU0NDYiLCJnY2xpZCI6IiIsInRlc3RfaWQiOiIiLCJ0a24iOiJkSEpyYVdRdWZITndiR2wwTG54MGRpNThkQzU4WTNBdWZHTndkQzU4WTNBeExueGpjREl1ZkdOd015NThZM0EwTG54amNEVXVmSEJ5WXk1OFkzUXVmR04wTVM1OFkzUXlMbngwWnpFdWZIUm5NaTU4ZEdjekxueDBaelF1ZkhSbk5TNThiR2xrTG54dExueG9ZWE5vTGprMU9UTXpNREV5WmpjMk1URXhNbU15WW1KbVltUXpNVFpsTldWaVpqRSIsInRlc3RfdmFyaWF0aW9uIjoiIiwiX2ZiX3Nlc3Npb25fdGltZSI6MTc3Njc3MTc5MiwiX2ZiX3VhIjoiTW96aWxsYVwvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0XC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWVcLzE0Ny4wLjAuMCBTYWZhcmlcLzUzNy4zNiIsIl9mYl9zcmNfdXJsIjoid3d3LnRoZXN0b2NrcGlsZXNhdmlvci5jb21cL3ZzbFwvaW5kZXgucGhwIiwiX2ZiX3VybF9wYXJhbXMiOiIiLCJfZmJfdGlkIjoibm90Zm91bmQiLCJ2ZW5kb3IiOiJzYXZzdGFzaCIsImFmZmlsaWF0ZSI6InN2YmFmZjAxIiwiX2ZicCI6IiIsIl9mYmMiOiIiLCJfY2lkIjoibm90c2V0In0="
+           target='_blank'
+           onclick="gtag('event', 'click', { 'event_category': 'Buy Button', 'event_label': 'tslbutton'});">
+            <img src="https://www.thestockpilesavior.com/disc1/img/lead/buy-btn-39p-ds.png"
+                 class="mx-auto d-block img-fluid"/>
+        </a>
+    </div>
+</div>
+<p>But really, the price doesn't even matter… because it comes with…</p>
+
+</div>
+
+<div class="paralax">
+<h2 class="headline-3--banners text-center">Our Ironclad 60 Day, No Questions Asked Money-Back
+    Guarantee
+</h2>
+</div>
+
+<div class="tsl-paragraphs text-align-left">
+<div class="article-img col-lg-5">
+    <img class="d-block mx-auto img-fluid"
+         src="https://www.thestockpilesavior.com/tsl/img/60-badge.webp"
+         alt="Digital formats of The Stockpile Savior"/>
+</div>
+
+<p>We are absolutely certain that this will help you and your family thrive, not just survive in the
+    face of any disaster.</p>
+
+<p>But we don’t want you to just take our word for it.</p>
+
+<p><b>We want you to see what this program can do for you yourself.</b></p>
+
+<p>That's why we want to offer you the opportunity to try The Stockpile Savior for yourself for the
+    next 60 days…</p>
+
+<p><b>With absolutely no financial risk whatsoever.</b></p>
+
+<p>It works like this…</p>
+
+<p>Simply <b>click on the big golden button that says "ADD to CART"…</b></p>
+
+<p>And order your own digital copy of The Stockpile Savior right now.</p>
+
+<p>Then, you'll have immediate access to the lifesaving information in The Stockpile Savior…</p>
+
+<p>I want you to check out the valuable information inside this system and put it into action.</p>
+
+<p>We are confident that once you do this, you'll have what you need to know to safeguard your
+    family from the first 100 days and beyond of ANY disaster…</p>
+
+<p>…In just 10 days.</p>
+
+<p>We've made this as newbie-friendly as we could.</p>
+
+<p>But If you're not blown away by the knowledge revealed in it...</p>
+
+<p>And if you're not absolutely <b>thrilled with how easy this makes it for you to build your
+        ultimate survival stockpile…</b></p>
+
+<p>Then simply send us an email within 60 days, and I'll send you your money back no questions
+    asked.</p>
+
+<p>The reason I’m offering this guarantee is because I have no doubt in my mind that you’ll be
+    shocked to <b>see how easy it really is to prepare your family with The Stockpile Savior… </b>
+</p>
+
+<p>Also because we like to do business the "right" way... </p>
+
+<p>And if we're not providing you with TREMENDOUS value then we don't deserve your money.</p>
+
+<p>This way you can see for yourself how great this program is without risking a thing.</p>
+
+<p>So go ahead and <b>click the big button below</b> and you'll enter directly into a secure order
+    form.</p>
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-100">
+        <a href="https://www.digistore24.com/product/536618?custom=56d79030-7ee8-45a1-8a70-adee06b7293c&cid=notset&hide_plans&plan=1089504&ds24tr=d_vsl_desktop" data-info="eyJldmVudF90eXBlIjoiYWRkLXRvLWNhcnQiLCJldmVudF92YWx1ZSI6NDU0MjI3LCJSRUYiOiI1NmQ3OTAzMC03ZWU4LTQ1YTEtOGE3MC1hZGVlMDZiNzI5M2MiLCJzdmJfZXZlbnRfaWQiOiIwYWUxMjE3Ni0yYjg0LTRlNWItYjAxMS0xOTc3MjIyMmU0NDYiLCJnY2xpZCI6IiIsInRlc3RfaWQiOiIiLCJ0a24iOiJkSEpyYVdRdWZITndiR2wwTG54MGRpNThkQzU4WTNBdWZHTndkQzU4WTNBeExueGpjREl1ZkdOd015NThZM0EwTG54amNEVXVmSEJ5WXk1OFkzUXVmR04wTVM1OFkzUXlMbngwWnpFdWZIUm5NaTU4ZEdjekxueDBaelF1ZkhSbk5TNThiR2xrTG54dExueG9ZWE5vTGprMU9UTXpNREV5WmpjMk1URXhNbU15WW1KbVltUXpNVFpsTldWaVpqRSIsInRlc3RfdmFyaWF0aW9uIjoiIiwiX2ZiX3Nlc3Npb25fdGltZSI6MTc3Njc3MTc5MiwiX2ZiX3VhIjoiTW96aWxsYVwvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0XC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWVcLzE0Ny4wLjAuMCBTYWZhcmlcLzUzNy4zNiIsIl9mYl9zcmNfdXJsIjoid3d3LnRoZXN0b2NrcGlsZXNhdmlvci5jb21cL3ZzbFwvaW5kZXgucGhwIiwiX2ZiX3VybF9wYXJhbXMiOiIiLCJfZmJfdGlkIjoibm90Zm91bmQiLCJ2ZW5kb3IiOiJzYXZzdGFzaCIsImFmZmlsaWF0ZSI6InN2YmFmZjAxIiwiX2ZicCI6IiIsIl9mYmMiOiIiLCJfY2lkIjoibm90c2V0In0="
+           target='_blank'
+           onclick="gtag('event', 'click', { 'event_category': 'Buy Button', 'event_label': 'tslbutton'});">
+            <img src="https://www.thestockpilesavior.com/disc1/img/lead/buy-btn-39d-ds2.png"
+                 class="mx-auto d-block img-fluid"/>
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-100">
+        <a href="https://www.digistore24.com/product/536616?custom=56d79030-7ee8-45a1-8a70-adee06b7293c&cid=notset&hide_plans&plan=1089502&ds24tr=p_vsl_desktop" data-info="eyJldmVudF90eXBlIjoiYWRkLXRvLWNhcnQiLCJldmVudF92YWx1ZSI6NDU0MjI3LCJSRUYiOiI1NmQ3OTAzMC03ZWU4LTQ1YTEtOGE3MC1hZGVlMDZiNzI5M2MiLCJzdmJfZXZlbnRfaWQiOiIwYWUxMjE3Ni0yYjg0LTRlNWItYjAxMS0xOTc3MjIyMmU0NDYiLCJnY2xpZCI6IiIsInRlc3RfaWQiOiIiLCJ0a24iOiJkSEpyYVdRdWZITndiR2wwTG54MGRpNThkQzU4WTNBdWZHTndkQzU4WTNBeExueGpjREl1ZkdOd015NThZM0EwTG54amNEVXVmSEJ5WXk1OFkzUXVmR04wTVM1OFkzUXlMbngwWnpFdWZIUm5NaTU4ZEdjekxueDBaelF1ZkhSbk5TNThiR2xrTG54dExueG9ZWE5vTGprMU9UTXpNREV5WmpjMk1URXhNbU15WW1KbVltUXpNVFpsTldWaVpqRSIsInRlc3RfdmFyaWF0aW9uIjoiIiwiX2ZiX3Nlc3Npb25fdGltZSI6MTc3Njc3MTc5MiwiX2ZiX3VhIjoiTW96aWxsYVwvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0XC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWVcLzE0Ny4wLjAuMCBTYWZhcmlcLzUzNy4zNiIsIl9mYl9zcmNfdXJsIjoid3d3LnRoZXN0b2NrcGlsZXNhdmlvci5jb21cL3ZzbFwvaW5kZXgucGhwIiwiX2ZiX3VybF9wYXJhbXMiOiIiLCJfZmJfdGlkIjoibm90Zm91bmQiLCJ2ZW5kb3IiOiJzYXZzdGFzaCIsImFmZmlsaWF0ZSI6InN2YmFmZjAxIiwiX2ZicCI6IiIsIl9mYmMiOiIiLCJfY2lkIjoibm90c2V0In0="
+           target='_blank'
+           onclick="gtag('event', 'click', { 'event_category': 'Buy Button', 'event_label': 'tslbutton'});">
+            <img src="https://www.thestockpilesavior.com/disc1/img/lead/buy-btn-39p-ds.png"
+                 class="mx-auto d-block img-fluid"/>
+        </a>
+    </div>
+</div>
+</div>
+
+<div class="paralax">
+<h2 class="headline-3--banners text-center">You’ve Reached The Point Where Your Family’s Future
+    Relies On The Decision You Make Now
+</h2>
+</div>
+
+<div class="tsl-paragraphs text-align-left">
+
+<p>The way I see it, you have 3 options now.</p>
+
+<p>The first option is to <b>do nothing.</b></p>
+
+<p>And <b>leave your family’s survival up to chance.</b></p>
+
+<p>Look, I hope that none of these ‘<i>Survival Black Swans</i>’ scenarios become a reality.</p>
+
+<p>I hope that you don’t end up needing any of this in the future. </p>
+
+<p>But you have to remember that <b>hope is not a strategy.</b></p>
+
+<p><b>Buying The Stockpile Savior today is like buying insurance for the future.</b></p>
+
+<p>You don’t do it because you think something bad is going to happen.</p>
+
+<p>You do it because you’ll <b>sleep easier at night knowing that if something does happen, your
+        family is covered.</b></p>
+
+<p>That brings me to my second option.</p>
+
+<p>Which is to <b>try to do this yourself. </b></p>
+
+<p>I did, for years, and you saw where it got me. </p>
+
+<p><b>Terrified to find out whether my mistake was going to cost me my daughter’s life</b>.</p>
+
+<p>I wouldn’t wish that kind of pain on anyone.</p>
+
+<p>Or your <b>third option is to take a chance with The Stockpile Savior today.</b></p>
+
+<p>Simply follow the instructions you get every morning.</p>
+
+<p>And <u>10 days from now, you’ll have a bulletproof stockpile ready to help you survive ANY
+        disaster.</u></p>
+
+<p>Without spending hours on research, wasting thousands of dollars or losing any sleep worrying
+    about what you need to ensure your family’s survival.</p>
+
+<p>I want you to take a moment and think about the disasters that have already been set in motion in
+    the US.</p>
+
+<p>When they inevitably hit, <b>it’ll be too late to prepare.</b></p>
+
+<p>Most of the important stuff will be <b>flying off the shelves…</b></p>
+
+<p>And <b>by the time you realize you need something essential, it will be gone. </b></p>
+
+<p>That’s why it’s absolutely crucial that you <b>don’t waste any more time.</b></p>
+
+<p>And that you <b>take action now</b> to ensure your family’s survival.</p>
+
+<p><b>Press the button below now</b> and I'll meet you on the other side.</p>
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-100">
+        <a href="https://www.digistore24.com/product/536618?custom=56d79030-7ee8-45a1-8a70-adee06b7293c&cid=notset&hide_plans&plan=1089504&ds24tr=d_vsl_desktop" data-info="eyJldmVudF90eXBlIjoiYWRkLXRvLWNhcnQiLCJldmVudF92YWx1ZSI6NDU0MjI3LCJSRUYiOiI1NmQ3OTAzMC03ZWU4LTQ1YTEtOGE3MC1hZGVlMDZiNzI5M2MiLCJzdmJfZXZlbnRfaWQiOiIwYWUxMjE3Ni0yYjg0LTRlNWItYjAxMS0xOTc3MjIyMmU0NDYiLCJnY2xpZCI6IiIsInRlc3RfaWQiOiIiLCJ0a24iOiJkSEpyYVdRdWZITndiR2wwTG54MGRpNThkQzU4WTNBdWZHTndkQzU4WTNBeExueGpjREl1ZkdOd015NThZM0EwTG54amNEVXVmSEJ5WXk1OFkzUXVmR04wTVM1OFkzUXlMbngwWnpFdWZIUm5NaTU4ZEdjekxueDBaelF1ZkhSbk5TNThiR2xrTG54dExueG9ZWE5vTGprMU9UTXpNREV5WmpjMk1URXhNbU15WW1KbVltUXpNVFpsTldWaVpqRSIsInRlc3RfdmFyaWF0aW9uIjoiIiwiX2ZiX3Nlc3Npb25fdGltZSI6MTc3Njc3MTc5MiwiX2ZiX3VhIjoiTW96aWxsYVwvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0XC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWVcLzE0Ny4wLjAuMCBTYWZhcmlcLzUzNy4zNiIsIl9mYl9zcmNfdXJsIjoid3d3LnRoZXN0b2NrcGlsZXNhdmlvci5jb21cL3ZzbFwvaW5kZXgucGhwIiwiX2ZiX3VybF9wYXJhbXMiOiIiLCJfZmJfdGlkIjoibm90Zm91bmQiLCJ2ZW5kb3IiOiJzYXZzdGFzaCIsImFmZmlsaWF0ZSI6InN2YmFmZjAxIiwiX2ZicCI6IiIsIl9mYmMiOiIiLCJfY2lkIjoibm90c2V0In0="
+           target='_blank'
+           onclick="gtag('event', 'click', { 'event_category': 'Buy Button', 'event_label': 'tslbutton'});">
+            <img src="https://www.thestockpilesavior.com/disc1/img/lead/buy-btn-39d-ds2.png"
+                 class="mx-auto d-block img-fluid"/>
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-top-100">
+        <a href="https://www.digistore24.com/product/536616?custom=56d79030-7ee8-45a1-8a70-adee06b7293c&cid=notset&hide_plans&plan=1089502&ds24tr=p_vsl_desktop" data-info="eyJldmVudF90eXBlIjoiYWRkLXRvLWNhcnQiLCJldmVudF92YWx1ZSI6NDU0MjI3LCJSRUYiOiI1NmQ3OTAzMC03ZWU4LTQ1YTEtOGE3MC1hZGVlMDZiNzI5M2MiLCJzdmJfZXZlbnRfaWQiOiIwYWUxMjE3Ni0yYjg0LTRlNWItYjAxMS0xOTc3MjIyMmU0NDYiLCJnY2xpZCI6IiIsInRlc3RfaWQiOiIiLCJ0a24iOiJkSEpyYVdRdWZITndiR2wwTG54MGRpNThkQzU4WTNBdWZHTndkQzU4WTNBeExueGpjREl1ZkdOd015NThZM0EwTG54amNEVXVmSEJ5WXk1OFkzUXVmR04wTVM1OFkzUXlMbngwWnpFdWZIUm5NaTU4ZEdjekxueDBaelF1ZkhSbk5TNThiR2xrTG54dExueG9ZWE5vTGprMU9UTXpNREV5WmpjMk1URXhNbU15WW1KbVltUXpNVFpsTldWaVpqRSIsInRlc3RfdmFyaWF0aW9uIjoiIiwiX2ZiX3Nlc3Npb25fdGltZSI6MTc3Njc3MTc5MiwiX2ZiX3VhIjoiTW96aWxsYVwvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0XC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWVcLzE0Ny4wLjAuMCBTYWZhcmlcLzUzNy4zNiIsIl9mYl9zcmNfdXJsIjoid3d3LnRoZXN0b2NrcGlsZXNhdmlvci5jb21cL3ZzbFwvaW5kZXgucGhwIiwiX2ZiX3VybF9wYXJhbXMiOiIiLCJfZmJfdGlkIjoibm90Zm91bmQiLCJ2ZW5kb3IiOiJzYXZzdGFzaCIsImFmZmlsaWF0ZSI6InN2YmFmZjAxIiwiX2ZicCI6IiIsIl9mYmMiOiIiLCJfY2lkIjoibm90c2V0In0="
+           target='_blank'
+           onclick="gtag('event', 'click', { 'event_category': 'Buy Button', 'event_label': 'tslbutton'});">
+            <img src="https://www.thestockpilesavior.com/disc1/img/lead/buy-btn-39p-ds.png"
+                 class="mx-auto d-block img-fluid"/>
+        </a>
+    </div>
+</div>
+</div>                        </div>
+                    </div>
+                
+
+                <!-- End of TSL Section -->
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="padding-row"></div>
+<!-- Code for action_div sibling -->
+<script defer>
+        document.getElementById("toggleRead").addEventListener("click", function() {
+            document.getElementById("sectionRead").style.display = "block";
+            this.style.display = "none";
+        });
+
+        (function() {
+            let originalShowBuyButton = svb.utils.showBuyButton;
+
+            svb.utils.showBuyButton = function() {
+                // Execute the original function
+                originalShowBuyButton.apply(this, arguments);
+
+                // Now, perform our action
+                let el = document.getElementById('action_div');
+                if (el && el.style.display === 'block') {
+                    let itemsToShow = document.querySelectorAll('.action_div_sibling');
+                    itemsToShow.forEach(item => {
+                        item.style.display = 'block';
+                    });
+
+                    // Check if sectionRead is visible and hide toggleRead if it is
+                    let sectionRead = document.getElementById('sectionRead');
+                    if (sectionRead && sectionRead.style.display === 'block') {
+                        document.getElementById('toggleRead').style.display = 'none';
+                    }
+                }
+            };
+        })();
+
+        function getCookie(name) {
+            const value = "; " + document.cookie;
+            const parts = value.split("; " + name + "=");
+            if (parts.length === 2) return parts.pop().split(";").shift();
+        }
+
+        if (getCookie("returnvisitor")) {
+            $('#toggleRead').hide();
+        }
+    </script>
+    <!-- FOOTER SECTION -->
+    <head>
+    <link href="https://www.thestockpilesavior.com//statics/css/footer_styles.css" rel="stylesheet"
+        type="text/css" />
+
+    <style>
+        @media (max-width: 576px) {
+            .footer-flex {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+    </style>
+</head>
+<div class="row bgr-color">
+    <div class="container footer-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-centered text-center footer-flex">
+                <p class="title text-center">The Stockpile Savior</p>
+                <a target="_blank" href="https://www.thestockpilesavior.com/statics/disclaimer.php"
+                    onclick="gtag('event', 'click', {'event_category': 'Footer-Btns', 'event_label': 'Disclaimer Button'});"
+                    class="menuitem" title="disclaimer">DISCLAIMER</a>
+                <a target="_blank" href="https://www.thestockpilesavior.com/statics/termsandconditions.php"
+                    onclick="gtag('event', 'click', {'event_category': 'Footer-Btns', 'event_label': 'Terms and Conditions Button'});"
+                    class="menuitem" title="Terms and Conditions">TERMS AND CONDITIONS</a>
+                <a target="_blank" href="https://www.thestockpilesavior.com/statics/privacy.php"
+                    onclick="gtag('event', 'click', {'event_category': 'Footer-Btns', 'event_label': 'Privacy Button'});"
+                    class="menuitem" title="Privacy">PRIVACY</a>
+                <a target="_blank" href="https://www.thestockpilesavior.com/statics/returnsandrefundspolicy.php"
+                    onclick="gtag('event', 'click', {'event_category': 'Footer-Btns', 'event_label': 'Refund Policy Button'});"
+                    class="menuitem" title="Refund Policy">REFUND POLICY</a>
+                <a target="_blank" href="https://www.thestockpilesavior.com/statics/contact.php" class="menuitem"
+                    onclick="gtag('event', 'click', {'event_category': 'Footer-Btns', 'event_label': 'Contact Button'});"
+                    title="Contact Us">CONTACT</a>
+                <a href="https://www.survivopedia.com/ccpa/" target="_blank" class="menuitem" onclick="StopExit=true;"
+                    title="Send a request through the CCPA form, it will open in a new window">DO NOT SELL MY
+                    INFO</a>
+            </div>
+            <div class="col-centered text-center disclaimer">
+                <p class="disclaimer-p text-center">This site is NOT a part of the Facebook website or Facebook Inc.
+                    Additionally, this site is NOT endorsed by Facebook in any way.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-delimiter"></div>
+    <div class="container copy-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-centered text-center">
+                <p class="copy text-center">Copyright &copy thestockpilesavior.com. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Begin of Digistore24 Trusted Badge Code -->
+    <script type="text/javascript" src="https://www.digistore24.com/trusted-badge/26209/9uah9TCOKZwsexs/salespage">
+    </script>
+    <!-- End of Digistore24 Trusted Badge Code -->
+
+    <script>
+var eventTimeID = "svb2." + Math.floor(Date.now() / 1000) + "." + '56d79030-7ee8-45a1-8a70-adee06b7293c';
+//gather all links and observe the click event
+function observeLinks() {
+    //all cart links
+    var pageBuyLinks = document.querySelectorAll('a[data-info]');
+    //if any cart links found
+    if (pageBuyLinks.length >= 1) {
+        pageBuyLinks.forEach(function(el) {
+            el.addEventListener('click', sendExtraInfoOnClick);
+        });
+    } else {
+        //no cart links matching our criteria found. log message
+        console.log('no cartlinks found', pageBuyLinks);
+    }
+    //also send this data when the page loads
+    sendData("eyJldmVudF90eXBlIjoicGFnZXZpZXciLCJldmVudF92YWx1ZSI6ImxvYWQiLCJSRUYiOiI1NmQ3OTAzMC03ZWU4LTQ1YTEtOGE3MC1hZGVlMDZiNzI5M2MiLCJzdmJfZXZlbnRfaWQiOiIwYWUxMjE3Ni0yYjg0LTRlNWItYjAxMS0xOTc3MjIyMmU0NDYiLCJnY2xpZCI6IiIsInRlc3RfaWQiOiIiLCJ0a24iOiJkSEpyYVdRdWZITndiR2wwTG54MGRpNThkQzU4WTNBdWZHTndkQzU4WTNBeExueGpjREl1ZkdOd015NThZM0EwTG54amNEVXVmSEJ5WXk1OFkzUXVmR04wTVM1OFkzUXlMbngwWnpFdWZIUm5NaTU4ZEdjekxueDBaelF1ZkhSbk5TNThiR2xrTG54dExueG9ZWE5vTGprMU9UTXpNREV5WmpjMk1URXhNbU15WW1KbVltUXpNVFpsTldWaVpqRSIsInRlc3RfdmFyaWF0aW9uIjoiIiwiX2ZiX3Nlc3Npb25fdGltZSI6MTc3Njc3MTc5MiwiX2ZiX3VhIjoiTW96aWxsYVwvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0XC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWVcLzE0Ny4wLjAuMCBTYWZhcmlcLzUzNy4zNiIsIl9mYl9zcmNfdXJsIjoid3d3LnRoZXN0b2NrcGlsZXNhdmlvci5jb21cL3ZzbFwvaW5kZXgucGhwIiwiX2ZiX3VybF9wYXJhbXMiOiIiLCJfZmJfdGlkIjoibm90Zm91bmQiLCJ2ZW5kb3IiOiJzYXZzdGFzaCIsImFmZmlsaWF0ZSI6InN2YmFmZjAxIiwiX2ZicCI6IiIsIl9mYmMiOiIiLCJfY2lkIjoibm90c2V0In0=");}
+//what to do when a link is clicked
+function sendExtraInfoOnClick(evn) {
+    //click on img or on link or p 
+    var elm;
+    if ((evn.target.tagName.toLowerCase() == 'img')) {
+        elm = evn.target.parentElement;
+    } else {
+        if (evn.target.tagName.toLowerCase() == 'a') {
+            elm = evn.target;
+        } else if (evn.target.tagName.toLowerCase() == 'p') {
+            elm = evn.target.parentElement.parentElement;
+        } else {
+            //unknown?
+            console.log('click on unknown element');
+            //stop script. return true in case there is a link, doing so we make sure the default behaviour will be applied
+            return true;
+        }
+    }
+    //stop the default browser behaviour when a link is clicked
+    evn.preventDefault();
+    let eventTime = Math.floor(Date.now() / 1000);
+    eventTimeID = "svb1." + eventTime + "." + '56d79030-7ee8-45a1-8a70-adee06b7293c';
+    console.log(eventTimeID);
+    //send data
+    sendData(elm.dataset.info);
+    //send ga event
+    gtag("event", "begin_checkout", {
+        currency: "USD",
+        value: 39,
+        items: [{
+            item_name: "The Stockpile Savior",
+            price: 39,
+            quantity: 1
+        }]
+    });
+    //send ga event
+    gtag('event', 'click', {
+        'event_category': 'Buy Button',
+        'event_label': 'button'
+    });
+    //fbq('track', 'InitiateCheckout', {value: 37, currency: 'USD'},{eventID: eventTimeID},{external_id: '56d79030-7ee8-45a1-8a70-adee06b7293c'});
+    //go to link's address
+    //window.location=elm.href;
+    //open link in a new tab
+    window.open(elm.href, '_blank');
+}
+//send this string of data to a hardcoded endpoint
+function sendData(data) {
+    //send fb event
+    //create payload object
+    var dataString = new FormData();
+    dataString.append('payload', data);
+    dataString.append('event_time_id', eventTimeID);
+    //send data
+    var ajx = new XMLHttpRequest();
+    ajx.open('POST', 'https://dev.svbcompass.com/api/v1/addtocartevents', true);
+    ajx.send(dataString);
+}
+//after the dom is done loading, execute this function one time
+document.addEventListener('DOMContentLoaded', observeLinks);
+</script>
+<!-- Loaded aside from 3.4.1 (see header_allpages.php) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"f6efac3cc08842af906a19fac407d067","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</html>

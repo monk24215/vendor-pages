@@ -1,0 +1,588 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Space Energy - Text Version</title>
+
+<style type="text/css">
+
+
+
+
+
+
+
+<!--
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	color: #000000;
+	margin: 0;
+	display: block;
+}
+
+body {
+	background: url(images/background.jpg) center top;
+	background-repeat: repeat-x;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #fff;
+	background-image: url(images/bg.jpg);
+}
+
+
+
+}
+
+
+
+.smallfont1 {
+    font-size: 18px;
+    color: #00769D;
+	
+h1, h2, h3, h4, h5, h6 {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	color: #cc0000;
+	display: block;
+}
+
+}
+
+.linespace {
+
+	font-size: 9px;
+
+}
+
+.footerfont {
+
+	color: #CCC;
+
+	font-size: 12px;
+
+}
+
+.footerfont2 {
+
+	text-align: center;
+
+	font-size: 14px;
+
+	font-weight: bold;
+
+	color: #333;
+
+}
+
+.bigred {font-size: 24px;
+
+	color: #F00;
+
+	font-family: Impact, Calibri, "Lucida Sans";
+
+}
+
+.redbold2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #F00;
+}
+
+.smalltext2 {
+	font-size: 12px;
+	font-style: italic;
+	color: #000;
+	font-weight: normal;
+}
+
+.bigwhite {
+
+	font-family: Impact, Calibri, "Lucida Sans";
+
+	font-size: 30px;
+
+	color: #FFF;
+
+}
+
+
+
+
+
+
+
+.more {
+
+	display: none;
+
+	padding-left:10px;
+
+	padding-right:10px;
+
+	border-top: 1px solid #666;
+
+	border-bottom: 1px solid #666; }
+
+a.showLink, a.hideLink {
+
+	text-decoration: none;
+
+	color: #36f;
+
+	padding-left: 8px;
+
+	background: transparent url('down.gif') no-repeat left; }
+
+a.hideLink {
+
+	background: transparent url('up.gif') no-repeat left; }
+
+a.showLink:hover, a.hideLink:hover {
+
+	border-bottom: 1px dotted #36f; }
+.link {
+	font-weight: bold;
+}
+
+
+
+
+
+-->
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+		<script type="text/javascript" src="bioep_modal.js"></script>
+
+		<script type="text/javascript">
+			bioEp.init({
+				
+				html: '<div id="bio_ep_close" align="center" style="width: 20px; height: 20px;">X</div><h1 style="text-align: center; font-size: 26px; padding-top: 20px; color: #AB0002;"> WAIT! Get $13 Discount Right Now!</h1><p style="font-size:20px;font-weight: bold;margin-left:20px; margin-right: 20px; padding-top: 20px; padding-bottom: 20px;" align="center">Click the Button Below Right Now And Save $13 On The Entire "Space Generator" System.</p><a href="bestdeal.php"><div id="bio_ep_close1">Get Your Discount Here</div></a>',
+				cookieExp: 0
+			});
+		</script>
+
+</head>
+
+
+
+<body >
+
+
+
+<div align="center"><img src="images2/headline-tsl.jpg" width="745" height="125" alt=""/> </div>
+
+<div style=" background-color:#fff; margin-left:auto; margin-right:auto; width:726px; height:auto; padding-left:10px; padding-right:10px; ">
+
+  <div style="width: 720px; padding-top: 11px; text-align: center; color: #000000; font-size: 18px;" >
+  
+<p>Warning!<br />
+</p>
+<p>This video contains  highly controversial information that the Big Energy Companies does not want  you to see.<br />
+  </p>
+<p>This presentation saves hundreds  of families each time it is shown...<br />
+  </p>
+<p>All the information in  it is scientifically verified...<br />
+  </p>
+<p>Yet, some of the largest  Energy companies in the world are threatening Mr. Randall with lawsuits if he  keeps his presentation online.<br />
+  </p>
+<p>In light of the above we  cannot guarantee this video will remain up long.<br />
+  </p>
+<p>It could be removed next  week, today or even before you even finish watching it...<br />
+  </p>
+<p>So handle your mouse  with care. One accidental click could mean missing out on information that  could save your life... Or the life of a loved one.<br />
+  </p>
+<p>Raise the volume high  and take rigorous notes...Because if you simply watch until the end and do what  it says...<br />
+  </p>
+<p>You will no longer be  dependent from the Power Companies 7 days from now.<br />
+  </p>
+<p>Enjoy the presentation.<br />
+  </p>
+<p>Hi.<br />
+  </p>
+<p>My name is Toby Randall. <br />
+  </p>
+<p>It all started 2 years  ago when I was called by the chief-editor of the newspaper I work, in his office.<br />
+  </p>
+<p>He told me that I need  to go to India, to make a report about the poverty in the villages of this  country.<br />
+  </p>
+<p>Next day, after a twelve  hours flight I arrived at the Indira Gandhi International Airport of Delhi.<br />
+  </p>
+<p>Immediately my  connection picked me up with his cab, and made the 6 hours drive to the Indian  village where I was supposed to do the report.<br />
+  </p>
+<p>When we arrived there,  it was already evening. <br />
+  </p>
+<p>The poverty of the  village was everywhere. Makeshift and reed houses without windows, Collapsed homes, kids were wandering  streets without clothes.<br />
+  </p>
+<p>But one thing caught my attention. <br />
+  </p>
+<p>Every small street and  every house in that village (no matter how poor it was) was illuminated.<br />
+  </p>
+<p>I immediately asked my  guide, if they were so poor, how they have electricity in the village?<br />
+  </p>
+<p>He called a villager and  asked him.<br />
+  </p>
+<p>The man said that a  professor from the neighboring city brought them a strange machine that  produces electricity for the whole village.<br />
+  </p>
+<p>I asked my guide to tell  him to show me that machine.<br />
+  </p>
+<p>He started to laugh and agreed to show me the source of electricity from  their village. Then he took me to show the most  simple thing. <br />
+  </p>
+<p>At first I was thinking at some expensive  solar panels with battery banks or some wind turbines.<br />
+  </p>
+<p>That`s when I saw some  lights flickering inside of a warehouse.</p>
+<p><img src="images/RLG_Experimental.jpg" width="416" height="306" alt=""/><br />
+</p>
+<p>The man opened the door,  and then I saw something like a spinning engine, it was very silent, with some  cables coming out of it and were feeding that village with electricity. It was  something I never saw before.<br />
+  </p>
+<p>I immediately took my  camera and started taking some pictures of that invention.<br />
+  </p>
+<p>In a few moments several  villagers gathered and began to look weird to me, as if it was something normal  for them, and I would have discovered the electricity for the first time.<br />
+  </p>
+<p>The villagers love the power. One villager shyly ushered me into his  single-room home to see his light bulb. </p>
+<p><img src="images/MDG-Energy-NGO-Teri-Indi-017.jpg" width="460" height="276" alt=""/></p>
+<p>&ldquo;We had a kerosene lamp before, but  this is exciting and costs no money,&rdquo; he said. Pride of&nbsp;place in the room went to a  treadle sewing machine that his wife can now work in the evenings, making and  mending clothes.<br />
+  <br />
+  Other women said they now spent their evenings weaving date-palm leaves into  the mats that they sell in local markets. </p>
+<p><img src="images/Smart-Power-for-Rural-Development-5.jpg" width="460" height="308" alt=""/></p>
+<p>Next door, a man proudly spoke of his daughter, Kumari, now in 10th grade  at a school some miles away, who can study in the evening by the light of the  bulb.</p>
+<p><img src="images/community-case-study-2.jpg" width="460" height="203" alt=""/></p>
+<p>More  hopefully, I watched a grinding machine — by far the most power-hungry piece of  equipment in the village — turn pellets of locally-grown turmeric, a bright  yellow spice, into a powder that was weighed by another machine, and sealed by  a third into bags for sale in local markets. The grinding was done not by  villagers but by the same professor from outside the village. The same one who brought  them the weird machine that produces electricity.</p>
+<p>I immediately asked my guide to find out where we can meet the professor.</p>
+<p>The villagers told us where we can find him, and the very next day in the  morning we got in the cab and made the two hours&rsquo; drive to the nearest town,  where the professor lived. </p>
+<p>I had no idea, however…that what I was about to see that day will change my  life and my children`s life forever, and also will alter the course of my life,  turning me into a leader.</p>
+<p>Here I met professor Tewari and visited his laboratory.</p>
+<p><img src="images/Toby-and-Tewari.jpg" width="460" height="437" alt=""/></p>
+<p>His English was pretty good, and I told him I was interested in the machine  I saw in the village, that produces electricity, and I want to know more about  it, how it works.</p>
+<p>He started to laugh and told me:</p>
+<p class="redbold2">It's  actually much easier than what you would expect it to be... even if you've  never built anything before.</p>
+<p>The he took me in a room and showed me the same machine I saw in the  village, but at a larger scale.</p>
+<p><img src="images/images0.jpg" width="256" height="197" alt=""/></p>
+<p>Two wires were coming out of the machine and were feeding his house and  laboratory grid. I just couldn`t believe it.</p>
+<p>He told me that it was called <span class="link">The Space Energy Generator.</span></p>
+<p>Mr. Tewari showed me a stiff conductor about a foot long which was allowed  to rotate at the center and connected at each end with small gauge wire. A  magnetic circuit was placed under the conductor. When a current was allowed to  flow through the conductor it rotated, due to a torque induced on the conductor  according to Flemings Left Hand Rule and standard theory, verified by  experiments at the dawn of the electrical age.</p>
+<p><img src="images/8795820_orig.jpg" width="460" height="259" alt=""/></p>
+<p>I asked him if it is possible to build something like this at my home in  the US. </p>
+<p>He said is surely possible, and he got out of an old closet, some papers  with some drawings, and gave to me, and he told me that if I make everything  like written there, it is impossible not to succeed.</p>
+<p>After that, he told me that absolutely no one should know about this,  because I will be in big danger if this goes public. He told me that he was  about to be arrested few years ago, at a conference in Germany, when he  presented <span class="link">The Space Energy Generator</span>.</p>
+<p>We have said goodbye, not before exchanging our phone numbers and  addresses, in case I cannot handle with the setup of the generator.</p>
+<p>I stayed for a couple of days more in India, in order to finish my report.</p>
+<p>And after that, I flight back home to my family, with the blueprints  resting in the bag that I held tight in my arms.</p>
+<p>When I arrived home I took a week off from the newspaper, and I called my  friend Gordon to visit me. </p>
+<p>Next weekend when my buddy Gordon came to visit...</p>
+<p>We were all having lunch, and Gordon starts complaining about the high  power bills and how they kept piling up..Not having enough between his  mortgage, bills, day-by-day expenses and schooling tuitions.</p>
+<p>Gordon and I went into my room and I showed him all the papers professor  gave me.</p>
+<p>Being a DIY enthusiast and having some experience in engineering, he  browsed through the blueprints and suddenly was in awe...</p>
+<p>He asked me if I knew what that was.</p>
+<p>I told him off course I know, and I told him everything about my trip to  India and about the meeting with the professor.</p>
+<p>He couldn't believe it...</p>
+<p>We started building the device the next morning, at dawn, documenting the  process step by step...</p>
+<p>It took us about 1 week from start to finish and most of the parts we used  I already had lying in my backyard....We scavenged around town and found the  pieces we didn`t already have...although a lot of the items needed were already  in the junk pile we keep.</p>
+<p>For a normal guy like me it would have been impossible to build it without  his help.</p>
+<p>When the big day came, we plugged in a fan, five bulbs, an electric kettle,  and started it. We just couldn't believe our eyes. Plugged in, the fan all the  five bulbs and the kettle were working from nothing...</p>
+<p>We had to pick our jaws up off the floor when we saw that we had cut our  monthly energy bill from $231 to -$6.91 a month.</p>
+<p><img src="images/electricbill.jpg" width="460" height="322" alt=""/></p>
+<p>You see, when I opened the envelope, I didn&rsquo;t see a bill asking for my  money. Instead, there was actually a check FROM the electric company, to me, for  $6.91.</p>
+<p>Now, $6.91 certainly wasn't going to make me rich. But, given the fact that the investment that month was zero, I was making money while running my house for free…</p>
+<p>60days later I received a check of $121.</p>
+<p>We decided to setup a generator for Gordon`s house too, but this time another  idea hit me in the back of my head.</p>
+<p>What if I call the professor and kindly ask him to come up with a  simplified version of the device so that anyone can understand and apply his  knowledge.</p>
+<p>It took a lot of convincing efforts but he finally accepted... and that's  how <span class="link">The Space Energy Generator</span> program got started.</p>
+<p>After the first draft was finished by the professor, we went over the plans  again.</p>
+<p>Actually we got so dedicated, we started building a new and improved device  at Gordon`s house.  Just to make sure the  new design works... documenting the whole process on camera.</p>
+<p>Gordon actually figured out how to simplify the plans, so that pretty much  anyone could understand them. So, the information I'm about to provide you with  is much easier than what we saw first.</p>
+<p class="redbold2">It's  actually much easier than what you would expect it to be... even if you've  never built anything before (I've been there, remember?).</p>
+<p>In fact, this  system was specifically designed so that <span class="link">ANYONE</span> with one hand can build it –  even if you have difficulty plugging your charger into a cell phone.</p>
+<p>Everybody  can get solar panels up on the house or in their yard... But how long does a  single charge last?... how much would a normal system cost?... Not to mention  maintenance, snow, and all the space they take... Or even worse, putting your  health at risk by hanging them on the house and climbing up there to clean  them. It's a nightmare when winter comes... High winds... Or when a sudden hail  storm hits.</p>
+<p align="center"><strong class="redbold2">Just Imagine Having Your Entire Home Powered By  Proffesor Tewari`s Invention…</strong><br />
+  </p>
+<p align="center"><strong>Honestly, you&rsquo;ve never saw anything like this before and in 5 minutes from  now, you will be furious about the fact that you ever gave Big Electric… or the  gas company… a dime.</strong><br />
+  </p>
+<p align="center">Pumping as much heat as you want during the winter… blasting the AC during  the summer… running your televisions, your kitchen lights, your garage doors, your  most heavy duty appliances…<br />
+  </p>
+<p align="center">You might want to&nbsp;<strong>take notes</strong>&nbsp;because this will be short  and intense…<br />
+  </p>
+<p align="center">I started to get strange emails from someone at  one of the local energy company. The emails just said that they knew what I was  up to, they didn&rsquo;t like it and that if I didn&rsquo;t stop then they would take legal  action against me.<br />
+  </p>
+<p>Now, Before I Continue, you must know that this  page is going to be taken down Very Soon. It may be gone before you finish  watching this presentation, because the Energy Mafia and the Government wants  to shutdown us forever, so please watch it now while you can…<br />
+</p>
+<p class="redbold2"><strong>Here's A Short Video Of The Device In Action:<br />
+  </strong></p>
+<p><span class="redbold2"><strong>You&rsquo;re going to see how a $60 device generates &ldquo;energy from nothing&rsquo;&rsquo;</strong></span></p>
+<p><br />
+<iframe src="https://player.vimeo.com/video/216656564?autoplay=1&title=0&byline=0&portrait=0" width="640" height="366" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	  </p>
+<p>Remember – this is a small scale of the&rsquo;&rsquo; Space  Energy Generator&rsquo;&rsquo;<br />
+  With larger scale devices the&nbsp;<strong>results are impressive</strong>. </p>
+<p>It is incredibly  easy to build, the technology may have been the cutting edge in the 1930's, but  these days, it is definitely not rocket science.<br />
+  </p>
+<ul>
+  <li>It generates FREE  electricity day in and day out, allowing you to slash your electricity bill by  80% or even 100%! Plus, the  scaling trick that will get you off the grid for good and even make the  electric company pay you for the electricity that you'll produce. You will discover how to get the optimal use from your Space Generator  setup. </li>
+  <li></li>
+  <li>You&rsquo;ll be able to heat or cool your home, light-up your house and operate all  your home appliances. It is destined to meet real energy needs like  refrigerators, air conditioning and machines, because you'll get the inside  scoop on how to make this device even more powerful.</li>
+  <li></li>
+  <li>You can use this to provide power to your cabin no matter how remote in the  mountains or forest it is.</li>
+</ul>
+<p>What's more... because <strong>The&nbsp;Space Energy  Generator</strong> is very light and portable, it's perfect for power emergencies.  No more freezing in the winter when the power goes off because of snow storms. It  is completely environmental friendly - no fumes are involved and you won't even  hear it running, in fact, it is probably more environmentally friendly than  solar power or wind power systems! It makes no difference if it is raining  outside or if it is too hot. You don't  need an expensive battery bank to store the excess electricity produced by this  generator! There's no maintenance whatsoever. You won't have to install in on  your roof like solar panels and worry about the weather forecast all the time.  You can basically install it anywhere you want. This device can be safe and  easy to operate in any basement, garage or storehouse. </p>
+<p>Here's what people  think about the device:</p>
+<p><img src="images/feedback1.jpg" width="640" height="300" alt=""/></p>
+<p><strong><em>&ldquo;After</em></strong><em> <strong> watching your presentation however, I was so  impressed with your system that I decided to try it for myself. And all I can  say is WOW. Not only were your building instructions incredibly easy to follow,  but the finished product really works. I can't even tell you how good it felt  open my first energy bill after building this, and see that it was just for a  measly $17! Every month since then, I've saved at least $200 on my power bills  each month, and I couldn't be happier. Thanks so much for putting this information  online for people to see!&rsquo;&rsquo;</strong></em><br />
+  <strong class="smallfont1"><em>Adam Simpson from Macon, Georgia (43 years)</em></strong></p>
+<p><img src="images/feedback2.jpg" width="640" height="300" alt=""/><br />
+  </p>
+<p class="redbold2"><strong>So Here&rsquo;s Why You Need To Try The Space Generator  Today…</strong></p>
+<p>Quite frankly, the exuberant bills you pay for electricity are criminally  high…<br />
+  </p>
+<p>I don't know if you noticed, but our economy doesn't show any signs of  improvement. <br />
+  </p>
+<p>With the prices getting higher every month, as well as unemployment rates,  with health care and immigration policies always under pressure, I wouldn't be  surprised if this year we see violence taking over our country.<br />
+  </p>
+<p>And if that happens, energy will be  a very powerful asset. This is why you need to insure your future with <span class="redbold2">The Space  Energy Generator</span> device and waste no more time.<br />
+  </p>
+<p>And electricity companies have teamed up with their so called &ldquo;competitors&rdquo;  to transfer this increase in production costs directly to the customer…Instead  of reducing their MASSIVE profit margins…<br />
+  </p>
+<p>I mean, come on… it doesn&rsquo;t get more disgusting than that…<br />
+  Imagine being able to have readily available  electricity without having to invest in expensive solar panels that can cost  $20,000 dollars just to install… and thousands more to keep maintained…</p>
+<p>The<strong>&nbsp;Space  Energy Generator</strong>&nbsp;on the other hand is extremely adaptable… and will  completely&nbsp;<strong>change the way you look</strong>&nbsp;at energy:</p>
+<ul>
+  <li><strong>It costs less than $100 to build</strong>&nbsp;– Everything you need could be purchased  at your hardware store easily and cheaply… or you can go online for even lower.</li>
+  <li></li>
+  <li><strong>It&rsquo;s completely weather proof</strong>&nbsp;– It makes no difference if it is raining outside or if it is too  hot. And you don't need an expensive battery bank to store the excess  electricity produced by this generator! </li>
+  <li></li>
+  <li><strong>It&rsquo;s incredibly easy to build.</strong>&nbsp; you can find all of the spare parts and materials at your local  electronics store, most of you will have a lot of the materials just laying  around like I did.… this system was specifically designed so that ANYONE with  one hand can build it – even if you have difficulty plugging your charger into  a cell phone.</li>
+  <li></li>
+  <li><span class="link"> It is completely environmental  friendly</span> – there are no emissions, no fires, no fumes released or no radiation and  no worry about creating a dangerous reaction. </li>
+  <li></li>
+  <li>And best of all, it&nbsp;generates&nbsp;<strong>FREE electricity day in and day  out</strong>&nbsp;– allowing to <strong>slash your bill&nbsp;</strong>by 60%...80%...even  100%!</li>
+</ul>
+<p align="center"><strong class="redbold2">Here&rsquo;s How To Get Space Energy Generator  Blueprints:</strong><br />
+  </p>
+<p align="center">You need to&nbsp;<strong>move fast</strong>&nbsp;on this  one, because this web site could get closed down very soon due to legal  threats. Our resources are limited.<br />
+  </p>
+<p align="center">The first time professor Tewari released this  information about <strong>The&nbsp;Space Energy Generator</strong>, Big  Energy unleashed its corrupt corporate legal devil dogs on him…and almost put  him in jail, and we fear it might happen once again.</p>
+<p>Meanwhile, I&rsquo;m  being threatened constantly… and I&rsquo;m becoming increasingly worried for the  safety of my loved ones.<br />
+  </p>
+<p>Which means that,  the moment I think the danger has become too real… or too immediate…I&rsquo;ll have  no choice but to take this website down forever? <br />
+  </p>
+<p>People need  to&nbsp;<strong>hear about this amazing device</strong>&nbsp;– so they can&nbsp;<strong>join  us </strong>in the fight with the greedy corporate energy monopoly monster!<br />
+  </p>
+<p class="redbold2"><strong>So Here&rsquo;s The Deal:</strong></p>
+
+  <li>The Space Energy Generator is available in digital format, as videos that  you can watch (and re-watch) or download as many times as you like...</li>
+  <li>Just think about it, how much money did you send  to your local power company last year? In 2 years? In 10 years?</li>
+  
+  <li><u>Imagine slashing your electric bills 70%,80%, 90%, until  getting completely off the grid</u> and making them pay YOU for a change.</li>
+  <li>Imagine  being able to have readily available electricity without having to invest in  expensive solar panels that can cost $20,000 dollars just to install… and  thousands more to keep maintained… </li>
+  <li>You  will not only see your bill getting smaller and smaller, but you will make your  home 100% immune to power outages, blackouts, storms or domestic emergencies. </li>
+  <li>I'm  also talking about energy that's <strong>transportable</strong>. Once you've built it,  you can take your generator wherever you need power, even in remote high  altitude locations.</li>
+  <li>No  matter what happens you&rsquo;ll always have access to energy and electricity…</li>
+  <li>When  the electricity goes out – you&rsquo;re safe…</li>
+  <li>When  the gas pumps close – you&rsquo;re safe… </li>
+  <li>Creating  electricity will not be a problem… </li>
+  <li>Imagine  being able to light up your house, even in the worst circumstances, without  having to run gas-guzzling generators that cost hundreds of dollars a day…  </li>
+  <p><strong class="redbold2">How Much Is It Worth To You To Literally Get  Free Electricity For&nbsp;Good?</strong><br />
+    
+  </p>
+  <p>Since you stand to save a good $1000 or $2000 or more over the next 5 years  with this device, we could easily charge $1,000 for our step by step detailed  plans and blueprints.<br />
+    </p>
+  <p>Even if we could charge $500 for it... we won&rsquo;t.<br />
+    </p>
+  <p>In fact, the whole reason I'm even charging any  money for this is to keep the website running for as long as possible. </p>
+  <p>Okay, here's what we were able to do for you. We  worked hard to find a financial &ldquo;sweet spot&rdquo;.<br />
+  </p>
+  <p>I&rsquo;m going to set the price of&nbsp;<strong>The&nbsp;Space  Energy Generator</strong> <strong>Blueprints&nbsp;</strong>at just&nbsp;<strong>$69.00.</strong><br />
+    </p>
+  <p>So I'm not going to ask you to invest $1000 for  this secret even though I know it's worth at least that. It won't cost you  $500, I wouldn't have afforded that.</p>
+<p>I can&rsquo;t guarantee  that I can keep this price for longer, especially since we&rsquo;re giving 60 days of  unlimited email support… so don&rsquo;t get mad if you come here in a few days and  see that the price has gone back up.<br />
+  </p>
+<p><strong class="redbold2">And Really... The Price Doesn't Even Matter</strong><br />
+  <br />
+  That&rsquo;s because you&rsquo;re covered by &ldquo;<strong>No  Questions Asked Money Back Guarantee</strong>&rdquo; for 60 full days.</p>
+<p><img src="tx/images/Get-Cash-For-Surveys-Review-by-Gary-Mitchell-Legit-or-Scams-5.jpg" width="550" height="352" alt=""/></p>
+    <p>Look: I know that too many folks, getting off  the grid with homemade generators may sound a bit too good to be true. </p>
+<p>So I&rsquo;ve decided to make this as &quot;risk  free&quot; as possible for you... and then, to take it up a notch. </p>
+<p>You'll get IMMEDIATE access  to all the Blueprints, the step by step DIY manual, the video guides and the  lists of tools and supplies...</p>
+<p align="center" class="redbold2"><strong>For A Single Payment Of ONLY</strong><br />
+    <strong>$49.97</strong></p>
+<p><a href="https://spcgen.pay.clickbank.net/?cbitems=1&amp;cbfid=50448"><img src="images/paypal-buy-now-button.png" width="580" height="217" alt=""/></a></p>
+    <p align="center">And this is a onetime fee. There are no hidden costs, no  &quot;auto-billing&quot; or forced continuity... so you can feel safe when  ordering today.<br />
+  </p>
+<p align="center">That&rsquo;s probably less than half of what you&rsquo;re  paying each month on electricity... Obviously, you will make back your  investment of $49 in a week or two, certainly in a month. Finally independent  of our energy overlords, you will feel like a king!</p>
+<p>Getting the blueprints for the&nbsp;<strong>The&nbsp;Space  Energy Generator</strong> is easy.<br />
+  </p>
+<p class="redbold2"><strong>Just Click The Big, Shiny, Inviting &ldquo;Buy Now&rdquo; Button&nbsp;Below &nbsp;And You&rsquo;ll Be Taken To Our Secure Order Page.</strong></p>
+	  <p><a href="https://spcgen.pay.clickbank.net/?cbitems=1&amp;cbfid=50448"><img src="images/paypal-buy-now-button.png" width="580" height="217" alt=""/></a></p>
+<p class="redbold2"><strong>It&rsquo;s Simple:</strong></p>
+<p><strong>Get your copy now. Try it out for a full 60  days. And if for some reason you're not satisfied... You don't see that damned  meter stop... Or whatever reason you may have (you don't have to tell me)...  Just write me a few lines on your private support page... </strong></p>
+<p><strong>And I'll refund you even if it's the 24th hour  of the 60th day.</strong></p>
+<p><strong>Get rid of the daily or weekly arguments over  the thermostat forever…</strong>And see what it&rsquo;s like to&nbsp;<strong>slash your electric bill</strong>&nbsp;by 60%...  80% or more… in less than 30 short days.</p>
+<p>If you find that the <strong>Space Energy  Generator</strong> doesn&rsquo;t help you to drastically reduce your electric bill by  fully powering your home, just email me within 60 days of receiving your order  to get a 100% refund. <br />
+  </p>
+<p>We&rsquo;ll give you an immediate refund – even if it&rsquo;s the 23rd&nbsp;hour of the  59th&nbsp;day.<br />
+  </p>
+<p><img src="tx/images/Get-Cash-For-Surveys-Review-by-Gary-Mitchell-Legit-or-Scams-5.jpg" width="550" height="352" alt=""/></p>
+	  <p>I started to get strange emails from someone at one of the local energy  companies<br />
+  </p>
+<p>The emails just said that they knew what I was up to, they didn&rsquo;t like it  and that if I didn&rsquo;t stop then they would take legal action against me.<br />
+  </p>
+<p>Honestly, if anything those emails just made me even MORE pissed at the  power cartels than I had been already…<br />
+  </p>
+<p>And even more determined to get the <strong>Space  Energy Generator</strong> system into as many people&rsquo;s hands as possible.<br />
+  </p>
+<p>And think of the looks on the greedy executives&rsquo; stupefied faces... as they  discover in horror that not only they&rsquo;ve lost a $3,000 a year customer... but  on top of that, <br />
+  </p>
+<p>... They Have To Send YOU<br />
+</p>
+<p>A Monthly Check – For $50, $100 or More!<br />
+  </p>
+<p>Now, you can send a message to the Big Energy  &quot;fat cats,&quot; and show them that you're no longer depending on them.  And really... the road to energy independence starts with the push of a button.</p>
+<p><strong>The&nbsp;Space Energy Generator</strong> <strong>will help you</strong>&nbsp;save thousands of dollars  each year. You won't need expensive generators... And it is portable, meaning  you can take it with you and use it for whatever you need. </p>
+<p>Instead of paying thousands of dollars on  expensive generators... you can&nbsp;<strong>pocket the savings&nbsp;</strong>and spend  it on more important things!</p>
+<p>I know it sounds crazy... but just imagine how  good it would feel to know you&rsquo;re not paying a cent on electricity. It&rsquo;s a  feeling of total peace of mind ... as you&rsquo;re no longer trapped by a monopoly  you cannot escape from. </p>
+<p><strong>Imagine</strong>&nbsp;this: You&rsquo;re coming home from work, receiving  the bill... Your hands shake while you open the envelope... And YES! It's  exactly what you've been expecting. The amount is NEGATIVE! <br />
+  </p>
+<p>This means that the electric company is now  FORCED to pay YOU for the excess electricity you are selling back to the grid! <br />
+  </p>
+<p>And you&rsquo;re getting checks every month… just from  keeping&nbsp;<strong>The&nbsp;Space Energy Generator</strong> on!</p>
+<p>Month after month you will enjoy that wonderful  stress-free feeling. At last, the financial pressure is off. It was like a bad  dream and now it's over. </p>
+<p> <strong>The&nbsp;Space  Energy Generator</strong> is about something bigger and more important than money. </p>
+<p>You'll be showing them that you can take a stand - and that you can become  &quot;energy independent,&quot; living on your own, without needing a single  kilowatt of their expensive electricity.<br />
+  </p>
+<p>I don't want to pressure you here, but you've got a really simple choice to  make.<br />
+  </p>
+<p>You've really got just 3 options:<br />
+  </p>
+<p>The first thing is to do like most people: take no action, do nothing. <br />
+  </p>
+<p>Right now, you could close this window and never look back. Leave this  website behind and keep acting like a power nazi around the house, constantly  worrying about every last kilowatt of power.<br />
+  </p>
+<p>Let your summers get hotter and  winters get colder while you're left with an ASTRONOMICALLY HIGH energy bill  each month!<br />
+  </p>
+<p>You can wait for the problem to solve itself. Unfortunately, that&rsquo;s  probably what most people will do. They will hope that the situation is only  temporary... and they&rsquo;ll pray that the Big Energy execs will suddenly  &quot;turn good&quot; and start charging fair prices.<br />
+  </p>
+<p>Of course, there's a second path - Buy solar panels or other generators.<br />
+  </p>
+<p>It`s great that you want to take  control over your life and protect your loved ones. It's even greater if you  have the money to invest in these fancy technologies. <br />
+  </p>
+<p>But I've already showed you the drawbacks you'll be facing and I need to  remind you that we're talking about thousands of dollars here, money that could  easily secure your retirement. <br />
+  </p>
+<p>Our team of experts created this guide just for people like you who are  ready to take matters in their own hands and wave goodbye to the Big Energy  Mafia once and for all.<br />
+  </p>
+<p>But pay attention... because without our expert help it's a different  story.<br />
+  </p>
+<p>Even if you find patents for the <strong>Space Energy Generator</strong> floating around the Internet, you will not be  able to buy this type of generator anywhere in the world! But don't worry... we  really have made it incredibly easy for you. <br />
+  </p>
+<p>Don't waste your energy and your money on expensive experiments.<br />
+  </p>
+<p>And if you really  want to hit the Big Energy Fat Cats right where it hurts, in the money bags.<br />
+  </p>
+<p>Then you  should&nbsp;<strong>consider option #3:</strong><br />
+  </p>
+<p><strong class="redbold2">Let ME Take All The RISK For You.</strong><br />
+  </p>
+<p><img src="tx/images/Get-Cash-For-Surveys-Review-by-Gary-Mitchell-Legit-or-Scams-5.jpg" width="550" height="352" alt=""/></p>
+    <p>Click the button  and join the 28,000 other Patriots who have decided they&rsquo;ve had enough of big  energy sucking up their precious dollars…<br />
+  </p>
+<p>You have 60 days  to decide whether this was a good investment or not. . You risk nothing. You&rsquo;ve seen the proof that  this works, you&rsquo;ve heard the success stories. And in less than a month, you  WILL see the results for yourself.<br />
+  </p>
+<p>Get the blueprints  today… and put them to the test. See how easy it is to make your own  electricity with <strong>The Space Energy  Generator</strong>.<br />
+  </p>
+<p><strong class="redbold2">Just Click The Orange &ldquo;Add To Cart&rdquo; Button That You  See Below.</strong><br />
+  <br />
+ <p><a href="https://spcgen.pay.clickbank.net/?cbitems=1&amp;cbfid=50448"><img src="images/paypal-buy-now-button.png" width="580" height="217" alt=""/></a></p>
+	As soon as you click that button, you will be  taken to our secure order page.</p>
+<p>They are easily one of the biggest and most  trusted online merchants in the world.<br />
+  </p>
+<p>They handle many thousands of secure  transactions every day so there is no risk to you.</p>
+<p>After you've finalized your payment, you will be  taken to our private Member's Area. This is where we keep the plans,  blueprints, guide, lists and much more, including a surprise gift just to show  you how much we appreciate you joining us and taking action.</p>
+<p>You'll be able to view the over-the-shoulder  video guide, the blueprints, the illustrated instructions and the material  lists right from your computer, Smartphone or tablet.</p>
+<p>You'll get IMMEDIATE access to all the  Blueprints, the step by step DIY manual, the video guides and the lists of  tools and supplies...for just $49.97.</p>
+<p><a href="https://spcgen.pay.clickbank.net/?cbitems=1&amp;cbfid=50448"><img src="images/paypal-buy-now-button.png" width="580" height="217" alt=""/></a></p>
+	<p>You'll also be able to download all of the files  and you can print out as many copies of the blueprints and materials lists as  you'd like.</p>
+<p>On top of your instant access, I'm also going to  make sure that building the system, and running it, is one of the easiest,  simplest, and most pain-free experiences you ever have in your life.</p>
+<p>That's why, when you take advantage of this  significant discounted investment price today...</p>
+<p>You're also going to get unlimited customer  support for LIFE.</p>
+<p>So go ahead and invest in the <strong>Space  Energy Generator</strong> system right now...<br />
+  </p>
+<p>And I'll look forward to seeing you inside that &quot;members only&quot;  area in a few moments from now.<br />
+  </p>
+<p>There are some questions that I keep receiving from people, and I&rsquo;ll try to  answer a few here.<br />
+  </p>
+<p><strong>1. If the parts are available in local stores,  then why doesn't everybody have free energy?</strong><br />
+  </p>
+<p>There are more than 28,000 happy families already using <strong>The&nbsp;Space Energy  Generator</strong> but every serious prepper that uses it won&rsquo;t brag about it. For  some it&rsquo;s the fear factor - most people think this is too complex to build. The  fact is <strong>The&nbsp;Space Energy Generator</strong> is easy when you have the proper  blueprint.</p>
+<p><strong>2. Is the Space Energy Generator Hard to Build?</strong><br />
+  <br />
+  This is incredibly simple to build. You&rsquo;ll kick  yourself for not taking up <strong>The&nbsp;Space Energy Generator</strong> earlier.  There's very little physical labor, so even the elderly or those with a bad  back or other ailment should have no problem making it. As a result, there are  just a small handful of materials required, and you should allow about three  hours total for construction.<br />
+  If you're still feeling nervous, remember that  there's also the step-by-step video guide that's included inside. Simply watch  what I'm doing, then copy it. It's really that straight forward.<br />
+  Plus, if you do get confused for even a second,  don't forget to take advantage of your free lifetime support that's included.</p>
+<p><strong>3. Another popular question goes something like  this: &quot;Is this just a fancy demo? Does it really work?&quot;</strong><br />
+  <br />
+  Listen, we totally  appreciate and understand your healthy skepticism. In fact, we welcome it. If  you did not have a skeptical, free thinking, inquisitive mind, then you would  never have arrived at our web site.<br />
+  The short answer  is &quot;Friend, this is real. This works. You will break free of the energy  company choke hold.&quot;<br />
+  </p>
+<p><strong>4. How much is  this really going to cost me to build?</strong><br />
+  <br />
+  Typically people  spend about $65 on their Space Generator, if they get everything brand new. But  I&rsquo;ve also had thousands of people write and email to tell me that they built  theirs for free. Those people simply took a little extra time to visit their  local junkyard, and found that almost every part they needed was right there  waiting for them. </p>
+<p><a href="https://spcgen.pay.clickbank.net/?cbitems=1&amp;cbfid=50448"><img src="images/paypal-buy-now-button.png" width="580" height="217" alt=""/></a></p>
+	<p>&nbsp;</p>
+
+  
+
+     
+
+  </div>
+<div align="center"><img src="images/ssl-security-plan.png" width="240" height="87" alt=""/></div>
+      
+
+
+
+      <div class="footerfont" style="padding-left: 15px; padding-right: 15px; color: #000000;">
+        <center>
+        <p>In order to keep him anonymous, the author used a pen name: Toby Randall. </p>
+        <p><a href="disclaimer.php">Disclaimer</a> |
+          <!--            <a href="/help/unsubscribe" target="_blank" id="donotemailLink">Unsubscribe</a> |-->
+          <a href="privacypolicy.php">Privacy</a> |
+          <a href="terms.php">Terms and Conditions</a>        
+          <!--             <a href="/help/refunds" target="_blank" id="refundLink" class='font-bold'>Refunds</a> -->| <a href="Contact.html">Contact</a> | <a href="Refunds.html">Refunds</a> | Affiliate Resources<br>
+  <!--            <a href='/help/aff' target='_blank' id='affLink'>Affiliate Program</a>-->
+        </p>
+        </center>
+        <p><span class="footerfont2"><span class="smallfont1"><span class="smalltext2">While all attempts have been made to verify information provided in our website and publication, neither the merchant nor the author assumes any responsibility for errors, omissions or contrary interpretation of the subject matter herein. All products presented here are strictly for informational purposes only.&nbsp;The story and presentation are created strictly for promotional purposes only. Some home alteration alternatives may be illegal in your town, city, state, province or country. It is your responsibility to inquire with your local authority about how to proceed if restrictions apply. The product is an experiment, it was not technically assessed and has not been individually producted nor small-scale produced or mass-produced. Although we have not encountered a problem, you still must consult with your local authority.</span></span></span></p>
+        <p><span class="footerfont2"><span class="smallfont1"><span class="smalltext2">ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales Inc., a Delaware corporation located at 1444 S. Entertainment Ave., Suite 410 Boise, ID 83709, USA and used by permission. ClickBank's role as retailer does not constitute an endorsement, approval or review of these products or any claim, statement or opinion used in promotion of these products. </span></span></span></p>
+        <p><span class="footerfont2"><span class="smallfont1"><span class="smalltext2">The thoughts and opinions expressed here are those of the seller(s) alone and do not necessarily reflect the views of Click Sales, Inc., its parents, subsidiaries or affiliates. The products, information, and other content provided by this seller are provided for informational purposes only. In the event of any problem with products that customers purchase through this seller, customers agree that their sole remedy is from the seller, if any, in accordance with any seller warranties and/or seller refund policy. </span></span></span></p>
+      </div>
+
+      
+
+     
+
+</div>
+
+<!-- ClickBank Trust Badge -->
+	<script src='//cbtb.clickbank.net/?vendor=spcgen'></script>
+
+<script language="javascript">
+var exitsplashalertmessage = '***************************************\n\n > > > W A I T < < <\n\n CLICK THE **CANCEL** BUTTON\n ON THE NEXT WINDOW TO SEE THE SPECIAL FAMILY DISCOUNT OFFER!\n\n***************************************';
+var exitsplashmessage = '***************************************\n\n W A I T  B E F O R E  Y O U  G O !\n\n CLICK THE CANCEL BUTTON RIGHT NOW\n TO STAY ON THE CURRENT PAGE.\n\n DO NOT MISS OUT - OFFER EXTREMELY LIMITED!\n\n***************************************';
+var exitsplashpage = 'bestdeal.php';
+</script>
+<script language="javascript" src="tx/exitsplash.html"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US"class="tcb">
+<!--<![endif]-->
+<head>
+		<meta charset="UTF-8"/>
+				
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<title>Solar_Tracking_18643334 &#8211; Energy Liberation Army</title>
+<style type="text/css">.tve_more_tag {visibility: hidden; height: 1px!important;}</style><link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Energy Liberation Army &raquo; Feed" href="https://energyliberationarmy.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Energy Liberation Army &raquo; Comments Feed" href="https://energyliberationarmy.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/energyliberationarmy.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.24"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])?!1:!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='tve_landing_page_base_css-css'  href='https://energyliberationarmy.com/wp-content/plugins/thrive-visual-editor/landing-page/templates/css/base.css?ver=2.4.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://energyliberationarmy.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.24' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://energyliberationarmy.com/wp-includes/css/dist/block-library/theme.min.css?ver=5.2.24' type='text/css' media='all' />
+<link rel='stylesheet' id='tve_style_family_tve_flt-css'  href='https://energyliberationarmy.com/wp-content/plugins/thrive-visual-editor/editor/css/thrive_flat.css?ver=2.4.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentynineteen-style-css'  href='https://energyliberationarmy.com/wp-content/themes/twentynineteen/style.css?ver=1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='twentynineteen-print-style-css'  href='https://energyliberationarmy.com/wp-content/themes/twentynineteen/print.css?ver=1.4' type='text/css' media='print' />
+<script type='text/javascript' src='https://energyliberationarmy.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://energyliberationarmy.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://energyliberationarmy.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://energyliberationarmy.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://energyliberationarmy.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.2.24" />
+<link rel="canonical" href="https://energyliberationarmy.com/solar_tracking_18643334/" />
+<link rel='shortlink' href='https://energyliberationarmy.com/?p=3156' />
+<link rel="alternate" type="application/json+oembed" href="https://energyliberationarmy.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fenergyliberationarmy.com%2Fsolar_tracking_18643334%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://energyliberationarmy.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fenergyliberationarmy.com%2Fsolar_tracking_18643334%2F&#038;format=xml" />
+<style type="text/css" id="tve_global_variables">:root{}</style>		
+		<style type="text/css" class="tve_global_style"></style>			<style type="text/css"
+				   class="tve_custom_style">@import url("//fonts.googleapis.com/css?family=Lato:400,700,300&subset=latin");@import url("//fonts.googleapis.com/css?family=Roboto:400,500,700,300,100,900&subset=latin");@import url("//fonts.googleapis.com/css?family=Hind:400,500&subset=latin");@media (min-width: 300px){#tcb_landing_page h3 { font-family: Hind; color: rgb(12, 129, 191); font-size: 40px; line-height: 73px; font-weight: 400; }#tcb_landing_page h2 { font-family: Hind; color: rgb(12, 129, 191); font-weight: 400; font-size: 50px; line-height: 73px; }#tcb_landing_page h1 { font-family: Hind; font-weight: 400; color: rgb(255, 255, 255); font-size: 70px; line-height: 1.286em; }#tcb_landing_page p, #tcb_landing_page li { font-family: Hind; font-weight: 400; font-size: 22px; line-height: 1.636em; }[data-css="tve-u-16be7e6f568"]::after { clear: both; }[data-css="tve-u-16bebc1cd55"] { margin-bottom: 0px !important; }[data-css="tve-u-16bf65d368d"] { background-color: rgb(47, 47, 47) !important; }#tcb_landing_page h4 { font-family: Hind; font-weight: 400; }#tcb_landing_page h5 { font-family: Hind; font-weight: 400; }#tcb_landing_page h6 { font-family: Hind; font-weight: 400; }#tcb_landing_page .tcb-plain-text { font-family: Hind; font-weight: 400; }[data-css="tve-u-16bf9e847c0"] { margin-right: 49px !important; margin-left: 50px !important; }:not(#tve) [data-css="tve-u-16bf9f6f0ae"] { font-size: 41px !important; font-family: Lato !important; font-weight: 300 !important; color: rgb(174, 0, 0) !important; }[data-css="tve-u-16bf9f6f0ae"] strong { font-weight: 700 !important; }:not(#tve) [data-css="tve-u-16bf9ff2305"] { font-size: 18px !important; }[data-css="tve-u-16bfc150567"] { background-color: rgb(255, 255, 255) !important; }[data-css="tve-u-16bfc1725eb"] { clip-path: url("#clip-bottom-92f71f99b189f"); -webkit-clip-path: url("#clip-bottom-92f71f99b189f");  background-image: none !important; background-color: rgb(255, 255, 255) !important; }[data-css="tve-u-16bfc1a3f01"] { color: rgb(174, 0, 0) !important; }:not(#tve) [data-css="tve-u-16bfc1cba81"] { font-size: 35px !important; font-family: Lato !important; font-weight: 400 !important; }[data-css="tve-u-16bfc1cba81"] strong { font-weight: 700 !important; }[data-css="tve-u-16bfc1dbdf7"] { width: 741px; float: none; margin-left: auto !important; margin-right: auto !important; margin-top: 0px !important; }:not(#tve) [data-css="tve-u-16bfc295dd2"] { font-size: 39px !important; color: rgb(38, 122, 0) !important; }:not(#tve) [data-css="tve-u-16bfc2be697"] { font-size: 17px !important; font-family: Lato !important; font-weight: 400 !important; }[data-css="tve-u-16bfc2fd60d"] { border: medium none !important; background-color: rgb(255, 255, 255) !important; background-image: none !important; }[data-css="tve-u-16bfc32f111"] { width: 1000px; float: none; margin-left: auto !important; margin-right: auto !important; margin-top: 0px !important; }[data-css="tve-u-16bfc332c26"] { display: block; float: none; padding: 20px 10px 20px 11px !important; margin: 49px auto 0px !important; z-index: 10 !important; }[data-css="tve-u-16c10d9568f"] { float: right; z-index: 3; position: absolute; top: 0px; display: block; right: 0px; margin-left: auto !important; margin-right: 28px !important; }[data-css="tve-u-16d53cd4ad3"] { background-color: rgb(255, 255, 255) !important; background-image: none !important; }[data-css="tve-u-16d53cd4ad4"] { max-width: 1120px; padding: 0px 20px 20px !important; margin-top: 0px !important; margin-bottom: 28px !important; }[data-css="tve-u-16d53cd4ad5"] { max-width: 1120px; }[data-css="tve-u-16d53cd4ad6"] { position: static; max-height: 452px; max-width: 960px; float: none; min-height: 540px; margin-left: auto !important; margin-right: auto !important; z-index: 9 !important; margin-top: 0px !important; }[data-css="tve-u-16d53cd4ad7"]::after { clear: both; }[data-css="tve-u-16d53cd4ae1"] .tcb-button-link { background-color: rgb(255, 147, 0) !important; background-image: none !important; }[data-css="tve-u-16d53cd4ae1"] .tcb-button-link span { font-weight: 400 !important; }:not(#tve) [data-css="tve-u-16d53cd4ae1"] .tcb-button-link { font-family: Roboto; font-size: 35px !important; }:not(#tve) [data-css="tve-u-16d53cd4ae1"] strong { font-weight: 700; }:not(#tve) [data-css="tve-u-16d53cd4ae2"] { text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 2px; font-size: 34px !important; }[data-css="tve-u-16d53cd4ae1"] { display: block; max-width: 60%; width: 60%; }:not(#tve) [data-css="tve-u-16d53cd4ae3"] { font-family: Lato !important; font-weight: 400 !important; font-size: 25px !important; }[data-css="tve-u-16d53cd4ae3"] strong { font-weight: 700 !important; }[data-css="tve-u-16d53cd4ae5"] { background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)) !important; background-size: auto !important; background-position: 50% 50% !important; background-attachment: scroll !important; background-repeat: no-repeat !important; }#tcb_landing_page .thrv_text_element a, #tcb_landing_page .tcb-styled-list a, #tcb_landing_page .tcb-numbered-list a { font-size: 22px; }[data-css="tve-u-16eec3402b6"] { margin-top: 0px; margin-left: 0px; }[data-css="tve-u-16eec491519"] { margin-top: 39px !important; }[data-css="tve-u-170338805d1"] { max-width: 1082px; min-height: 67px !important; }[data-css="tve-u-17033c117bc"] { background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) !important; background-size: auto !important; background-position: 50% 50% !important; background-attachment: scroll !important; background-repeat: no-repeat !important; }:not(#tve) [data-css="tve-u-17033c1771e"] { font-size: 30px !important; font-family: Lato !important; font-weight: 400 !important; }[data-css="tve-u-17033c1771e"] strong { font-weight: 700 !important; }[data-css="tve-u-170906abc3c"] { max-width: 1082px; min-height: 67px !important; }[data-css="tve-u-17091628151"] { width: 105px; float: none; padding-right: 0px !important; padding-left: 0px !important; margin-left: 139px !important; margin-right: auto !important; }[data-css="tve-u-17091638a8d"] { width: 176px; float: none; margin-left: auto !important; margin-right: auto !important; margin-top: 30px !important; }[data-css="tve-u-1709164097b"] { float: none; margin-left: -33px !important; margin-right: auto !important; padding-top: 0px !important; margin-top: -2px !important; }[data-css="tve-u-17091677d44"] { color: rgb(174, 0, 0) !important; }[data-css="tve-u-17091679ac8"] { display: inline-block !important; text-decoration: underline !important; color: rgb(174, 0, 0) !important; }:not(#tve) [data-css="tve-u-17091839df8"] { font-size: 31px !important; }[data-css="tve-u-1709187686d"] { width: 1021px; margin-left: auto !important; margin-right: auto !important; float: none; }[data-css="tve-u-17091885f09"] { border: medium none !important; }:not(#tve) [data-css="tve-u-170918a0825"] { font-size: 16px !important; }[data-css="tve-u-170918a4898"] { margin-top: 39px !important; }[data-css="tve-u-170918a5ca5"] { padding-top: 0px !important; margin-top: -28px !important; }:not(#tve) [data-css="tve-u-170918b16ee"] { font-size: 32px !important; font-family: Lato !important; font-weight: 400 !important; }[data-css="tve-u-170918b16f2"] { display: inline-block !important; text-decoration: line-through !important; }:not(#tve) [data-css="tve-u-170918b748c"] { font-size: 32px !important; font-family: Lato !important; font-weight: 400 !important; }[data-css="tve-u-170918b16ee"] strong { font-weight: 700 !important; }[data-css="tve-u-170918c5ab6"] { color: rgb(38, 122, 0) !important; }:not(#tve) [data-css="tve-u-170918ca310"] { font-size: 32px !important; font-family: Lato !important; font-weight: 400 !important; }:not(#tve) [data-css="tve-u-170918d9993"] { text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 2px; font-size: 69px !important; font-family: Lato !important; font-weight: 400 !important; color: rgb(174, 0, 0) !important; }[data-css="tve-u-170918e24e2"] { box-shadow: none !important; }[data-css="tve-u-1709190d1e1"] { float: none; font-size: 26px; margin-left: auto !important; margin-right: auto !important; }[data-css="tve-u-1709191a590"] { text-shadow: none; margin-left: 0px !important; margin-right: 0px !important; }[data-css="tve-u-1709191e868"] { box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 6px -2px; border: 3px solid rgb(0, 0, 0) !important; }[data-css="tve-u-170ba65fc7e"] { width: 139px; margin-left: auto !important; margin-right: auto !important; float: none; }[data-css="tve-u-170ba667846"] { width: 30%; margin-left: auto !important; margin-right: auto !important; float: none; }:not(#tve) [data-css="tve-u-170ba672b42"] { color: rgb(0, 0, 0) !important; font-size: 18px !important; }:not(#tve) [data-css="tve-u-170ba672b49"] { color: rgb(0, 0, 0) !important; font-size: 18px !important; }:not(#tve) [data-css="tve-u-170ba672b4d"] { color: rgb(0, 0, 0) !important; font-size: 18px !important; }[data-css="tve-u-170ba67c377"] { font-size: 14px !important; }[data-css="tve-u-1714eb9ff50"] { font-size: 15px !important; }[data-css="tve-u-1714eb9ff53"] { font-size: 15px !important; }:not(#tve) [data-css="tve-u-1714ebaac9a"] { font-size: 19px !important; }[data-css="tve-u-1714ebb5d6a"] { width: 69px; margin-left: auto !important; margin-right: auto !important; float: none; }[data-css="tve-u-1714ebd7b24"] { color: rgb(0, 0, 0) !important; }[data-css="tve-u-1714ebe4d7e"] { margin-left: auto !important; margin-right: auto !important; float: none; }:not(#tve) [data-css="tve-u-1714ebf3fd0"] { font-size: 17px !important; }[data-css="tve-u-1714ec0f784"] { width: 564px; margin-left: auto !important; margin-right: auto !important; float: none; }:not(#tve) [data-css="tve-u-1714ec3bb79"] { font-family: Lato !important; font-weight: 400 !important; }[data-css="tve-u-1714ec3f25e"] { width: 46px; margin-top: 1px !important; }[data-css="tve-u-1714ec42ca7"] { margin-left: -413px !important; }[data-css="tve-u-1714eca0729"] { width: 366px; margin-left: auto !important; margin-right: auto !important; float: none; }[data-css="tve-u-1714ecb754d"] { color: rgb(174, 0, 0) !important; }[data-css="tve-u-1714ecbdece"] { width: 65%; margin-left: auto !important; margin-right: auto !important; float: none; }[data-css="tve-u-1714ecc849e"] { color: rgb(0, 0, 0) !important; }[data-css="tve-u-1714ecc84a1"] { color: rgb(0, 0, 0) !important; }[data-css="tve-u-1714ecc84a4"] { display: inline-block !important; text-decoration: line-through !important; }[data-css="tve-u-1714eccbf6f"] { color: rgb(174, 0, 0) !important; }[data-css="tve-u-1714ecdfcd7"] { margin-left: auto !important; margin-right: auto !important; float: none; }:not(#tve) [data-css="tve-u-1714ed6521f"] { font-size: 17px !important; }[data-css="tve-u-1714ed71597"] { width: 650px; margin-left: auto !important; margin-right: auto !important; float: none; }:not(#tve) [data-css="tve-u-1714ed81461"] { font-family: Lato !important; font-weight: 400 !important; font-size: 37px !important; }[data-css="tve-u-1714ed81469"] { display: inline-block !important; text-decoration: underline !important; }[data-css="tve-u-1714ed85227"] { color: rgb(174, 0, 0) !important; }[data-css="tve-u-1720ee67c0c"] { max-width: 1082px; min-height: 67px !important; }[data-css="tve-u-1720ef34c2e"] { background-color: rgb(255, 255, 255) !important; background-image: none !important; }[data-css="tve-u-1720ef3afc8"] { background-image: linear-gradient(rgb(0, 131, 255), rgb(0, 131, 255)) !important; background-size: auto !important; background-position: 50% 50% !important; background-attachment: scroll !important; background-repeat: no-repeat !important; }:not(#tve) [data-css="tve-u-1720ef421ec"] { background-color: rgb(0, 131, 255) !important; color: rgb(255, 255, 255) !important; text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 2px; font-size: 30px !important; }:not(#tve) [data-css="tve-u-1720ef421f0"] { background-color: rgb(0, 131, 255) !important; color: rgb(255, 255, 255) !important; text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 2px; font-size: 30px !important; }:not(#tve) .thrv-content-box [data-css="tve-u-1720ef48f6a"] p, :not(#tve) .thrv-content-box [data-css="tve-u-1720ef48f6a"] li, :not(#tve) .thrv-content-box [data-css="tve-u-1720ef48f6a"] blockquote, :not(#tve) .thrv-content-box [data-css="tve-u-1720ef48f6a"] address, :not(#tve) .thrv-content-box [data-css="tve-u-1720ef48f6a"] .tcb-plain-text, :not(#tve) .thrv-content-box [data-css="tve-u-1720ef48f6a"] label, :not(#tve) .thrv-content-box [data-css="tve-u-1720ef48f6a"] h1, :not(#tve) .thrv-content-box [data-css="tve-u-1720ef48f6a"] h2, :not(#tve) .thrv-content-box [data-css="tve-u-1720ef48f6a"] h3, :not(#tve) .thrv-content-box [data-css="tve-u-1720ef48f6a"] h4, :not(#tve) .thrv-content-box [data-css="tve-u-1720ef48f6a"] h5, :not(#tve) .thrv-content-box [data-css="tve-u-1720ef48f6a"] h6 { color: rgb(0, 0, 0); }[data-css="tve-u-1720ef48f6c"] { border-radius: 20px; box-shadow: rgba(9, 105, 155, 0.4) 0px 21px 21px -18px; background-color: rgb(0, 131, 255) !important; border: 2px solid rgba(0, 152, 231, 0.5) !important; }[data-css="tve-u-1720ef5ae44"] { width: 593px; margin-left: auto !important; margin-right: auto !important; float: none; }[data-css="tve-u-1720ef7732c"] { color: rgb(174, 0, 0) !important; font-size: 32px !important; }[data-css="tve-u-1720ef7732f"] { color: rgb(174, 0, 0) !important; font-size: 32px !important; }[data-css="tve-u-1720ef7dcc0"] { padding-right: 66px !important; }[data-css="tve-u-1720ef80538"] { padding-top: 120px !important; }[data-css="tve-u-17ccbda3cb4"] { color: rgb(194, 0, 0) !important; }[data-css="tve-u-17ce51a264b"] { font-size: 14px !important; font-family: Lato !important; font-weight: 400 !important; }:not(#tve) [data-css="tve-u-17ce5bc25de"] { font-family: Lato !important; font-weight: 400 !important; }[data-css="tve-u-17ce5bc25de"] strong { font-weight: 700 !important; }[data-css="tve-u-17ce5bc25de"] { box-shadow: none; }[data-css="tve-u-17ce5bc7dff"] .tcb-button-link { border-radius: 8px; background-image: none !important; background-color: rgb(255, 116, 0) !important; padding: 22px 40px; }:not(#tve) [data-css="tve-u-17ce5bc7dff"]:hover .tcb-button-link { background-color: rgb(229, 107, 0) !important; }[data-css="tve-u-17ce5bc7dff"] { display: block; max-width: 65%; width: 65%; }[data-css="tve-u-17ce5bd0c88"] { text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 2px !important; font-size: 50px !important; }:not(#tve) [data-css="tve-u-17ce5bc7dff"] .tcb-button-link { line-height: 1.1em; font-size: 38px; }[data-css="tve-u-17ce5be5f07"] { width: 100%; }[data-css="tve-u-17ce5bedbb3"] { color: rgb(174, 0, 0) !important; }:not(#tve) [data-css="tve-u-17ce5bfd693"] { color: rgb(174, 0, 0) !important; }[data-css="tve-u-17ce5bff0f1"] { color: rgb(174, 0, 0) !important; }:not(#tve) [data-css="tve-u-17ce5c15014"] { font-size: 30px !important; }[data-css="tve-u-17ce5c1c753"] { color: rgb(174, 0, 0) !important; }[data-css="tve-u-17ce5c1e364"] { color: rgb(174, 0, 0) !important; }[data-css="tve-u-17ce5c266d6"] { border: 2px dashed rgb(0, 0, 0) !important; }:not(#tve) [data-css="tve-u-17ce5c2f0a1"] { font-size: 30px !important; }:not(#tve) [data-css="tve-u-17ce5c44abe"] { font-size: 27px !important; }:not(#tve) [data-css="tve-u-17ce5c44ac1"] { font-size: 27px !important; }:not(#tve) [data-css="tve-u-17ce5c44ac3"] { font-size: 27px !important; }:not(#tve) [data-css="tve-u-17ce5c63934"] { font-family: Lato !important; font-weight: 400 !important; text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 2px; font-size: 50px !important; }[data-css="tve-u-17ce5c63934"] strong { font-weight: 700 !important; }[data-css="tve-u-17ce5c68a52"] .tcb-button-link { border-radius: 8px; padding: 22px 40px; background-image: none !important; background-color: rgb(255, 116, 0) !important; border-color: rgb(255, 220, 220); }:not(#tve) [data-css="tve-u-17ce5c68a52"]:hover .tcb-button-link { background-color: rgb(229, 107, 0) !important; }:not(#tve) [data-css="tve-u-17ce5c68a52"] .tcb-button-link { line-height: 1.1em; font-size: 38px; }[data-css="tve-u-17ce5c68a52"] { display: block; max-width: 71%; width: 71%; }:not(#tve) [data-css="tve-u-17ce5cabbe0"] { font-family: Lato !important; font-weight: 400 !important; font-size: 37px !important; }:not(#tve) [data-css="tve-u-17ce5cabbe3"] { font-family: Lato !important; font-weight: 400 !important; font-size: 37px !important; }[data-css="tve-u-17ce5cb2dac"] { display: inline-block !important; text-decoration: line-through !important; }[data-css="tve-u-17ce5cb2daf"] { color: rgb(174, 0, 0) !important; }:not(#tve) [data-css="tve-u-17ce5cb882f"] { font-family: Lato !important; font-weight: 400 !important; text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 2px; font-size: 50px !important; }[data-css="tve-u-17ce5cb882f"] strong { font-weight: 700 !important; }[data-css="tve-u-17ce5cb882f"] { box-shadow: none; }[data-css="tve-u-17ce5cbcf8c"] .tcb-button-link { border-radius: 8px; padding: 22px 40px; background-image: none !important; background-color: rgb(255, 116, 0) !important; border-color: rgb(255, 220, 220); }:not(#tve) [data-css="tve-u-17ce5cbcf8c"]:hover .tcb-button-link { background-color: rgb(229, 107, 0) !important; }:not(#tve) [data-css="tve-u-17ce5cbcf8c"] .tcb-button-link { line-height: 1.1em; font-size: 38px; }[data-css="tve-u-17ce5cbcf8c"] { width: 65%; display: block; max-width: 65%; }:not(#tve) [data-css="tve-u-17ce5ceca74"] { font-family: Lato !important; font-weight: 400 !important; text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 2px; font-size: 50px !important; }[data-css="tve-u-17ce5ceca74"] strong { font-weight: 700 !important; }[data-css="tve-u-17ce5ceeba1"] .tcb-button-link { border-radius: 8px; padding: 22px 40px; background-image: none !important; background-color: rgb(255, 116, 0) !important; border-color: rgb(255, 220, 220); }:not(#tve) [data-css="tve-u-17ce5ceeba1"]:hover .tcb-button-link { background-color: rgb(229, 107, 0) !important; }:not(#tve) [data-css="tve-u-17ce5ceeba1"] .tcb-button-link { line-height: 1.1em; font-size: 38px; }[data-css="tve-u-17ce5ceeba1"] { display: block; max-width: 65%; width: 65%; }:not(#tve) [data-css="tve-u-17cf0a0285e"] { font-size: 25px !important; }:not(#tve) [data-css="tve-u-17cf0a15a49"] { font-size: 25px !important; }:not(#tve) [data-css="tve-u-17cf0a208be"] { font-size: 25px !important; }}@media (max-width: 767px){[data-css="tve-u-16bfc1725eb"] { background-image: none !important; }[data-css="tve-u-16bfc332c26"] { padding-left: 10px !important; padding-right: 10px !important; }[data-css="tve-u-16d53cd4ad6"] { min-height: 150px; }}</style><style type="text/css" id="tve_head_custom_css" class="tve_user_custom_style">.thrv_text_element p { margin: 0;}
+.thrv_heading h1,h2,h3,h4,h5 {margin: 0;}
+
+
+
+.video-overlay {
+    width: 100%;
+    height: 100%;
+    background: none;
+    background-image: url("https://energyliberationarmy.com/wp-content/uploads/2021/10/SUN_TRACK_VIDEO_THUMBNAIL-1.jpg");
+    background-repeat: no-repeat;
+		background-size:contain;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.video-container {
+	position:relative;
+	padding-bottom:56.3%;
+	padding-top:0px;
+	height:0;
+	overflow:hidden;
+
+}
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+	
+}
+
+
+.forced-sticky-video {
+	width: 100%;
+	height: 100%;
+}
+
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+.sticky-video--placeholder {
+	
+}
+
+.video-overlay-glass {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+
+#exit-deal {
+	display: none;
+}
+
+#exit-deal2 {
+	display: none;
+}
+
+#preview-deal {
+	display: none;
+}
+
+
+#vsl-part2, #vsl-part3, #vsl-part4, #vsl-part5, #vsl-part6, #vsl-part7, #vsl-part8, #vsl-part9, #vsl-part10, #vsl-part11, #vsl-part12, #vsl-part13, #get-started {
+	display: none;
+}
+
+#close-button {
+	display: none;
+		cursor: pointer;
+  
+	width:50px;
+	height:71px;
+	background: none;
+	background-image: url("/wp-content/uploads/2021/11/close_b2.png");
+	
+  background-repeat: no-repeat;
+
+}
+#close-button-wrapper {
+	position: fixed;
+	top: 40px; 
+}
+
+#timer1 {
+	  font-size: 44px !important;
+    color: black !important;
+	text-align: center;
+}
+#timer2 {
+	  font-size: 44px !important;
+    color: black !important;
+	text-align: center;
+}
+
+#dmca {
+		display:flex;
+	justify-content:center;
+	align-items:center;
+}
+</style><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135074664-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135074664-3');
+</script>
+
+	<style type="text/css">
+		html {
+			height: auto;
+		}
+
+		html.tcb-editor {
+			overflow-y: initial;
+		}
+
+		body:before, body:after {
+			height: 0 !important;
+		}
+
+		.thrv_page_section .out {
+			max-width: none
+		}
+
+		.tve_wrap_all {
+			position: relative;
+		}
+	</style>
+
+</head>
+<body class="page-template-default page page-id-3156 wp-embed-responsive tve_lp" style="" data-css="tve-u-16bf65d368d">
+<div class="wrp cnt bSe" style="display: none">
+	<div class="awr"></div>
+</div>
+<div class="tve_wrap_all" id="tcb_landing_page">
+	<div class="tve_post_lp tve_lp_tcb2-copy-2-0-hybrid-sales-page-video-version tve_lp_template_wrapper" style="">
+				<div id="tve_flt" class="tve_flt"><div id="tve_editor" class="tve_shortcode_editor"><div class="tcb-clear" data-css="tve-u-16c10d99fb8"><div class="thrv_wrapper thrv_custom_html_shortcode close-button-wrapper" style="" data-css="tve-u-16c10d9568f" data-float-d="1" id="close-button-wrapper"><div class="close-button" id="close-button">
+
+</div></div></div><div class="thrv_wrapper thrv-page-section" id="exit-deal" style="" data-gtm-vis-first-on-screen-12918611_7="689989" data-gtm-vis-first-on-screen-12992851_7="92748" data-gtm-vis-first-on-screen-30232390_6="310324">
+<div class="tve-page-section-out" data-css="tve-u-16bfc150567"></div>
+<div class="tve-page-section-in tve_empty_dropzone" data-css="tve-u-170338805d1"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-16bfc332c26" style="" data-value-type="percent">
+<div class="tve-content-box-background" data-css="tve-u-16bfc1725eb" data-clip-id="92f71f99b189f"><svg width="0" height="0" class="tve-decoration-svg"><defs></defs></svg></div>
+<div class="tve-cb tve_empty_dropzone" data-css="tve-u-16be7e6f568"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-1714eca0729" style=""><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-1274" alt="" title="http___pluspng.com_img-png_wait-sign-png-wait-png-534" data-id="1274" src="https://energyliberationarmy.com/wp-content/uploads/2020/03/http___pluspng.com_img-png_wait-sign-png-wait-png-534.png" style="width: 100%;" width="534" height="211"></span></div><div class="thrv_wrapper thrv_text_element" style=""><p data-css="tve-u-16bfc1cba81" style="text-align: center;"><strong>Get one-time offer for the entire <span data-css="tve-u-16bfc1a3f01" style="color: rgb(174, 0, 0);">"​​​DIY Sun Tracking Device"</span> ​video &amp; ​PDF guide for only</strong><span data-css="tve-u-1714ecb754d" style="color: rgb(174, 0, 0);"><strong>&nbsp;$​27</strong></span></p></div><div class="thrv_wrapper tve_image_caption" data-css="tve-u-1714ecbdece" style=""><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-3179" alt="" title="ALL" data-id="3179" src="https://energyliberationarmy.com/wp-content/uploads/2021/10/ALL.png" style="width: 100%;" width="1920" height="1144" srcset="https://energyliberationarmy.com/wp-content/uploads/2021/10/ALL.png 1920w, https://energyliberationarmy.com/wp-content/uploads/2021/10/ALL-300x179.png 300w, https://energyliberationarmy.com/wp-content/uploads/2021/10/ALL-768x458.png 768w, https://energyliberationarmy.com/wp-content/uploads/2021/10/ALL-1024x610.png 1024w, https://energyliberationarmy.com/wp-content/uploads/2021/10/ALL-1568x934.png 1568w" sizes="(max-width: 1920px) 100vw, 1920px" /></span></div><div class="thrv_wrapper thrv_text_element" style=""><p data-css="tve-u-16bfc295dd2" style="text-align: center;"><strong><span data-css="tve-u-1714ecc849e" style="color: rgb(0, 0, 0);">​GET IT NOW FOR ONLY</span></strong></p><p data-css="tve-u-16bfc295dd2" style="text-align: center;"><strong><span data-css="tve-u-1714ecc84a1" style="color: rgb(0, 0, 0);">​<span data-css="tve-u-1714ecc84a4" style="display: inline-block; text-decoration: line-through;">$​49.97</span></span> <span data-css="tve-u-1714eccbf6f" style="color: rgb(174, 0, 0);">$27</span></strong><br></p></div><div class="thrv_wrapper thrv-button" data-css="tve-u-17ce5bc7dff" data-tcb_hover_state_parent="" data-button-style="rounded" data-button-size="xl">
+	<a href="http://2.solartrack.pay.clickbank.net/?cbfid=49597" class="tcb-button-link">
+		<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text" data-css="tve-u-17ce5bc25de"><strong>​<span data-css="tve-u-17ce5bd0c88" style="text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 2px; font-size: 50px;">CLAIM YOUR DISCOUNT</span></strong></span></span>
+	</a>
+</div><div class="thrv_wrapper thrv-credit" data-style="style1" data-cards="visa,masterCard,americanExpress,payPal,discover" style="" data-css="tve-u-1714ecdfcd7"><svg viewBox="0 0 72 52" class="tcb-visa-card"><g><path class="visa-style-1-st0" d="M7.6,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6H7.6c-3.7,0-6.6-3-6.6-6.6V7.5C1,3.9,4,0.9,7.6,0.9z"></path><path class="visa-style-1-st1" d="M24.8,33.8h-4.1l-3.1-11.6c-0.1-0.5-0.5-1-0.9-1.2c-1.1-0.6-2.4-1-3.7-1.2v-0.4h6.6c0.9,0,1.6,0.7,1.7,1.5l1.6,8.4l4.1-9.8h4L24.8,33.8z M33.1,33.8h-3.8l3.2-14.5h3.8L33.1,33.8z M41.2,23.3c0.1-0.8,0.8-1.2,1.6-1.2c1.2-0.1,2.6,0.1,3.7,0.7l0.7-3.1c-1.1-0.4-2.4-0.7-3.5-0.7c-3.7,0-6.4,2-6.4,4.8c0,2.1,1.9,3.2,3.3,3.9c1.5,0.7,2,1.1,1.9,1.8c0,1-1.1,1.5-2.3,1.5c-1.4,0-2.7-0.3-4-0.9l-0.7,3.1c1.4,0.6,2.8,0.8,4.2,0.8C44,34,46.6,32,46.6,29C46.6,25.2,41.2,25,41.2,23.3L41.2,23.3z M60,33.8l-3.1-14.5h-3.3c-0.7,0-1.4,0.4-1.6,1.1l-5.6,13.4h4l0.8-2.1H56l0.5,2.1H60z M54.2,23.2l1.1,5.5h-3.2L54.2,23.2z"></path></g></svg><svg viewBox="0 0 72 52" class="tcb-masterCard-card"><g transform="translate(337.000000, 0.000000)"><path class="masterCard-style-1-st0" d="M-329.4,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6h-56.7c-3.7,0-6.6-3-6.6-6.6V7.5C-336,3.9-333,0.9-329.4,0.9z"></path><g transform="translate(12.526316, 11.194030)"><path class="masterCard-style-1-st1" d="M-313.2,4.5c-2.4-2.1-5.5-3.3-8.8-3.3c-7.5,0-13.6,6.2-13.6,13.8s6.1,13.8,13.6,13.8c3.4,0,6.5-1.2,8.8-3.3c2.4,2.1,5.5,3.3,8.8,3.3c7.5,0,13.6-6.2,13.6-13.8s-6.1-13.8-13.6-13.8C-307.7,1.2-310.8,2.4-313.2,4.5z"></path><path class="masterCard-style-1-st2" d="M-313.2,4.5c-2.4-2.1-5.5-3.3-8.8-3.3c-7.5,0-13.6,6.2-13.6,13.8s6.1,13.8,13.6,13.8c3.4,0,6.5-1.2,8.8-3.3c-2.9-2.5-4.8-6.3-4.8-10.5S-316.1,7-313.2,4.5z"></path><path class="masterCard-style-1-st3" d="M-313.2,25.5c2.4,2.1,5.5,3.3,8.8,3.3c7.5,0,13.6-6.2,13.6-13.8s-6.1-13.8-13.6-13.8c-3.4,0-6.5,1.2-8.8,3.3c2.9,2.5,4.8,6.3,4.8,10.5S-310.2,23-313.2,25.5z"></path></g></g></svg><svg viewBox="0 0 72 52" class="tcb-americanExpress-card"><g><g><g transform="translate(169.000000, 0.000000)"><path class="americanExpress-style-1-st0" d="M-161.4,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6h-56.7c-3.7,0-6.6-3-6.6-6.6V7.5C-168,3.9-165,0.9-161.4,0.9z"></path></g></g><path class="americanExpress-style-1-st1" d="M31,28.2l-3.8-8.4h-4.6v11.9l-5.4-11.9h-3.8L8,32.3h3.2l1.1-2.7h6l1.1,2.7h6.2v-9.2l4.1,9.2h2.7l4.1-8.9v8.9h3V20.1h-4.6L31,28.5L31,28.2z M15.4,26.9h-1.9l1.9-4.3l0,0l2,4.3L15.4,26.9z"></path><path class="americanExpress-style-1-st1" d="M58.4,26l2.2-2.4l3.2-3.5H60l-3.5,3.8L53,20.1H41.3v12.2H53l3.5-4.1l3.5,4.1h3.8l-3.2-3.8L58.4,26z M51.1,29.8h-6.8v-2.4h6.8V25h-6.8v-2.2h6.8l3.5,3.2L51.1,29.8z"></path></g></svg><svg viewBox="0 0 72 52" class="tcb-payPal-card"><g><g transform="translate(85.000000, 0.000000)"><path class="payPal-style-1-st0" d="M-77.4,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6h-56.7c-3.7,0-6.6-3-6.6-6.6V7.5C-84,3.9-81,0.9-77.4,0.9z"></path></g><path class="payPal-style-1-st1" d="M34.7,18.3h8.1c4.3,0,6,2.2,5.7,5.4c-0.4,5.3-3.6,8.3-7.9,8.3h-2.2c-0.6,0-1,0.4-1.1,1.4l-0.9,6.1c-0.1,0.4-0.3,0.6-0.6,0.7h-5.1c-0.5,0-0.6-0.4-0.5-1.2l3.1-19.6C33.4,18.7,33.8,18.3,34.7,18.3z"></path><path class="payPal-style-1-st2" d="M29.6,11.6h8.1c2.3,0,5,0.1,6.8,1.7c1.2,1.1,1.8,2.8,1.7,4.6c-0.5,6.2-4.2,9.6-9.1,9.6h-4c-0.7,0-1.1,0.4-1.3,1.7l-1.1,7.1C30.6,36.7,30.4,37,30,37h-5c-0.6,0-0.7-0.4-0.6-1.3L28,12.9C28.2,12,28.7,11.6,29.6,11.6z"></path></g></svg><svg viewBox="0 0 72 52" class="tcb-discover-card"><g transform="translate(253.000000, 0.000000)"><path class="discover-style-1-st0" d="M-245.3,0.9h56.6c3.7,0,6.7,3,6.7,6.7v36.6c0,3.7-3,6.7-6.7,6.7h-56.6c-3.7,0-6.7-3-6.7-6.7V7.6C-252,3.9-249,0.9-245.3,0.9z"></path><path class="discover-style-1-st1" d="M-190.8,25.7h-0.5v-2.9h0.5c1.2,0,1.7,0.5,1.7,1.4C-189.1,25.2-189.6,25.7-190.8,25.7L-190.8,25.7z M-187.1,24.1c0-1.8-1.2-2.8-3.4-2.8h-2.7v9.6h1.8V27h0.2l2.5,3.9h2.3l-2.9-4C-188,26.7-187,25.5-187.1,24.1L-187.1,24.1z M-199.6,30.9h5.2v-1.6h-3.4v-2.6h3.3V25h-3.3v-2.1h3.4v-1.6h-5.2V30.9L-199.6,30.9z M-205.1,27.7l-2.5-6.4h-2l4,9.8h1l4-9.8h-2L-205.1,27.7L-205.1,27.7z M-227.1,26.1c0,2.7,2.2,4.9,4.9,4.9c0.9,0,1.6-0.2,2.4-0.5v-2.1c-0.5,0.6-1.3,1.1-2.2,1.1c-1.7,0-3.2-1.3-3.2-3v-0.2c-0.1-1.7,1.3-3.2,3-3.3c0.9,0,1.7,0.4,2.3,1.1v-2.1c-0.7-0.4-1.5-0.5-2.3-0.5C-224.9,21.1-227.1,23.3-227.1,26.1L-227.1,26.1z M-230.5,24.9c-1.1-0.4-1.4-0.6-1.4-1.2c0.1-0.6,0.7-1.2,1.3-1.1c0.5,0,1.1,0.3,1.5,0.8l1-1.3c-0.8-0.6-1.7-1.1-2.7-1.1c-1.5-0.1-2.8,1.1-2.9,2.6v0.1c0,1.3,0.5,2,2.3,2.6c0.4,0.1,0.9,0.3,1.3,0.5c0.3,0.2,0.5,0.5,0.5,1c0,0.8-0.7,1.4-1.3,1.4h-0.1c-0.9,0-1.6-0.5-2-1.3l-1.2,1.2c0.7,1.2,2,1.8,3.3,1.8c1.7,0.1,3.2-1.2,3.3-2.9v-0.3C-227.8,26.4-228.3,25.8-230.5,24.9L-230.5,24.9z M-236.8,30.9h1.8v-9.6h-1.8V30.9L-236.8,30.9z M-240.5,28.5c-0.7,0.5-1.6,0.9-2.5,0.8h-0.5v-6.3h0.5c0.9-0.1,1.8,0.2,2.5,0.8c0.7,0.6,1,1.5,1,2.4C-239.5,27-239.8,27.8-240.5,28.5L-240.5,28.5z M-242.7,21.3h-2.7v9.6h2.7c1.2,0.1,2.4-0.3,3.4-1.1c1.1-1,1.7-2.3,1.7-3.7c0.1-2.6-2-4.7-4.6-4.8H-242.7L-242.7,21.3z M-214.3,21.1c-2.7,0-5,2.1-5,4.9c0,2.7,2.2,4.9,5,5.1c2.8,0.1,5-2.1,5.1-4.9C-209.3,23.3-211.5,21.1-214.3,21.1L-214.3,21.1z"></path></g></svg></div><div class="thrv_wrapper thrv_text_element" style=""><p data-css="tve-u-16bfc2be697" style="text-align: center;">​- Instant Access &nbsp; &nbsp;- Safe and Secure Payment &nbsp;- Satisfaction Guaranteed</p></div><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-17cf0a0285e" style="text-align: center;">​<br></p></div><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-17cf0a15a49" style="text-align: center;">​​​This Offer will end in:</p></div><div class="thrv_wrapper thrv_text_element" style="" id="timer1"><p><br></p></div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad">
+	<div class="tve-content-box-background"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-17ce5c15014" style="text-align: center;">​With this discount you will also get these <strong><span data-css="tve-u-17ce5c1c753" style="color: rgb(174, 0, 0);">BONUSES</span></strong> for <strong><span data-css="tve-u-17ce5c1e364" style="color: rgb(174, 0, 0);">FREE.</span></strong></p></div></div>
+</div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad" style="">
+	<div class="tve-content-box-background" data-css="tve-u-17ce5c266d6"></div>
+	<div class="tve-cb"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-17ce5be5f07"><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-3181" alt="" title="BONUSES" data-id="3181" src="https://energyliberationarmy.com/wp-content/uploads/2021/10/BONUSES.png" style="width: 100%;" width="1920" height="556" srcset="https://energyliberationarmy.com/wp-content/uploads/2021/10/BONUSES.png 1920w, https://energyliberationarmy.com/wp-content/uploads/2021/10/BONUSES-300x87.png 300w, https://energyliberationarmy.com/wp-content/uploads/2021/10/BONUSES-768x222.png 768w, https://energyliberationarmy.com/wp-content/uploads/2021/10/BONUSES-1024x297.png 1024w, https://energyliberationarmy.com/wp-content/uploads/2021/10/BONUSES-1568x454.png 1568w" sizes="(max-width: 1920px) 100vw, 1920px" /></span></div><div class="thrv_wrapper thrv-columns"><div class="tcb-flex-row tcb--cols--3"><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-17cccadf115" style="text-align: center;"><strong>​<span data-css="tve-u-17ce5bedbb3" style="color: rgb(174, 0, 0);">BONUS 1:</span></strong></p><p data-css="tve-u-17cccadf119" style="text-align: center;">​How to Change the Glass Sheet</p><p data-css="tve-u-17cccadf11c" style="text-align: center;">on a Broken Solar Panel.</p></div></div></div><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-17ce5bfd693" style="text-align: center;"><strong>BONUS 2:</strong></p><p data-css="tve-u-17cccadf119" style="text-align: center;">​Everything About</p><p data-css="tve-u-17cccadf119" style="text-align: center;">Deep Cycle Batteries</p></div></div></div><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-17cccadf115" style="text-align: center;"><strong>​<span data-css="tve-u-17ce5bff0f1" style="color: rgb(174, 0, 0);">BONUS 3:</span></strong></p><p data-css="tve-u-17cccadf119" style="text-align: center;">​How to ​Install your Solar Panel</p><p data-css="tve-u-17cccadf119" style="text-align: center;">Arra on your Roof</p></div></div></div></div></div></div>
+</div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad" style="" data-css="tve-u-16bf9e847c0">
+<div class="tve-content-box-background" data-css="tve-u-16bfc2fd60d"></div>
+<div class="tve-cb"><div class="thrv_wrapper thrv_text_element" style=""><p data-css="tve-u-17ce5c2f0a1"><strong>​INSIDE YOU WILL FIND:</strong><br></p></div><div class="thrv_wrapper thrv-columns"><div class="tcb-flex-row tcb--cols--2"><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-1714ec3f25e" style=""><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-171" alt="" title="check-mark-png-45010" data-id="171" src="https://energyliberationarmy.com/wp-content/uploads/2019/10/check-mark-png-45010.png" style="width: 100%;" width="582" height="596"></span></div></div></div><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper thrv_text_element" style="" data-css="tve-u-1714ec42ca7"><p data-css="tve-u-1714ec3bb79"><strong>​​<strong>​Save thousands of dollars on the cost of a sun tracking device.</strong></strong></p></div></div></div></div></div><div class="thrv_wrapper thrv-columns"><div class="tcb-flex-row tcb--cols--2"><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-1714ec3f25e" style=""><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-171" alt="" title="check-mark-png-45010" data-id="171" src="https://energyliberationarmy.com/wp-content/uploads/2019/10/check-mark-png-45010.png" style="width: 100%;" width="582" height="596"></span></div></div></div><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper thrv_text_element" style="" data-css="tve-u-1714ec42ca7"><p data-css="tve-u-1714ec3bb79"><strong>​<strong><strong>​Generate up to 100% more power from your solar panels.</strong></strong></strong></p></div></div></div></div></div><div class="thrv_wrapper thrv-columns"><div class="tcb-flex-row tcb--cols--2"><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-1714ec3f25e" style=""><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-171" alt="" title="check-mark-png-45010" data-id="171" src="https://energyliberationarmy.com/wp-content/uploads/2019/10/check-mark-png-45010.png" style="width: 100%;" width="582" height="596"></span></div></div></div><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper thrv_text_element" style="" data-css="tve-u-1714ec42ca7"><p data-css="tve-u-1714ec3bb79"><strong>​<strong><strong>​Go green and help the environment.</strong></strong></strong></p></div></div></div></div></div><div class="thrv_wrapper tve_image_caption" data-css="tve-u-1714ec0f784" style=""><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-599" alt="" title="60-day-guarantee-3" data-id="599" src="https://energyliberationarmy.com/wp-content/uploads/2020/02/60-day-guarantee-3.jpg" style="width: 100%;" width="564" height="343"></span></div><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-17ce5c44abe" style="text-align: center;">If there is something (anything!) that you are not absolutely thrilled about...</p><p data-css="tve-u-17ce5c44ac1" style="text-align: center;">Just send us a quick mail at ​​<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f5868085859a8781aa86809baa818794969e9c9b92b59298949c99db969a98">[email&#160;protected]</a></p><p data-css="tve-u-17ce5c44ac3" style="text-align: center;">And you'll get your money back instantly - no questions asked!</p></div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad">
+	<div class="tve-content-box-background"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-17cf0a208be" style="text-align: center;">​This offer will end in:</p></div><div class="thrv_wrapper thrv_text_element" id="timer2"><p style="">​<br></p></div></div>
+</div><div class="thrv_wrapper thrv_text_element" style=""><p data-css="tve-u-16bf9f6f0ae" style="text-align: center;"><strong><span data-css="tve-u-1714ebd7b24" style="color: rgb(0, 0, 0); display: inline-block; text-decoration: line-through;">​$​49.97</span> $27</strong></p></div><div class="thrv_wrapper thrv-button" data-css="tve-u-17ce5c68a52" data-tcb_hover_state_parent="" data-button-style="rounded" data-button-size="xl">
+	<a href="http://2.solartrack.pay.clickbank.net/?cbfid=49597" class="tcb-button-link">
+		<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text" data-css="tve-u-17ce5c63934"><strong>​CLAIM YOUR DISCOUNT</strong></span></span>
+	</a>
+</div><div class="thrv_wrapper thrv-credit" data-style="style1" data-cards="visa,masterCard,americanExpress,payPal,discover" style="" data-css="tve-u-1714ebe4d7e"><svg viewBox="0 0 72 52" class="tcb-visa-card"><g><path class="visa-style-1-st0" d="M7.6,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6H7.6c-3.7,0-6.6-3-6.6-6.6V7.5C1,3.9,4,0.9,7.6,0.9z"></path><path class="visa-style-1-st1" d="M24.8,33.8h-4.1l-3.1-11.6c-0.1-0.5-0.5-1-0.9-1.2c-1.1-0.6-2.4-1-3.7-1.2v-0.4h6.6c0.9,0,1.6,0.7,1.7,1.5l1.6,8.4l4.1-9.8h4L24.8,33.8z M33.1,33.8h-3.8l3.2-14.5h3.8L33.1,33.8z M41.2,23.3c0.1-0.8,0.8-1.2,1.6-1.2c1.2-0.1,2.6,0.1,3.7,0.7l0.7-3.1c-1.1-0.4-2.4-0.7-3.5-0.7c-3.7,0-6.4,2-6.4,4.8c0,2.1,1.9,3.2,3.3,3.9c1.5,0.7,2,1.1,1.9,1.8c0,1-1.1,1.5-2.3,1.5c-1.4,0-2.7-0.3-4-0.9l-0.7,3.1c1.4,0.6,2.8,0.8,4.2,0.8C44,34,46.6,32,46.6,29C46.6,25.2,41.2,25,41.2,23.3L41.2,23.3z M60,33.8l-3.1-14.5h-3.3c-0.7,0-1.4,0.4-1.6,1.1l-5.6,13.4h4l0.8-2.1H56l0.5,2.1H60z M54.2,23.2l1.1,5.5h-3.2L54.2,23.2z"></path></g></svg><svg viewBox="0 0 72 52" class="tcb-masterCard-card"><g transform="translate(337.000000, 0.000000)"><path class="masterCard-style-1-st0" d="M-329.4,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6h-56.7c-3.7,0-6.6-3-6.6-6.6V7.5C-336,3.9-333,0.9-329.4,0.9z"></path><g transform="translate(12.526316, 11.194030)"><path class="masterCard-style-1-st1" d="M-313.2,4.5c-2.4-2.1-5.5-3.3-8.8-3.3c-7.5,0-13.6,6.2-13.6,13.8s6.1,13.8,13.6,13.8c3.4,0,6.5-1.2,8.8-3.3c2.4,2.1,5.5,3.3,8.8,3.3c7.5,0,13.6-6.2,13.6-13.8s-6.1-13.8-13.6-13.8C-307.7,1.2-310.8,2.4-313.2,4.5z"></path><path class="masterCard-style-1-st2" d="M-313.2,4.5c-2.4-2.1-5.5-3.3-8.8-3.3c-7.5,0-13.6,6.2-13.6,13.8s6.1,13.8,13.6,13.8c3.4,0,6.5-1.2,8.8-3.3c-2.9-2.5-4.8-6.3-4.8-10.5S-316.1,7-313.2,4.5z"></path><path class="masterCard-style-1-st3" d="M-313.2,25.5c2.4,2.1,5.5,3.3,8.8,3.3c7.5,0,13.6-6.2,13.6-13.8s-6.1-13.8-13.6-13.8c-3.4,0-6.5,1.2-8.8,3.3c2.9,2.5,4.8,6.3,4.8,10.5S-310.2,23-313.2,25.5z"></path></g></g></svg><svg viewBox="0 0 72 52" class="tcb-americanExpress-card"><g><g><g transform="translate(169.000000, 0.000000)"><path class="americanExpress-style-1-st0" d="M-161.4,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6h-56.7c-3.7,0-6.6-3-6.6-6.6V7.5C-168,3.9-165,0.9-161.4,0.9z"></path></g></g><path class="americanExpress-style-1-st1" d="M31,28.2l-3.8-8.4h-4.6v11.9l-5.4-11.9h-3.8L8,32.3h3.2l1.1-2.7h6l1.1,2.7h6.2v-9.2l4.1,9.2h2.7l4.1-8.9v8.9h3V20.1h-4.6L31,28.5L31,28.2z M15.4,26.9h-1.9l1.9-4.3l0,0l2,4.3L15.4,26.9z"></path><path class="americanExpress-style-1-st1" d="M58.4,26l2.2-2.4l3.2-3.5H60l-3.5,3.8L53,20.1H41.3v12.2H53l3.5-4.1l3.5,4.1h3.8l-3.2-3.8L58.4,26z M51.1,29.8h-6.8v-2.4h6.8V25h-6.8v-2.2h6.8l3.5,3.2L51.1,29.8z"></path></g></svg><svg viewBox="0 0 72 52" class="tcb-payPal-card"><g><g transform="translate(85.000000, 0.000000)"><path class="payPal-style-1-st0" d="M-77.4,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6h-56.7c-3.7,0-6.6-3-6.6-6.6V7.5C-84,3.9-81,0.9-77.4,0.9z"></path></g><path class="payPal-style-1-st1" d="M34.7,18.3h8.1c4.3,0,6,2.2,5.7,5.4c-0.4,5.3-3.6,8.3-7.9,8.3h-2.2c-0.6,0-1,0.4-1.1,1.4l-0.9,6.1c-0.1,0.4-0.3,0.6-0.6,0.7h-5.1c-0.5,0-0.6-0.4-0.5-1.2l3.1-19.6C33.4,18.7,33.8,18.3,34.7,18.3z"></path><path class="payPal-style-1-st2" d="M29.6,11.6h8.1c2.3,0,5,0.1,6.8,1.7c1.2,1.1,1.8,2.8,1.7,4.6c-0.5,6.2-4.2,9.6-9.1,9.6h-4c-0.7,0-1.1,0.4-1.3,1.7l-1.1,7.1C30.6,36.7,30.4,37,30,37h-5c-0.6,0-0.7-0.4-0.6-1.3L28,12.9C28.2,12,28.7,11.6,29.6,11.6z"></path></g></svg><svg viewBox="0 0 72 52" class="tcb-discover-card"><g transform="translate(253.000000, 0.000000)"><path class="discover-style-1-st0" d="M-245.3,0.9h56.6c3.7,0,6.7,3,6.7,6.7v36.6c0,3.7-3,6.7-6.7,6.7h-56.6c-3.7,0-6.7-3-6.7-6.7V7.6C-252,3.9-249,0.9-245.3,0.9z"></path><path class="discover-style-1-st1" d="M-190.8,25.7h-0.5v-2.9h0.5c1.2,0,1.7,0.5,1.7,1.4C-189.1,25.2-189.6,25.7-190.8,25.7L-190.8,25.7z M-187.1,24.1c0-1.8-1.2-2.8-3.4-2.8h-2.7v9.6h1.8V27h0.2l2.5,3.9h2.3l-2.9-4C-188,26.7-187,25.5-187.1,24.1L-187.1,24.1z M-199.6,30.9h5.2v-1.6h-3.4v-2.6h3.3V25h-3.3v-2.1h3.4v-1.6h-5.2V30.9L-199.6,30.9z M-205.1,27.7l-2.5-6.4h-2l4,9.8h1l4-9.8h-2L-205.1,27.7L-205.1,27.7z M-227.1,26.1c0,2.7,2.2,4.9,4.9,4.9c0.9,0,1.6-0.2,2.4-0.5v-2.1c-0.5,0.6-1.3,1.1-2.2,1.1c-1.7,0-3.2-1.3-3.2-3v-0.2c-0.1-1.7,1.3-3.2,3-3.3c0.9,0,1.7,0.4,2.3,1.1v-2.1c-0.7-0.4-1.5-0.5-2.3-0.5C-224.9,21.1-227.1,23.3-227.1,26.1L-227.1,26.1z M-230.5,24.9c-1.1-0.4-1.4-0.6-1.4-1.2c0.1-0.6,0.7-1.2,1.3-1.1c0.5,0,1.1,0.3,1.5,0.8l1-1.3c-0.8-0.6-1.7-1.1-2.7-1.1c-1.5-0.1-2.8,1.1-2.9,2.6v0.1c0,1.3,0.5,2,2.3,2.6c0.4,0.1,0.9,0.3,1.3,0.5c0.3,0.2,0.5,0.5,0.5,1c0,0.8-0.7,1.4-1.3,1.4h-0.1c-0.9,0-1.6-0.5-2-1.3l-1.2,1.2c0.7,1.2,2,1.8,3.3,1.8c1.7,0.1,3.2-1.2,3.3-2.9v-0.3C-227.8,26.4-228.3,25.8-230.5,24.9L-230.5,24.9z M-236.8,30.9h1.8v-9.6h-1.8V30.9L-236.8,30.9z M-240.5,28.5c-0.7,0.5-1.6,0.9-2.5,0.8h-0.5v-6.3h0.5c0.9-0.1,1.8,0.2,2.5,0.8c0.7,0.6,1,1.5,1,2.4C-239.5,27-239.8,27.8-240.5,28.5L-240.5,28.5z M-242.7,21.3h-2.7v9.6h2.7c1.2,0.1,2.4-0.3,3.4-1.1c1.1-1,1.7-2.3,1.7-3.7c0.1-2.6-2-4.7-4.6-4.8H-242.7L-242.7,21.3z M-214.3,21.1c-2.7,0-5,2.1-5,4.9c0,2.7,2.2,4.9,5,5.1c2.8,0.1,5-2.1,5.1-4.9C-209.3,23.3-211.5,21.1-214.3,21.1L-214.3,21.1z"></path></g></svg></div><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-1714ebf3fd0" style="text-align: center;">​- Instant Access &nbsp; &nbsp;- Safe and Secure Payment &nbsp;- Satisfaction Guaranteed</p></div><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-16bf9ff2305" style="text-align: center;"><em>This is a special launch offer price and I reserve the right to end it anytime.</em></p></div></div>
+</div><div class="thrv_wrapper thrv_text_element"><p style="text-align: justify;">​<strong>I can only offer this right now and right now only,</strong> as I can't continue giving away the entire ​Moray Generator Video Course forever at such a discounted rate, or I wouldn't be able to afford the costs associated with keeping this product and website up.</p></div></div>
+</div><div class="thrv_wrapper tve_image_caption" data-css="tve-u-16bfc32f111" style=""><span class="tve_image_frame" style="width: 100%;"><noscript><img class="tve_image wp-image-233" alt="" width="1000" height="62" title="freedom-box-formats" data-id="233" src="https://energyliberationarmy.com/wp-content/uploads/2020/02/freedom-box-formats-1.jpg" style="width: 100%;"></noscript><img class="tve_image wp-image-233 ls-is-cached lazyloaded" alt="" title="freedom-box-formats" data-id="233" src="https://energyliberationarmy.com/wp-content/uploads/2020/02/freedom-box-formats-1.jpg" data-src="https://energyliberationarmy.com/wp-content/uploads/2020/02/freedom-box-formats-1.jpg" style="" width="1000" height="62"></span></div></div>
+</div><div class="thrv_wrapper thrv-page-section" id="exit-deal2" style="" data-gtm-vis-first-on-screen-12918611_7="689989" data-gtm-vis-first-on-screen-12992851_7="92748" data-gtm-vis-first-on-screen-30232390_6="310324">
+<div class="tve-page-section-out" data-css="tve-u-16bfc150567"></div>
+<div class="tve-page-section-in tve_empty_dropzone" data-css="tve-u-170906abc3c"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-16bfc332c26" style="" data-value-type="percent">
+<div class="tve-content-box-background" data-css="tve-u-16bfc1725eb" data-clip-id="92f71f99b189f"><svg width="0" height="0" class="tve-decoration-svg"><defs></defs></svg></div>
+<div class="tve-cb tve_empty_dropzone" data-css="tve-u-16be7e6f568"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-1714ed71597" style=""><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-1317" alt="" title="image004" data-id="1317" src="https://energyliberationarmy.com/wp-content/uploads/2020/04/image004.png" style="width: 100%;" width="650" height="189"></span></div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad" style="">
+	<div class="tve-content-box-background"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv_text_element" style=""><p data-css="tve-u-1714ed81461" style="text-align: center;"><strong><span data-css="tve-u-1714ed81469" style="display: inline-block; text-decoration: underline;">​SAVE <span data-css="tve-u-1714ed85227" style="color: rgb(174, 0, 0);">$​32.97</span> RIGHT NOW!!!</span></strong></p></div></div>
+</div><div class="thrv_wrapper tve_image_caption" data-css="tve-u-16bfc1dbdf7" style=""><span class="tve_image_frame" style="width: 100%;"><noscript><img class="tve_image wp-image-180" alt="Freedom Box Package" width="880" height="517" title="The Freedom Box" data-id="180" src="https://energyliberationarmy.com/wp-content/uploads/2020/02/BULK_880x517-1.png" style="width: 100%;"></noscript><a href="http://2.suntrack.pay.clickbank.net/?vtid=exitd1_img"><img class="tve_image ls-is-cached lazyloaded wp-image-3179" alt="" title="ALL" data-id="3179" src="https://energyliberationarmy.com/wp-content/uploads/2021/10/ALL.png" data-src="https://energyliberationarmy.com/wp-content/uploads/2020/02/BULK_880x517-1.png" style="width: 100%;" data-css="tve-u-16eec3402b6" width="1920" height="1144" srcset="https://energyliberationarmy.com/wp-content/uploads/2021/10/ALL.png 1920w, https://energyliberationarmy.com/wp-content/uploads/2021/10/ALL-300x179.png 300w, https://energyliberationarmy.com/wp-content/uploads/2021/10/ALL-768x458.png 768w, https://energyliberationarmy.com/wp-content/uploads/2021/10/ALL-1024x610.png 1024w, https://energyliberationarmy.com/wp-content/uploads/2021/10/ALL-1568x934.png 1568w" sizes="(max-width: 1920px) 100vw, 1920px" /></a></span></div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad">
+	<div class="tve-content-box-background"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-17ce5cabbe0" style="text-align: center;"><strong>​DISCOUNTED PRICE</strong></p><p data-css="tve-u-17ce5cabbe3" style="text-align: center;"><strong><span data-css="tve-u-17ce5cb2dac" style="display: inline-block; text-decoration: line-through;">$49.97</span> &nbsp;<span data-css="tve-u-17ce5cb2daf" style="color: rgb(174, 0, 0);">$17</span></strong><br></p></div></div>
+</div><div class="thrv_wrapper thrv-button" data-css="tve-u-17ce5cbcf8c" data-tcb_hover_state_parent="" data-button-style="rounded" data-button-size="xl">
+	<a href="http://3.solartrack.pay.clickbank.net/?cbfid=49598" class="tcb-button-link">
+		<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text" data-css="tve-u-17ce5cb882f"><strong>​<span data-css="tve-u-17ce5cbfa45">CLAIM YOUR DISCOUNT</span></strong></span></span>
+	</a>
+</div><div class="thrv_wrapper thrv-columns"><div class="tcb-flex-row tcb--cols--3"><div class="tcb-flex-col"><div class="tcb-col" style=""><div class="thrv_wrapper tve_image_caption" style="" data-css="tve-u-17091628151"><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-193" alt="" title="90day-partial_large" data-id="193" src="https://energyliberationarmy.com/wp-content/uploads/2019/10/90day-partial_large.png" style="width: 100%;" width="286" height="295"></span></div></div></div><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper tve_image_caption" style="" data-css="tve-u-17091638a8d"><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-199" alt="" title="ssl-secure-checkout-trust-seal-1" data-id="199" src="https://energyliberationarmy.com/wp-content/uploads/2019/10/ssl-secure-checkout-trust-seal-1.png" style="width: 100%;" width="587" height="258"></span></div></div></div><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad">
+	<div class="tve-content-box-background"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv-credit" data-style="style1" data-cards="visa,masterCard,americanExpress,payPal,discover" style="" data-css="tve-u-1709164097b"><svg viewBox="0 0 72 52" class="tcb-visa-card"><g><path class="visa-style-1-st0" d="M7.6,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6H7.6c-3.7,0-6.6-3-6.6-6.6V7.5C1,3.9,4,0.9,7.6,0.9z"></path><path class="visa-style-1-st1" d="M24.8,33.8h-4.1l-3.1-11.6c-0.1-0.5-0.5-1-0.9-1.2c-1.1-0.6-2.4-1-3.7-1.2v-0.4h6.6c0.9,0,1.6,0.7,1.7,1.5l1.6,8.4l4.1-9.8h4L24.8,33.8z M33.1,33.8h-3.8l3.2-14.5h3.8L33.1,33.8z M41.2,23.3c0.1-0.8,0.8-1.2,1.6-1.2c1.2-0.1,2.6,0.1,3.7,0.7l0.7-3.1c-1.1-0.4-2.4-0.7-3.5-0.7c-3.7,0-6.4,2-6.4,4.8c0,2.1,1.9,3.2,3.3,3.9c1.5,0.7,2,1.1,1.9,1.8c0,1-1.1,1.5-2.3,1.5c-1.4,0-2.7-0.3-4-0.9l-0.7,3.1c1.4,0.6,2.8,0.8,4.2,0.8C44,34,46.6,32,46.6,29C46.6,25.2,41.2,25,41.2,23.3L41.2,23.3z M60,33.8l-3.1-14.5h-3.3c-0.7,0-1.4,0.4-1.6,1.1l-5.6,13.4h4l0.8-2.1H56l0.5,2.1H60z M54.2,23.2l1.1,5.5h-3.2L54.2,23.2z"></path></g></svg><svg viewBox="0 0 72 52" class="tcb-masterCard-card"><g transform="translate(337.000000, 0.000000)"><path class="masterCard-style-1-st0" d="M-329.4,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6h-56.7c-3.7,0-6.6-3-6.6-6.6V7.5C-336,3.9-333,0.9-329.4,0.9z"></path><g transform="translate(12.526316, 11.194030)"><path class="masterCard-style-1-st1" d="M-313.2,4.5c-2.4-2.1-5.5-3.3-8.8-3.3c-7.5,0-13.6,6.2-13.6,13.8s6.1,13.8,13.6,13.8c3.4,0,6.5-1.2,8.8-3.3c2.4,2.1,5.5,3.3,8.8,3.3c7.5,0,13.6-6.2,13.6-13.8s-6.1-13.8-13.6-13.8C-307.7,1.2-310.8,2.4-313.2,4.5z"></path><path class="masterCard-style-1-st2" d="M-313.2,4.5c-2.4-2.1-5.5-3.3-8.8-3.3c-7.5,0-13.6,6.2-13.6,13.8s6.1,13.8,13.6,13.8c3.4,0,6.5-1.2,8.8-3.3c-2.9-2.5-4.8-6.3-4.8-10.5S-316.1,7-313.2,4.5z"></path><path class="masterCard-style-1-st3" d="M-313.2,25.5c2.4,2.1,5.5,3.3,8.8,3.3c7.5,0,13.6-6.2,13.6-13.8s-6.1-13.8-13.6-13.8c-3.4,0-6.5,1.2-8.8,3.3c2.9,2.5,4.8,6.3,4.8,10.5S-310.2,23-313.2,25.5z"></path></g></g></svg><svg viewBox="0 0 72 52" class="tcb-americanExpress-card"><g><g><g transform="translate(169.000000, 0.000000)"><path class="americanExpress-style-1-st0" d="M-161.4,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6h-56.7c-3.7,0-6.6-3-6.6-6.6V7.5C-168,3.9-165,0.9-161.4,0.9z"></path></g></g><path class="americanExpress-style-1-st1" d="M31,28.2l-3.8-8.4h-4.6v11.9l-5.4-11.9h-3.8L8,32.3h3.2l1.1-2.7h6l1.1,2.7h6.2v-9.2l4.1,9.2h2.7l4.1-8.9v8.9h3V20.1h-4.6L31,28.5L31,28.2z M15.4,26.9h-1.9l1.9-4.3l0,0l2,4.3L15.4,26.9z"></path><path class="americanExpress-style-1-st1" d="M58.4,26l2.2-2.4l3.2-3.5H60l-3.5,3.8L53,20.1H41.3v12.2H53l3.5-4.1l3.5,4.1h3.8l-3.2-3.8L58.4,26z M51.1,29.8h-6.8v-2.4h6.8V25h-6.8v-2.2h6.8l3.5,3.2L51.1,29.8z"></path></g></svg><svg viewBox="0 0 72 52" class="tcb-payPal-card"><g><g transform="translate(85.000000, 0.000000)"><path class="payPal-style-1-st0" d="M-77.4,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6h-56.7c-3.7,0-6.6-3-6.6-6.6V7.5C-84,3.9-81,0.9-77.4,0.9z"></path></g><path class="payPal-style-1-st1" d="M34.7,18.3h8.1c4.3,0,6,2.2,5.7,5.4c-0.4,5.3-3.6,8.3-7.9,8.3h-2.2c-0.6,0-1,0.4-1.1,1.4l-0.9,6.1c-0.1,0.4-0.3,0.6-0.6,0.7h-5.1c-0.5,0-0.6-0.4-0.5-1.2l3.1-19.6C33.4,18.7,33.8,18.3,34.7,18.3z"></path><path class="payPal-style-1-st2" d="M29.6,11.6h8.1c2.3,0,5,0.1,6.8,1.7c1.2,1.1,1.8,2.8,1.7,4.6c-0.5,6.2-4.2,9.6-9.1,9.6h-4c-0.7,0-1.1,0.4-1.3,1.7l-1.1,7.1C30.6,36.7,30.4,37,30,37h-5c-0.6,0-0.7-0.4-0.6-1.3L28,12.9C28.2,12,28.7,11.6,29.6,11.6z"></path></g></svg><svg viewBox="0 0 72 52" class="tcb-discover-card"><g transform="translate(253.000000, 0.000000)"><path class="discover-style-1-st0" d="M-245.3,0.9h56.6c3.7,0,6.7,3,6.7,6.7v36.6c0,3.7-3,6.7-6.7,6.7h-56.6c-3.7,0-6.7-3-6.7-6.7V7.6C-252,3.9-249,0.9-245.3,0.9z"></path><path class="discover-style-1-st1" d="M-190.8,25.7h-0.5v-2.9h0.5c1.2,0,1.7,0.5,1.7,1.4C-189.1,25.2-189.6,25.7-190.8,25.7L-190.8,25.7z M-187.1,24.1c0-1.8-1.2-2.8-3.4-2.8h-2.7v9.6h1.8V27h0.2l2.5,3.9h2.3l-2.9-4C-188,26.7-187,25.5-187.1,24.1L-187.1,24.1z M-199.6,30.9h5.2v-1.6h-3.4v-2.6h3.3V25h-3.3v-2.1h3.4v-1.6h-5.2V30.9L-199.6,30.9z M-205.1,27.7l-2.5-6.4h-2l4,9.8h1l4-9.8h-2L-205.1,27.7L-205.1,27.7z M-227.1,26.1c0,2.7,2.2,4.9,4.9,4.9c0.9,0,1.6-0.2,2.4-0.5v-2.1c-0.5,0.6-1.3,1.1-2.2,1.1c-1.7,0-3.2-1.3-3.2-3v-0.2c-0.1-1.7,1.3-3.2,3-3.3c0.9,0,1.7,0.4,2.3,1.1v-2.1c-0.7-0.4-1.5-0.5-2.3-0.5C-224.9,21.1-227.1,23.3-227.1,26.1L-227.1,26.1z M-230.5,24.9c-1.1-0.4-1.4-0.6-1.4-1.2c0.1-0.6,0.7-1.2,1.3-1.1c0.5,0,1.1,0.3,1.5,0.8l1-1.3c-0.8-0.6-1.7-1.1-2.7-1.1c-1.5-0.1-2.8,1.1-2.9,2.6v0.1c0,1.3,0.5,2,2.3,2.6c0.4,0.1,0.9,0.3,1.3,0.5c0.3,0.2,0.5,0.5,0.5,1c0,0.8-0.7,1.4-1.3,1.4h-0.1c-0.9,0-1.6-0.5-2-1.3l-1.2,1.2c0.7,1.2,2,1.8,3.3,1.8c1.7,0.1,3.2-1.2,3.3-2.9v-0.3C-227.8,26.4-228.3,25.8-230.5,24.9L-230.5,24.9z M-236.8,30.9h1.8v-9.6h-1.8V30.9L-236.8,30.9z M-240.5,28.5c-0.7,0.5-1.6,0.9-2.5,0.8h-0.5v-6.3h0.5c0.9-0.1,1.8,0.2,2.5,0.8c0.7,0.6,1,1.5,1,2.4C-239.5,27-239.8,27.8-240.5,28.5L-240.5,28.5z M-242.7,21.3h-2.7v9.6h2.7c1.2,0.1,2.4-0.3,3.4-1.1c1.1-1,1.7-2.3,1.7-3.7c0.1-2.6-2-4.7-4.6-4.8H-242.7L-242.7,21.3z M-214.3,21.1c-2.7,0-5,2.1-5,4.9c0,2.7,2.2,4.9,5,5.1c2.8,0.1,5-2.1,5.1-4.9C-209.3,23.3-211.5,21.1-214.3,21.1L-214.3,21.1z"></path></g></svg></div></div>
+</div></div></div></div></div><div class="thrv_wrapper thrv_text_element" style="" data-css="tve-u-170918a5ca5"><p data-css="tve-u-16bfc2be697" style="text-align: center;">​- Instant Access &nbsp; &nbsp;- Safe and Secure Payment &nbsp;- Satisfaction Guaranteed</p></div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad" style="" data-css="tve-u-170918a4898">
+	<div class="tve-content-box-background" data-css="tve-u-17091885f09"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-17091839df8" style="text-align: center;">​With this discount you will also get for ​<strong><span data-css="tve-u-17091679ac8">FREE</span></strong> these <strong><span data-css="tve-u-17091677d44" style="display: inline-block; text-decoration: underline;">BONUSES:</span></strong></p></div><div class="thrv_wrapper thrv_text_element"><p>​<br></p></div><div class="thrv_wrapper tve_image_caption" data-css="tve-u-1709187686d" style=""><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-3181" alt="" title="BONUSES" data-id="3181" src="https://energyliberationarmy.com/wp-content/uploads/2021/10/BONUSES.png" style="width: 100%;" width="1920" height="556" srcset="https://energyliberationarmy.com/wp-content/uploads/2021/10/BONUSES.png 1920w, https://energyliberationarmy.com/wp-content/uploads/2021/10/BONUSES-300x87.png 300w, https://energyliberationarmy.com/wp-content/uploads/2021/10/BONUSES-768x222.png 768w, https://energyliberationarmy.com/wp-content/uploads/2021/10/BONUSES-1024x297.png 1024w, https://energyliberationarmy.com/wp-content/uploads/2021/10/BONUSES-1568x454.png 1568w" sizes="(max-width: 1920px) 100vw, 1920px" /></span></div><div class="thrv_wrapper thrv-columns"><div class="tcb-flex-row tcb--cols--3"><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-17cccadf115" style="text-align: center;"><strong>​<span data-css="tve-u-17ce5bedbb3">BONUS 1:</span></strong></p><p data-css="tve-u-17cccadf119" style="text-align: center;">​How to Change the Glass Sheet</p><p data-css="tve-u-17cccadf11c" style="text-align: center;">on a Broken Solar Panel.</p></div></div></div><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-17ce5bfd693" style="text-align: center;"><strong>BONUS 2:</strong></p><p data-css="tve-u-17cccadf119" style="text-align: center;">​Everything About</p><p data-css="tve-u-17cccadf119" style="text-align: center;">Deep Cycle Batteries</p></div></div></div><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-17cccadf115" style="text-align: center;"><strong>​<span data-css="tve-u-17ce5bff0f1">BONUS 3:</span></strong></p><p data-css="tve-u-17cccadf119" style="text-align: center;">​How to ​Install your Solar Panel</p><p data-css="tve-u-17cccadf119" style="text-align: center;">Arra on your Roof</p></div></div></div></div></div></div>
+</div><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-170918a0825" style="text-align: center;">​Delivered as Download</p></div></div>
+</div><div class="thrv_wrapper thrv_text_element" style=""><p data-css="tve-u-170918b16ee" style="text-align: center;"><strong><span data-css="tve-u-170918b16f2" style="display: inline-block; text-decoration: line-through;">​Regular Retail Price: $​​49.97</span></strong></p></div><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-170918b748c" style="text-align: center;"><strong>​<span data-css="tve-u-170918c5ab6" style="color: rgb(38, 122, 0);">Your Price: $17</span></strong></p></div><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-170918ca310" style="text-align: center;"><strong>​LIMITED TIME OFFER</strong></p></div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad" style="" data-css="tve-u-1709191a590">
+	<div class="tve-content-box-background" data-css="tve-u-1709191e868"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv_text_element" data-css="tve-u-170918e24e2"><p data-css="tve-u-170918d9993" style="text-align: center;"><strong>​ONLY $17!</strong><br></p></div><div class="thrv_wrapper thrv-button" data-css="tve-u-17ce5ceeba1" data-tcb_hover_state_parent="" data-button-style="rounded" data-button-size="xl">
+	<a href="http://3.solartrack.pay.clickbank.net/?cbfid=49598" class="tcb-button-link">
+		<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text" data-css="tve-u-17ce5ceca74"><strong>​CLAIM YOUR DISCOUNT</strong></span></span>
+	</a>
+</div><div class="thrv_wrapper thrv-credit" data-style="style1" data-cards="visa,masterCard,americanExpress,payPal,discover" style="" data-css="tve-u-1709190d1e1"><svg viewBox="0 0 72 52" class="tcb-visa-card"><g><path class="visa-style-1-st0" d="M7.6,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6H7.6c-3.7,0-6.6-3-6.6-6.6V7.5C1,3.9,4,0.9,7.6,0.9z"></path><path class="visa-style-1-st1" d="M24.8,33.8h-4.1l-3.1-11.6c-0.1-0.5-0.5-1-0.9-1.2c-1.1-0.6-2.4-1-3.7-1.2v-0.4h6.6c0.9,0,1.6,0.7,1.7,1.5l1.6,8.4l4.1-9.8h4L24.8,33.8z M33.1,33.8h-3.8l3.2-14.5h3.8L33.1,33.8z M41.2,23.3c0.1-0.8,0.8-1.2,1.6-1.2c1.2-0.1,2.6,0.1,3.7,0.7l0.7-3.1c-1.1-0.4-2.4-0.7-3.5-0.7c-3.7,0-6.4,2-6.4,4.8c0,2.1,1.9,3.2,3.3,3.9c1.5,0.7,2,1.1,1.9,1.8c0,1-1.1,1.5-2.3,1.5c-1.4,0-2.7-0.3-4-0.9l-0.7,3.1c1.4,0.6,2.8,0.8,4.2,0.8C44,34,46.6,32,46.6,29C46.6,25.2,41.2,25,41.2,23.3L41.2,23.3z M60,33.8l-3.1-14.5h-3.3c-0.7,0-1.4,0.4-1.6,1.1l-5.6,13.4h4l0.8-2.1H56l0.5,2.1H60z M54.2,23.2l1.1,5.5h-3.2L54.2,23.2z"></path></g></svg><svg viewBox="0 0 72 52" class="tcb-masterCard-card"><g transform="translate(337.000000, 0.000000)"><path class="masterCard-style-1-st0" d="M-329.4,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6h-56.7c-3.7,0-6.6-3-6.6-6.6V7.5C-336,3.9-333,0.9-329.4,0.9z"></path><g transform="translate(12.526316, 11.194030)"><path class="masterCard-style-1-st1" d="M-313.2,4.5c-2.4-2.1-5.5-3.3-8.8-3.3c-7.5,0-13.6,6.2-13.6,13.8s6.1,13.8,13.6,13.8c3.4,0,6.5-1.2,8.8-3.3c2.4,2.1,5.5,3.3,8.8,3.3c7.5,0,13.6-6.2,13.6-13.8s-6.1-13.8-13.6-13.8C-307.7,1.2-310.8,2.4-313.2,4.5z"></path><path class="masterCard-style-1-st2" d="M-313.2,4.5c-2.4-2.1-5.5-3.3-8.8-3.3c-7.5,0-13.6,6.2-13.6,13.8s6.1,13.8,13.6,13.8c3.4,0,6.5-1.2,8.8-3.3c-2.9-2.5-4.8-6.3-4.8-10.5S-316.1,7-313.2,4.5z"></path><path class="masterCard-style-1-st3" d="M-313.2,25.5c2.4,2.1,5.5,3.3,8.8,3.3c7.5,0,13.6-6.2,13.6-13.8s-6.1-13.8-13.6-13.8c-3.4,0-6.5,1.2-8.8,3.3c2.9,2.5,4.8,6.3,4.8,10.5S-310.2,23-313.2,25.5z"></path></g></g></svg><svg viewBox="0 0 72 52" class="tcb-americanExpress-card"><g><g><g transform="translate(169.000000, 0.000000)"><path class="americanExpress-style-1-st0" d="M-161.4,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6h-56.7c-3.7,0-6.6-3-6.6-6.6V7.5C-168,3.9-165,0.9-161.4,0.9z"></path></g></g><path class="americanExpress-style-1-st1" d="M31,28.2l-3.8-8.4h-4.6v11.9l-5.4-11.9h-3.8L8,32.3h3.2l1.1-2.7h6l1.1,2.7h6.2v-9.2l4.1,9.2h2.7l4.1-8.9v8.9h3V20.1h-4.6L31,28.5L31,28.2z M15.4,26.9h-1.9l1.9-4.3l0,0l2,4.3L15.4,26.9z"></path><path class="americanExpress-style-1-st1" d="M58.4,26l2.2-2.4l3.2-3.5H60l-3.5,3.8L53,20.1H41.3v12.2H53l3.5-4.1l3.5,4.1h3.8l-3.2-3.8L58.4,26z M51.1,29.8h-6.8v-2.4h6.8V25h-6.8v-2.2h6.8l3.5,3.2L51.1,29.8z"></path></g></svg><svg viewBox="0 0 72 52" class="tcb-payPal-card"><g><g transform="translate(85.000000, 0.000000)"><path class="payPal-style-1-st0" d="M-77.4,0.9h56.7c3.7,0,6.6,3,6.6,6.6v36.7c0,3.7-3,6.6-6.6,6.6h-56.7c-3.7,0-6.6-3-6.6-6.6V7.5C-84,3.9-81,0.9-77.4,0.9z"></path></g><path class="payPal-style-1-st1" d="M34.7,18.3h8.1c4.3,0,6,2.2,5.7,5.4c-0.4,5.3-3.6,8.3-7.9,8.3h-2.2c-0.6,0-1,0.4-1.1,1.4l-0.9,6.1c-0.1,0.4-0.3,0.6-0.6,0.7h-5.1c-0.5,0-0.6-0.4-0.5-1.2l3.1-19.6C33.4,18.7,33.8,18.3,34.7,18.3z"></path><path class="payPal-style-1-st2" d="M29.6,11.6h8.1c2.3,0,5,0.1,6.8,1.7c1.2,1.1,1.8,2.8,1.7,4.6c-0.5,6.2-4.2,9.6-9.1,9.6h-4c-0.7,0-1.1,0.4-1.3,1.7l-1.1,7.1C30.6,36.7,30.4,37,30,37h-5c-0.6,0-0.7-0.4-0.6-1.3L28,12.9C28.2,12,28.7,11.6,29.6,11.6z"></path></g></svg><svg viewBox="0 0 72 52" class="tcb-discover-card"><g transform="translate(253.000000, 0.000000)"><path class="discover-style-1-st0" d="M-245.3,0.9h56.6c3.7,0,6.7,3,6.7,6.7v36.6c0,3.7-3,6.7-6.7,6.7h-56.6c-3.7,0-6.7-3-6.7-6.7V7.6C-252,3.9-249,0.9-245.3,0.9z"></path><path class="discover-style-1-st1" d="M-190.8,25.7h-0.5v-2.9h0.5c1.2,0,1.7,0.5,1.7,1.4C-189.1,25.2-189.6,25.7-190.8,25.7L-190.8,25.7z M-187.1,24.1c0-1.8-1.2-2.8-3.4-2.8h-2.7v9.6h1.8V27h0.2l2.5,3.9h2.3l-2.9-4C-188,26.7-187,25.5-187.1,24.1L-187.1,24.1z M-199.6,30.9h5.2v-1.6h-3.4v-2.6h3.3V25h-3.3v-2.1h3.4v-1.6h-5.2V30.9L-199.6,30.9z M-205.1,27.7l-2.5-6.4h-2l4,9.8h1l4-9.8h-2L-205.1,27.7L-205.1,27.7z M-227.1,26.1c0,2.7,2.2,4.9,4.9,4.9c0.9,0,1.6-0.2,2.4-0.5v-2.1c-0.5,0.6-1.3,1.1-2.2,1.1c-1.7,0-3.2-1.3-3.2-3v-0.2c-0.1-1.7,1.3-3.2,3-3.3c0.9,0,1.7,0.4,2.3,1.1v-2.1c-0.7-0.4-1.5-0.5-2.3-0.5C-224.9,21.1-227.1,23.3-227.1,26.1L-227.1,26.1z M-230.5,24.9c-1.1-0.4-1.4-0.6-1.4-1.2c0.1-0.6,0.7-1.2,1.3-1.1c0.5,0,1.1,0.3,1.5,0.8l1-1.3c-0.8-0.6-1.7-1.1-2.7-1.1c-1.5-0.1-2.8,1.1-2.9,2.6v0.1c0,1.3,0.5,2,2.3,2.6c0.4,0.1,0.9,0.3,1.3,0.5c0.3,0.2,0.5,0.5,0.5,1c0,0.8-0.7,1.4-1.3,1.4h-0.1c-0.9,0-1.6-0.5-2-1.3l-1.2,1.2c0.7,1.2,2,1.8,3.3,1.8c1.7,0.1,3.2-1.2,3.3-2.9v-0.3C-227.8,26.4-228.3,25.8-230.5,24.9L-230.5,24.9z M-236.8,30.9h1.8v-9.6h-1.8V30.9L-236.8,30.9z M-240.5,28.5c-0.7,0.5-1.6,0.9-2.5,0.8h-0.5v-6.3h0.5c0.9-0.1,1.8,0.2,2.5,0.8c0.7,0.6,1,1.5,1,2.4C-239.5,27-239.8,27.8-240.5,28.5L-240.5,28.5z M-242.7,21.3h-2.7v9.6h2.7c1.2,0.1,2.4-0.3,3.4-1.1c1.1-1,1.7-2.3,1.7-3.7c0.1-2.6-2-4.7-4.6-4.8H-242.7L-242.7,21.3z M-214.3,21.1c-2.7,0-5,2.1-5,4.9c0,2.7,2.2,4.9,5,5.1c2.8,0.1,5-2.1,5.1-4.9C-209.3,23.3-211.5,21.1-214.3,21.1L-214.3,21.1z"></path></g></svg></div><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-1714ed6521f" style="text-align: center;">- Instant Access &nbsp; &nbsp;- Safe and Secure Payment &nbsp;- Satisfaction Guaranteed</p></div><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-1714ed6521f" style="text-align: center;">​<em>This is a special launch offer price and I reserve the right to end it anytime.</em></p></div></div>
+</div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad">
+	<div class="tve-content-box-background"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv_text_element"><p>​<br></p></div></div>
+</div><div class="thrv_wrapper tve_image_caption" data-css="tve-u-16bfc32f111" style=""><span class="tve_image_frame" style="width: 100%;"><noscript><img class="tve_image wp-image-233" alt="" width="1000" height="62" title="freedom-box-formats" data-id="233" src="https://energyliberationarmy.com/wp-content/uploads/2020/02/freedom-box-formats-1.jpg" style="width: 100%;"></noscript><img class="tve_image wp-image-233 ls-is-cached lazyloaded" alt="" title="freedom-box-formats" data-id="233" src="https://energyliberationarmy.com/wp-content/uploads/2020/02/freedom-box-formats-1.jpg" data-src="https://energyliberationarmy.com/wp-content/uploads/2020/02/freedom-box-formats-1.jpg" style="" width="1000" height="62"></span></div></div>
+</div><div class="thrv_wrapper thrv-page-section" id="preview-deal" style="" data-gtm-vis-first-on-screen-12918611_7="689989" data-gtm-vis-first-on-screen-12992851_7="92748" data-gtm-vis-first-on-screen-30232390_6="310324">
+<div class="tve-page-section-out" data-css="tve-u-1720ef34c2e"></div>
+<div class="tve-page-section-in tve_empty_dropzone" data-css="tve-u-1720ee67c0c"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-16bfc332c26" style="" data-value-type="percent">
+<div class="tve-content-box-background" data-css="tve-u-16bfc1725eb" data-clip-id="92f71f99b189f"><svg width="0" height="0" class="tve-decoration-svg"><defs></defs></svg></div>
+<div class="tve-cb tve_empty_dropzone" data-css="tve-u-16be7e6f568"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad cb_style_6" data-style="cb_style_6">
+	<div class="tve-content-box-background cb_style_6-bg" data-css="tve-u-1720ef48f6c"></div>
+	<div class="tve-cb cb_style_6-cb" data-css="tve-u-1720ef48f6a"><div class="thrv_wrapper thrv_text_element" data-css="tve-u-1720ef3afc8"><p data-css="tve-u-1720ef421ec" style="text-align: center;"><strong>​You can't leave like this. Not until I will give you something.</strong></p><p data-css="tve-u-1720ef421f0" style="text-align: center;"><strong><span data-css="tve-u-1720ef3ff55">​You can try the Moray Generator BONUSES</span></strong><strong><span data-css="tve-u-1720ef3ff58">&nbsp;FOR FREE.</span></strong><br></p></div></div>
+</div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad" style="">
+	<div class="tve-content-box-background"></div>
+	<div class="tve-cb"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-1720ef5ae44" style=""><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-1314" alt="" title="FPCcover" data-id="1314" src="https://energyliberationarmy.com/wp-content/uploads/2020/04/FPCcover.png" style="width: 100%;" width="795" height="824"></span></div></div>
+</div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad">
+	<div class="tve-content-box-background"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv-columns"><div class="tcb-flex-row tcb--cols--2"><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper thrv_text_element" style="" data-css="tve-u-1720ef80538"><p style="text-align: center;"><span style="color: rgb(174, 0, 0); font-size: 32px; display: inline-block; text-decoration: underline;" data-css="tve-u-1720ef7732c"><strong>​All you have to do</strong></span></p><p style="text-align: center;"><span style="color: rgb(174, 0, 0); font-size: 32px; display: inline-block; text-decoration: underline;" data-css="tve-u-1720ef7732f"><strong>​is, enter your best email...</strong></span></p><p style=""><strong><br></strong></p><li data-css="tve-u-1720e508df9">It will take you only 1 minute!</li><li data-css="tve-u-1720e508dfc">Yes it's ​FREE.</li><li data-css="tve-u-1720e508dfe">You will be ​immediately redirect to the bonuses.</li></div></div></div><div class="tcb-flex-col"><div class="tcb-col" style="" data-css="tve-u-1720ef7dcc0"><div class="thrv_wrapper thrv_custom_html_shortcode"><code class="tve_js_placeholder"><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=G2Tf6&amp;webforms_id=BPg1l" data-webform-id="BPg1l"></script></code></div></div></div></div></div></div>
+</div></div>
+</div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad">
+	<div class="tve-content-box-background"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv_text_element"><p>​<br></p></div></div>
+</div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad">
+	<div class="tve-content-box-background"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv_text_element"><p>​<br></p></div></div>
+</div><div class="thrv_wrapper tve_image_caption" data-css="tve-u-16bfc32f111" style=""><span class="tve_image_frame" style="width: 100%;"><noscript><img class="tve_image wp-image-233" alt="" width="1000" height="62" title="freedom-box-formats" data-id="233" src="https://energyliberationarmy.com/wp-content/uploads/2020/02/freedom-box-formats-1.jpg" style="width: 100%;"></noscript><img class="tve_image wp-image-233 ls-is-cached lazyloaded" alt="" title="freedom-box-formats" data-id="233" src="https://energyliberationarmy.com/wp-content/uploads/2020/02/freedom-box-formats-1.jpg" data-src="https://energyliberationarmy.com/wp-content/uploads/2020/02/freedom-box-formats-1.jpg" style="" width="1000" height="62"></span></div></div>
+</div><div class="thrv_wrapper thrv-page-section" style="" id="vsl-part1" data-inherit-lp-settings="1">
+<div class="tve-page-section-out" data-css="tve-u-16d53cd4ad3"></div>
+<div class="tve-page-section-in tve_empty_dropzone" data-css="tve-u-16d53cd4ad5"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-16d53cd4ad4" style="">
+<div class="tve-content-box-background" data-css="tve-u-16d53cd4ae5"></div>
+<div class="tve-cb tve_empty_dropzone" data-css="tve-u-16d53cd4ad7"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad tcb-mobile-hidden" style="">
+	<div class="tve-content-box-background" data-css="tve-u-17033c117bc"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-17033c1771e" style="text-align: center;"><strong>​​​​Squeeze every drop of electricity from your Solar Panels and make your system <strong><span data-css="tve-u-17ccbda3cb4" style="color: rgb(194, 0, 0);">100% ​MORE EFFICIENT</span></strong></strong></p></div></div>
+</div><div class="thrv_wrapper thrv_text_element" style="" data-css="tve-u-16eec491519"><p data-css="tve-u-16d53cd4ae3" style="text-align: center;">​<strong><span data-css="tve-u-1714eb9ff50" style="font-size: 15px;">​MAKE SURE YOUR SOUND IS TURNED ON.</span></strong><span data-css="tve-u-1714eb9ff53" style="font-size: 15px;">&nbsp;WAIT 5 SECONDS FOR THE VIDEO TO LOAD.</span></p></div><div class="thrv_wrapper thrv_custom_html_shortcode wrapper" data-css="tve-u-16d53cd4ad6" style="" id=""><center>
+
+<div class="wrapper">
+<div id="sticky-video--close-button" style="border-top: 0px; top: 188.789px; left: 282px; display: none;" class=""></div><div id="sticky-video--placeholder" style="null"></div><div id="sticky-video--close-button"></div><div id="sticky-video--placeholder"></div><div id="sticky-video--close-button"></div><div id="sticky-video--placeholder"></div><div id="sticky-video--close-button"></div><div id="sticky-video--placeholder"></div><div id="sticky-video--close-button"></div><div class="forced-sticky-video" data-sticky-video-state="ready" style="will-change: position, transform, opacity; opacity: 1; transform: translate(0px, 0px) scale(1); transition: opacity 0.5s ease 0s, transform 0.5s ease 0s;" width="null" height="null">
+
+<div class="video-container">
+<div id="vid-overlay" class="video-overlay" style="display: block;"></div>
+<div id="glass" class="video-overlay-glass" style="display: none;"></div>
+<div id="player" style="display: none;"></div>
+</div>
+	
+</div>
+</div>
+</center></div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad get-started" id="get-started">
+	<div class="tve-content-box-background"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv-button" data-css="tve-u-16d53cd4ae1" data-tcb_hover_state_parent="">
+<a href="http://1.solartrack.pay.clickbank.net/?cbfid=49596" class="tcb-button-link _mPS2id-h mPS2id-highlight mPS2id-highlight-first mPS2id-highlight-last">
+<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text" data-css="tve-u-16d53cd4ae2"><strong>Get Started Now - Only $​49.97</strong></span></span>
+</a>
+</div></div>
+</div><div class="thrv_wrapper thrv_text_element"><p data-css="tve-u-1714ebaac9a" style="text-align: center;">​​A big surprise is waiting you at the end.</p></div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad">
+	<div class="tve-content-box-background"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv_text_element"><p>​<br></p></div></div>
+</div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad">
+	<div class="tve-content-box-background"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv_text_element"><p>​<br></p></div></div>
+</div></div>
+</div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box tve-elem-default-pad">
+	<div class="tve-content-box-background"></div>
+	<div class="tve-cb"><div class="thrv_wrapper thrv-columns"><div class="tcb-flex-row tcb--cols--3"><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-170ba65fc7e" style=""><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-498" alt="" title="ssl-secure-checkout-trust-badge-black-300x132-1" data-id="498" src="https://energyliberationarmy.com/wp-content/uploads/2020/02/ssl-secure-checkout-trust-badge-black-300x132-1.png" style="width: 100%;" width="300" height="132"></span></div></div></div><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-1714ebb5d6a" style=""><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-1261" alt="" title="pngfuel.com" data-id="1261" src="https://energyliberationarmy.com/wp-content/uploads/2020/03/pngfuel.com_.png" style="width: 100%;" width="1024" height="1024"></span></div></div></div><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper tve_image_caption" style="" data-css="tve-u-170ba667846"><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-1260" alt="" title="kisspng-transport-layer-security-public-key-certificate-ht-sslcertifikat-5b3ab71d10da70.353441011530574621069" data-id="1260" src="https://energyliberationarmy.com/wp-content/uploads/2020/03/kisspng-transport-layer-security-public-key-certificate-ht-sslcertifikat-5b3ab71d10da70.353441011530574621069.png" style="width: 100%;" width="1920" height="1200"></span></div></div></div></div></div><div class="thrv_wrapper thrv_text_element" style=""><p data-css="tve-u-170ba672b42" style="text-align: center;">ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales Inc., a Delaware corporation located at 1444 S. Entertainment Ave., Suite 410 Boise, ID 83709, USA and used by permission. ClickBank's role as retailer does not constitute an endorsement, approval or review of these products or any claim, statement or opinion used in promotion of these products.</p><p data-css="tve-u-170ba672b49" style="text-align: center;"><br></p><p data-css="tve-u-170ba672b4d" style="text-align: center;">Testimonials, case studies, and examples found on this page are results that have been forwarded to us by users of "Tyranny Liberator" products and related products, and may not reflect the typical purchaser's experience, may not apply to the average person and are not intended to represent or guarantee that anyone will achieve the same &nbsp;or similar results.</p><p data-css="tve-u-170ba672b4d" style="text-align: center;"><br></p><pre style="text-align: center;"><span data-css="tve-u-17ce51a264b" style="font-size: 18px;">CLICKBANK AND ALL OF ITS AGENTS AND EMPLOYEES (THE ?CLICKBANK PARTIES?) DISCLAIM ALL LIABILITY FOR</span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;">THE ACCURACY OR</span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;">COMPLETENESS</span>​<br><span data-css="tve-u-17ce51a264b" style="font-size: 18px;">OF THE PROMOTIONAL GUIDELINES, AND DISCLAIM ALL WARRANTIES, EXPRESS</span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;">OR IMPLIED.</span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;">THE CLICKBANK</span>​&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;">PARTIES</span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;">FURTHER</span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;">DISCLAIM ALL LIABILITY</span><br><span data-css="tve-u-17ce51a264b" style="font-size: 18px;">FOR ANY DAMAGES WHATSOEVER ​</span>​&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;">INCLUDING,</span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;">WITHOUT LIMITATION,</span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;">DIRECT, INDIRECT,</span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;">INCIDENTAL, PUNITIVE <span data-css="tve-u-17ce10505e7">OR CONSEQUENTIAL DAMAGES)</span></span>​<br><span data-css="tve-u-17ce51a264b" style="font-size: 18px;"><span data-css="tve-u-17ce10505e7">ARISING</span></span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;"><span data-css="tve-u-17ce10505e7">OUT OF THE USE, INABILITY TO USE,</span></span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;"><span data-css="tve-u-17ce10505e7">OR THE RESULTS OF USE OF THE</span></span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;"><span data-css="tve-u-17ce10505e7">PROMOTIONAL GUIDELINES,</span></span>​&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;"><span data-css="tve-u-17ce10505e7">ANY REFERENCES USED IN THE PROMOTIONAL</span></span><br><span data-css="tve-u-17ce51a264b" style="font-size: 18px;"><span data-css="tve-u-17ce10505e7">GUIDELINES,</span>&nbsp;<span data-css="tve-u-17ce10505e7">OR THE MATERIALS,</span></span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;"><span data-css="tve-u-17ce10505e7">INFORMATION,</span></span>​&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;"><span data-css="tve-u-17ce10505e7">OR PROCEDURES</span></span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;"><span data-css="tve-u-17ce10505e7">CONTAINED IN THE PROMOTIONAL GUIDELINES. PLEASE READ</span></span>​&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;"><span data-css="tve-u-17ce10505e7">THE CLICKBANK CLIENT</span></span><br><span data-css="tve-u-17ce51a264b" style="font-size: 18px;"><span data-css="tve-u-17ce10505e7">CONTRACT AND ALL</span></span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;"><span data-css="tve-u-17ce10505e7">ACCOMPANYING CLICKBANK POLICIES</span> TO ENSURE YOUR COMPLIANCE WITH ALL APPLICABLE POLICIES,</span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;">RULES AND REGULATIONS.</span><br><span data-css="tve-u-17ce51a264b" style="font-size: 18px;">IT IS YOUR RESPONSIBILITY TO ENSURE THAT YOU ARE IN COMPLIANCE WITH THE CLICKBANK CLIENT CONTRACT, ALL CLICKBAN</span>&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;">POLICIES AND ALL APPLICABLE</span><br><span data-css="tve-u-17ce51a264b" style="font-size: 18px;">RULES</span>​&nbsp;<span data-css="tve-u-17ce51a264b" style="font-size: 18px;">AND REGULATIONS.</span></pre><p data-css="tve-u-170ba672b4d" style="text-align: center;"><br></p></div><div class="thrv_wrapper thrv_text_element" style=""><p style="text-align: center;">​<span data-css="tve-u-170ba67c377" style="font-size: 14px;">© ​​​DIY S​un Tracking Device</span></p></div></div>
+</div></div>
+</div><div class="thrv_wrapper thrv_custom_html_shortcode" style="" data-css="tve-u-16bebc1cd55"><code class="tve_js_placeholder"><script>
+var tag = document.createElement('script');
+
+
+
+var play_retry = 0;
+var autoplay = false;
+var exit_attempts = 0;
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+var yt_player = document.getElementById("player");
+
+
+
+if (yt_player) {
+
+    var glass_div = document.getElementById("glass");
+    var vid_overlay = document.getElementById("vid-overlay");
+
+    var player;
+    var playerloaded = false;
+    var videotime = 0;
+    var addToCartVisible = false;
+
+    // window.setInterval(function(){
+    //   videotime = player.getCurrentTime();
+    //   console.log()
+    // }, 5000);
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '100%',
+            width: '100%',
+            videoId: 'nyjeqCHn4Xs',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            },
+            playerVars: {
+                rel: 0,
+                showinfo: 0,
+                ecver: 2,
+                controls: 0,
+                autoplay: 0,
+                disablekb: 1,
+                modestbranding: 1
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        event.target.setVolume(100);
+
+
+        event.target.playVideo();
+        function updateTime() {
+          var oldTime = videotime;
+          if(player && player.getCurrentTime) {
+            videotime = player.getCurrentTime();
+          }
+          if(videotime !== oldTime) {
+            onProgress(videotime);
+          }
+        }
+        timeupdater = setInterval(updateTime, 100);
+
+
+    }
+
+
+      // when the time changes, this will be called.
+    function onProgress(currentTime) {
+    if(currentTime > 517) {
+        vid_overlay.style.display = "none"
+        if (!addToCartVisible) {
+            set_salesp("show_addtocart");
+            addToCartVisible = true;
+
+      }
+    }
+    }
+
+    var done = false;
+    var pause_count = 0;
+
+
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+
+        }
+
+        if (event.data == YT.PlayerState.PAUSED) {
+            yt_player.style.display = "none"
+            glass_div.style.display = "none"
+            vid_overlay.style.display = "block"
+
+        }
+
+
+    }
+
+    function playVideo() {
+        if (playerloaded) {
+            try {
+                var fn = function() {
+                    player.playVideo();
+                }
+                setTimeout(fn, 1000);
+            } catch (err) {}
+        } else {
+
+            if (play_retry++ < 10) {
+                setTimeout(playVideo, 5000);
+                if (play_retry > 3) {
+                    window.location.reload(false);
+                    autoplay = true;
+                }
+
+            }
+
+
+        }
+    }
+
+    function stopVideo() {
+        player.stopVideo();
+    }
+
+
+
+    var warnBeforeClose = true;
+    function unloadPage(){
+        if (warnBeforeClose) {
+            set_salesp("show_discount")
+            return "Your changes will not be saved.";
+        }
+    }
+    window.onbeforeunload = unloadPage;
+
+    // ...when the elements exist:
+    jQuery("a").click(dontWarn);
+    jQuery("form").submit(dontWarn);
+    function dontWarn() {
+        // Don't warn
+        warnBeforeClose = false;
+
+        // ...but if we're still on the page a second later, set the flag again
+        setTimeout(function() {
+            warnBeforeClose = true;
+        }, 1000);
+    }
+
+
+
+
+    document.body.addEventListener('click', function(evt) {
+        if (evt.target.className === 'video-overlay') {
+            yt_player.style.display = "block";
+            document.getElementById("player").style.display = "block"
+            glass_div.style.display = "block";
+            vid_overlay.style.display = "none";
+            //playVideo()
+            player.playVideo();
+        }
+
+
+        if (evt.target.className === 'video-overlay-glass') {
+            pause_count += 1;
+
+            if (pause_count == 1) {
+                vid_overlay.style.backgroundImage = "url('https://energyliberationarmy.com/wp-content/uploads/2021/10/SUN_TRACK_VIDEO_THUMBNAIL_2.jpg')";
+            }
+
+            if (pause_count > 1) {
+                vid_overlay.style.backgroundImage = "url('https://energyliberationarmy.com/wp-content/uploads/2021/10/SUN_TRACK_VIDEO_THUMBNAIL_3.jpg')";
+            }
+
+            yt_player.style.display = "none";
+            glass_div.style.display = "none";
+            vid_overlay.style.display = "block";
+            player.pauseVideo();
+
+        }
+        if (evt.target.className === 'close-button') {
+            set_salesp("show_salespage");
+        }
+
+        dontWarn();
+
+
+
+    }, false);
+
+
+}
+
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+function getUrlParam(parameter, defaultvalue){
+    var urlparameter = defaultvalue;
+    if(window.location.href.indexOf(parameter) > -1){
+        urlparameter = getUrlVars()[parameter];
+        }
+
+    if (urlparameter === "0") {
+        urlparameter = defaultvalue;
+    }
+    return urlparameter;
+}
+
+// var affiliateID = getUrlParam('hop', 'greenjk');
+// var elements = document.getElementsByName("custom affiliate");
+// for (var i=0; i<elements.length; i++) {
+
+//     elements[i].value = affiliateID;
+
+// }
+
+
+
+
+function set_salesp(action) {
+    var i;
+    if (action == "show_discount") {
+        try {
+
+            document.getElementById("exit-deal").style.display = "block";
+            document.getElementById("close-button").style.display = "block";
+            window.scrollTo({ top: 50, behavior: 'smooth' });
+            player.pauseVideo();
+
+            
+
+            for (i = 1; i < 13; i++) { 
+                try {
+                    document.getElementById('vsl-part' + i).style.display = "none";
+                    }
+                    catch (err) {}
+            }
+
+            document.getElementById('claim').style.display = "none";
+        } catch (err) {}
+    }
+
+
+    if (action == "show_discount2") {
+        try {
+
+            document.getElementById("exit-deal").style.display = "none";
+            document.getElementById("exit-deal2").style.display = "block";
+            document.getElementById("close-button").style.display = "block";
+            window.scrollTo({ top: 50, behavior: 'smooth' });
+            player.pauseVideo();
+
+            
+
+            for (i = 1; i < 13; i++) { 
+                try {
+                    document.getElementById('vsl-part' + i).style.display = "none";
+                    }
+                    catch (err) {}
+            }
+
+            document.getElementById('claim').style.display = "none";
+        } catch (err) {}
+    }
+
+    if (action == "show_salespage") {
+        try {
+            exit_attempts = 0;
+            document.getElementById("exit-deal").style.display = "none";
+            document.getElementById("exit-deal2").style.display = "none";
+            document.getElementById("preview-deal").style.display = "none";
+            document.getElementById("close-button").style.display = "none";
+            document.getElementById("get-started").style.display = "block";
+             window.scrollTo({ top: 0, behavior: 'smooth' });
+            for (i = 1; i < 13; i++) { 
+                try {
+                    document.getElementById('vsl-part' + i).style.display = "block";
+                }
+                    catch (err) {}
+            }
+
+            document.getElementById('claim').style.display = "block";
+        } catch (err) {}
+
+    }
+
+    if (action == "show_preview") {
+
+        try {
+            document.getElementById("exit-deal").style.display = "none";
+            document.getElementById("exit-deal2").style.display = "none";
+            document.getElementById("preview-deal").style.display = "block";
+            document.getElementById("close-button").style.display = "block";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            player.pauseVideo();
+
+            
+
+            for (i = 1; i < 13; i++) { 
+                try {
+                    document.getElementById('vsl-part' + i).style.display = "none";
+                }
+                catch (err) {}
+            }
+
+            document.getElementById('claim').style.display = "none";
+        } catch (err) {}
+
+
+    }
+
+    if (action == "show_addtocart") {
+
+        try {
+            document.getElementById("get-started").style.display = "block";
+            for (i = 1; i < 13; i++) { 
+                try {
+                    document.getElementById('vsl-part' + i).style.display = "block";
+                }
+                catch (err) {}
+            }
+            
+
+        } catch (err) {}
+
+
+    }
+
+
+
+}
+
+
+
+
+document.getElementById('timer1').innerHTML =
+    10 + ":" + 00;
+document.getElementById('timer2').innerHTML =
+    10 + ":" + 00;
+
+var time_started = false;
+
+function startTimer1() {
+    var presentTime = document.getElementById('timer1').innerHTML;
+    var timeArray = presentTime.split(/[:]+/);
+    var m = timeArray[0];
+    var s = checkSecond((timeArray[1] - 1));
+    if (s == 59) {
+        m = m - 1
+    }
+    if (m < 0) {
+
+        document.getElementById('timer1').innerHTML = "0:00";
+        return;
+    }
+
+    document.getElementById('timer1').innerHTML =
+        m + ":" + s;
+    setTimeout(startTimer1, 1000);
+}
+
+function startTimer2() {
+    var presentTime = document.getElementById('timer2').innerHTML;
+    var timeArray = presentTime.split(/[:]+/);
+    var m = timeArray[0];
+    var s = checkSecond((timeArray[1] - 1));
+    if (s == 59) {
+        m = m - 1
+    }
+    if (m < 0) {
+
+        document.getElementById('timer2').innerHTML = "0:00";
+        return;
+    }
+
+    document.getElementById('timer2').innerHTML =
+        m + ":" + s;
+    setTimeout(startTimer2, 1000);
+}
+
+function checkSecond(sec) {
+    if (sec < 10 && sec >= 0) {
+        sec = "0" + sec
+    }; // add zero in front of numbers < 10
+    if (sec < 0) {
+        sec = "59"
+    };
+    return sec;
+}
+
+
+
+function addEvent(obj, evt, fn) {
+    if (obj.addEventListener) {
+        obj.addEventListener(evt, fn, false);
+    } else if (obj.attachEvent) {
+        obj.attachEvent("on" + evt, fn);
+    }
+}
+
+
+addEvent(window, "load", function(e) {
+    addEvent(document, "mouseout", function(e) {
+        e = e ? e : window.event;
+        var from = e.relatedTarget || e.toElement;
+        if (e.clientY < 0) {
+            //alert("left window");
+            exit_attempts += 1;
+            if (time_started == false) {
+                startTimer1();
+                startTimer2();
+                time_started = true;
+
+            }
+            if (exit_attempts == 1) {
+                set_salesp("show_discount");
+            }
+
+            if (exit_attempts >= 2) {
+                set_salesp("show_discount2");
+            }
+
+            if (exit_attempts > 2) {
+                set_salesp("show_preview");
+            }
+
+        }
+    });
+});
+
+
+
+
+
+
+
+</script></code>
+
+<!-- ClickBank Trust Badge -->
+<code class="tve_js_placeholder"><script src="//cbtb.clickbank.net/?vendor=suntrack"></script></code></div>
+</div></div>	</div>
+</div>
+<script type='text/javascript' src='https://energyliberationarmy.com/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='https://energyliberationarmy.com/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script type='text/javascript' src='https://energyliberationarmy.com/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2b'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tve_frontend_options = {"ajaxurl":"https:\/\/energyliberationarmy.com\/wp-admin\/admin-ajax.php","is_editor_page":"","page_events":[],"is_single":"1","social_fb_app_id":"","dash_url":"https:\/\/energyliberationarmy.com\/wp-content\/plugins\/thrive-visual-editor\/thrive-dashboard","translations":{"Copy":"Copy"},"routes":{"posts":"https:\/\/energyliberationarmy.com\/wp-json\/tcb\/v1\/posts"},"post_id":"3156"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://energyliberationarmy.com/wp-content/plugins/thrive-visual-editor/editor/js/dist/frontend.min.js?ver=2.4.3.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tve_dash_front = {"ajaxurl":"https:\/\/energyliberationarmy.com\/wp-admin\/admin-ajax.php","force_ajax_send":"","is_crawler":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://energyliberationarmy.com/wp-content/plugins/thrive-visual-editor/thrive-dashboard/js/dist/frontend.min.js?ver=2.2.3.4'></script>
+<script type='text/javascript' src='https://energyliberationarmy.com/wp-includes/js/wp-embed.min.js?ver=5.2.24'></script>
+<script type="text/javascript">var tcb_post_lists=JSON.parse('[]');</script>	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"b2cc3bd813864476828206c0432f4eb7","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
